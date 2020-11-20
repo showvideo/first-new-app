@@ -1,5 +1,5 @@
 <?php
-    include('anime/parts/head.php');
+    require('anime/parts/head.php');
 ?>
 
 <?php
