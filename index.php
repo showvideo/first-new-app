@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/anime/parts/head.php')
+    include('/anime/parts/head.php')
 ?>
 
 <?php
