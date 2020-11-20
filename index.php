@@ -1,5 +1,5 @@
 <?php
-    include('parts/head.php')
+    include('anime/parts/head.php')
 ?>
 
 <?php
