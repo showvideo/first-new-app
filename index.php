@@ -16,9 +16,7 @@
     
     ｱﾆﾒ一覧</br>
     <div style = "margin-left:10px;">
-        <?php
-        require('parts/title.php')
-        ?>
+
     </div>
 
 </div>
