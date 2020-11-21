@@ -13,7 +13,7 @@
     ｱﾆﾒで繋がる掲示板</br>
     ゲーム情報をみんなで交換しよう！
     友だち募集やゲーム攻略などゲーム情報が満載！</br>
-    こんにちは
+    
     ｱﾆﾒ一覧</br>
     <div style = "margin-left:10px;">
         <?php
@@ -23,7 +23,7 @@
 
 </div>
 <?php
-echo "ﾃﾞｲ氏ね";
+echo 'ﾃﾞｲ氏ね';
 ?>
 <div style = "display:inline-block;vertical-align:top;border:ridge;height:700px;width:200px;">
     最新ｱﾆﾒのTL</br>
@@ -34,3 +34,5 @@ echo "ﾃﾞｲ氏ね";
     </div>
 
 </div>
+
+こんにちは
