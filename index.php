@@ -3,7 +3,7 @@
 ?>
 
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/anime/func/function.php')
+    require('func/function.php')
 ?>
 
 
@@ -17,7 +17,7 @@
     ｱﾆﾒ一覧</br>
     <div style = "margin-left:10px;">
         <?php
-        include($_SERVER['DOCUMENT_ROOT'] . '/anime/parts/title.php')
+        require('parts/title.php')
         ?>
     </div>
 
@@ -29,7 +29,7 @@ echo "ﾃﾞｲ氏ね";
     最新ｱﾆﾒのTL</br>
     <div>
         <?php
-        include($_SERVER['DOCUMENT_ROOT'] . '/anime/parts/tl.php')
+        require('parts/tl.php')
         ?>
     </div>
 
