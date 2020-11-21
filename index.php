@@ -28,7 +28,9 @@ echo "ﾃﾞｲ氏ね";
 <div style = "display:inline-block;vertical-align:top;border:ridge;height:700px;width:200px;">
     最新ｱﾆﾒのTL</br>
     <div>
-
+        <?php
+        require('parts/tl.php')
+        ?>
     </div>
 
 </div>
