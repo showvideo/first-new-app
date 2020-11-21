@@ -1,5 +1,5 @@
 <?php
-    require('showvideo/anime/parts/head.php');
+    require('parts/head.php');
 ?>
 
 <?php
