@@ -1,6 +1,3 @@
-<?php
-    require('parts/head.php');
-?>
 
 <?php
     require('func/function.php')
