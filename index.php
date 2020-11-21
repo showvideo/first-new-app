@@ -6,7 +6,7 @@
     require('func/function.php')
 ?>
 
-
+こｆｂｐｂｐｄばｆｄ
 
 <div style = "display:inline-block;border:ridge;margin-left:405px;width:450px;height:1000px;">
     あなたが見たｱﾆﾒを共有しよう</br>
