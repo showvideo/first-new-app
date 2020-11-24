@@ -2,7 +2,7 @@
 
     function getDB() {
 
-        $dsn = 'mysql:dbname=animech;host=localhost';
+        $dsn = 'mysql:dbname=animech;host=127.0.0.1';
         $user = 'root';
         $pass = '';
 
