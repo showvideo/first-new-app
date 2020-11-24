@@ -4,7 +4,7 @@
 
         $dsn = 'mysql:dbname=animech;host=127.0.0.1';
         $user = 'root';
-        $pass = '';
+        $pass = 'takeru329';
 
         try {
             $dbh = new PDO($dsn, $user, $pass);
