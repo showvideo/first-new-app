@@ -1,5 +1,5 @@
 <?php
-    require('../head.php');
+    require('head.php');
 ?>
 
 <?php
@@ -16,7 +16,7 @@
     最新ｱﾆﾒのTL</br>
     <div>
         <?php
-        require('../tl.php')
+        require('tl.php')
         ?>
     </div>
 
