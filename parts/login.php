@@ -10,7 +10,7 @@
     <form action="" method="post">
         ログイン</br>
         メールアドレス:<input type="text" name="e-mail"></br>
-        パスワード:<input type="pass" name="pass"></br>
+        パスワード:<input type="pass" name="pass">
         <input type="submit" value="ログイン">
     </form>
 </div>
