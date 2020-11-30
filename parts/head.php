@@ -8,9 +8,7 @@
 </head>
 
 <div style = "margin-left:auto;margin-right:auto;border:ridge;width:654px;">
-    <h3>ｼｪｱｱﾆ</h3></br>
+    <h4>ｼｪｱｱﾆ</h4></br>
+    <a href="login.php">ログイン</a>
 </div>
 
-<div>
-    <a href="login.php">ログイン</a>    
-</div>
