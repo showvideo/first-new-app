@@ -10,3 +10,7 @@
 <div style = "margin-left:auto;margin-right:auto;border:ridge;width:654px;">
     <h3>ｼｪｱｱﾆ</h3></br>
 </div>
+
+<div>
+    <a href="login.php">ログイン</a>    
+</div>
