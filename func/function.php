@@ -30,7 +30,7 @@ function getDB() {
 
     function anime_title() {
 
-        $sql = "SELECT aninon, title
+        $sql = "SELECT animenon, title
                 FROM anime_title
                 WHERE 1";
         
@@ -48,7 +48,7 @@ function getDB() {
 
         <th style = "width:50px;height:26px;background-color:white;display:inline-block;
         padding:2px;font-size:12px;">
-        <a href="/anime/title/'.$title["aninon"].'/" style = "text-decoration:none;" >'."".$title["title"].'
+        <a href="/anime/title/'.$title["animenon"].'/" style = "text-decoration:none;" >'."".$title["title"].'
         </a></th>
 
         ');
@@ -84,13 +84,13 @@ function getDB() {
 
     function anititle() {
 
-        $sql = "SELECT aninon, title
+        $sql = "SELECT animenon, title
                 FROM anime_title
-                WHERE aninon = :aninon
-                ORDER BY aninon";
+                WHERE animenon = :animenon
+                ORDER BY animenon";
         
         $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':aninon', $aninon, PDO::PARAM_STR);
+        $stmt->bindParam(':animenon', $animenon, PDO::PARAM_STR);
         $stmt->execute();
         $anititle = $stmt->fetchAll();
 
