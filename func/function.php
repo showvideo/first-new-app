@@ -1,21 +1,21 @@
 <?php
 
-    function getDB() {
+function getDB() {
 
-        $dsn = 'mysql:dbname=animech;host=127.0.0.1';
-        $user = 'root';
-        $pass = 'takeru329';
+    $dsn = 'mysql:dbname=heroku_dc6bcee06683c20;host=us-cdbr-east-02.cleardb.com';
+    $user = 'be79249baf2bce';
+    $pass = '032b4eaf';
 
-        try {
-            $dbh = new PDO($dsn, $user, $pass);
-            $dbh->query('SET NAMES utf8');
-        }catch(PDOException $e) {
-            ('Error:'.$e->getMessage());
-            ('接続できませんでした');
-            die();
-        } return $dbh;
+    try {
+        $dbh = new PDO($dsn, $user, $pass);
+        $dbh->query('SET NAMES utf8');
+    }catch(PDOException $e) {
+        ('Error:'.$e->getMessage());
+        ('接続できませんでした');
+        die();
+    } return $dbh;
 
-    }
+}
 
     function getURL() {
         return $_SERVER["REQUEST_URI"];
