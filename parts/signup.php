@@ -8,10 +8,10 @@
 
 <div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;height:1000px;">
     <form action="" method="post">
-        ログイン</br>
+        新規登録</br>
         メールアドレス:<input type="text" name="e-mail"></br>
         パスワード:<input type="pass" name="pass">
-        <input type="submit" value="ログイン">
+        <input type="submit" value="新規登録">
     </form>
 </div>
 
