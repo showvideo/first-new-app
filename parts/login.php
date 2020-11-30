@@ -8,7 +8,10 @@
 
 <div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;height:1000px;">
 
-    </div>
+    ログイン
+    メールアドレス:<input type="text" name="e-mail">
+    パスワード:<input type="pass" name="pass">
+    <input type="submit" value="ログイン">
 
 </div>
 
