@@ -6,7 +6,7 @@
     require('func/function.php')
 ?>
 
-<div style = "display:inline-block;border:ridge;margin-left:405px;width:450px;height:1000px;">
+<div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;height:1000px;">
     あなたが見たｱﾆﾒを共有しよう</br>
     ｱﾆﾒで繋がる掲示板</br>
     ゲーム情報をみんなで交換しよう！
