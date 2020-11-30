@@ -1,4 +1,4 @@
-<table  cellspacing="1" bgcolor:black; style="border-collapse:collapse;">
+<table  cellspacing="1" bgcolor:black; border="1"; style="border-collapse:collapse;">
 
     <tr>
         
