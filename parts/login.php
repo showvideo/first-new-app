@@ -8,9 +8,9 @@
 
 <div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;height:1000px;">
     <form action="" method="post">
-        ログイン
-        メールアドレス:<input type="text" name="e-mail">
-        パスワード:<input type="pass" name="pass">
+        ログイン</br>
+        メールアドレス:<input type="text" name="e-mail"></br>
+        パスワード:<input type="pass" name="pass"></br>
         <input type="submit" value="ログイン">
     </form>
 </div>
