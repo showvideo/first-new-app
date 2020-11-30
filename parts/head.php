@@ -8,7 +8,8 @@
 </head>
 
 <div style = "margin-left:auto;margin-right:auto;border:ridge;width:654px;">
-    <h4>ｼｪｱｱﾆ</h4></br>
-    <a href="login.php">ログイン</a>
+    <p>ｼｪｱｱﾆ</p></br>
+    <a href="login.php" style="padding-left:500px;">ログイン</a>
+    <a href="signup.php" style="padding-left:30px;">新規登録</a>
 </div>
 
