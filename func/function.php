@@ -7,13 +7,13 @@ function getDB() {
     $pass = '032b4eaf';
 
     try {
-        $dbh = new PDO($dsn, $user, $pass);
-        $dbh->query('SET NAMES utf8');
+        $db = new PDO($dsn, $user, $pass);
+        $db->query('SET NAMES utf8');
     }catch(PDOException $e) {
         ('Error:'.$e->getMessage());
         ('接続できませんでした');
         die();
-    } return $dbh;
+    } return $db;
 
 }
 
