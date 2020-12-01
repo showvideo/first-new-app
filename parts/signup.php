@@ -2,7 +2,32 @@
     require('head.php');
 ?>
 
+<?php
+    require('anime/func/function.php')
+?>
 
+<?php
+if(isset($_POST['signin'])) {
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    try {
+        $db = getDB();
+        $sql = 'INSERT INTO users(email, pass) values(:email, :pass)';
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param(:email, $email, PDO_PARAM_STR);
+        $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
+        $stmt->execute();
+        $stmt = null;
+        $db = null;
+        header('Location: ../parts/login.php');
+        exit;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+        exit;
+    }
+}
+
+?>
 
 
 <div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;height:1000px;">
