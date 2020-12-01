@@ -1,4 +1,26 @@
 <?php
+if(isset($_POST['signin'])) {
+    $e-mail = $_POST['e-mail'];
+    $pass = $_POST['pass'];
+    try {
+        $db = getDB();
+        $sql = 'INSERT INTO users(username, password) values(:e-mail, :pass);
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param(:e-mail, $e-mail, PDO_PARAM_STR);
+        $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
+        $stmt->execute();
+        $stmt = null;
+        $stmt = null;
+        header('Location: ../parts/login.php');
+        exit;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+        exit;
+    }
+}
+
+?>
+<?php
     require('head.php');
 ?>
 
