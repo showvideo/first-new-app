@@ -1,7 +1,9 @@
 <?php
     require('head.php');
 ?>
-
+<?php
+   include($_SERVER['DOCUMENT_ROOT'] . '/anime/func/function.php') 
+?>     
 <?php
 if(isset($_POST['login'])) {
     $email = $_POST['email'];
