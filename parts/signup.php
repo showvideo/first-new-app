@@ -4,16 +4,14 @@
 
 <?php
     require('anime/func/function.php')
-?>
-
+?>       
 <?php
 if(isset($_POST['signin'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     try {
-        $db = getDB();
         $sql = 'INSERT INTO users(email, pass) values(:email, :pass)';
-        $stmt = $db->prepare($sql);
+        $stmt = getDB()->prepare($sql);
         $stmt->bind_param(:email, $email, PDO_PARAM_STR);
         $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
         $stmt->execute();
