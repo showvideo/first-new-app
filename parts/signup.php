@@ -15,16 +15,7 @@
     </form>
 </div>
 
-<?php
-    
-    $sql = "INSERT INTO user(email,pass) VALLUES(:email, :pass)
-    
-    $stmt = prepare($sql);
-    $stmt->bind-Param(:email, $email, PDO_PARAM_STR);
-    $stmt->bind-Param(:pass, $pass, PDO_PARAM_STR);
-    $stmt->execute();
-    
-?>
+
 <div style = "display:inline-block;vertical-align:top;border:ridge;height:700px;width:194px;">
     最新ｱﾆﾒのTL</br>
     <div>
