@@ -4,29 +4,16 @@
 
 <?php
     require('../func/function.php');
-?>       
-<?php
-if(isset($_POST['signin'])) {
-    $email = $_POST['email'];
-    $pass = $_POST['pass'];
-        try{
-        $sql = 'INSERT INTO users(email, pass) VALUES(:email, :pass)';
-        $stmt = getDB()->prepare($sql);
-        $stmt->bind_param(:email, $email, PDO_PARAM_STR);
-        $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
-        $stmt->execute();
+?>     
+<?php 
 
-        header('Location: ../parts/login.php');
-        exit;
-        } catch (PDOException $e) {
-        echo $e->getMessage();
-        exit;
-        }
+$result = anitl();
+$array = array_slice($result, 0 ,100);
+foreach($array as $tl) {
+    table_titles($tl);
 }
 
 ?>
-
-
 <div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;height:1000px;">
     <form action="" method="post">
         新規登録</br>
