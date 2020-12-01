@@ -3,7 +3,7 @@
 ?>
 
 <?php
-    require('../../func/function.php')
+    require('../../func/function.php');
 ?>       
 <?php
 if(isset($_POST['signin'])) {
