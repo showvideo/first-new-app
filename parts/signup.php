@@ -10,7 +10,7 @@ if(isset($_POST['signin'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     try {
-        $sql = 'INSERT INTO users(email, pass) values(:email, :pass)';
+        $sql = 'INSERT INTO users(email, pass) VALUES(:email, :pass)';
         $stmt = getDB()->prepare($sql);
         $stmt->bind_param(:email, $email, PDO_PARAM_STR);
         $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
