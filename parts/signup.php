@@ -6,8 +6,11 @@ if(isset($_POST['signin'])) {
         $db = getDB();
         $sql = 'INSERT INTO users(username, password) values(:name, :pass)
         $stmt = $db->prepare($sql);
-        
-        $stmt->execute()
+        $stmt->bind_param(:name, $name, PDO_PARAM_STR);
+        $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
+        $stmt->execute();
+        $stmt = null;
+        $stmt = null;
     } catch (PDOException $e) {
         echo $e->getMessage();
         exit;
