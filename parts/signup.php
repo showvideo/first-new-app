@@ -3,7 +3,7 @@
 ?>
 
 <?php
-    require('/func/function.php')
+   include($_SERVER['DOCUMENT_ROOT'] . '/anime/func/function.php') 
 ?>     
 
 <?php
@@ -16,7 +16,8 @@ if(isset($_POST['signin'])) {
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
         $stmt->execute();
-
+        $db = null;
+        $stmt = null;
         header('Location: ../parts/login.php');
         exit;
         } catch (PDOException $e) {
