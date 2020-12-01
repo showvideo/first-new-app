@@ -13,8 +13,8 @@ if(isset($_POST['signin'])) {
         try{
         $sql = 'INSERT INTO users(email, pass) VALUES(:email, :pass)';
         $stmt = getDB()->prepare($sql);
-        $stmt->bind_param(:email, $email, PDO_PARAM_STR);
-        $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
         $stmt->execute();
 
         header('Location: ../parts/login.php');
