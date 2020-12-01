@@ -11,9 +11,12 @@ if(isset($_POST['signin'])) {
         $stmt->execute();
         $stmt = null;
         $stmt = null;
+        header('Location: ../parts/login.php');
+        exit;
     } catch (PDOException $e) {
         echo $e->getMessage();
         exit;
+    }
 }
 
 ?>
