@@ -3,8 +3,8 @@
 ?>
 
 <?php
-    require('../func/function.php')
-?>
+   include($_SERVER['DOCUMENT_ROOT'] . '/anime/func/function.php') 
+?>  
 
 <div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;height:1000px;">
     <form action="" method="post">
