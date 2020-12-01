@@ -18,7 +18,7 @@ if(isset($_POST['signin'])) {
         $stmt->execute();
         $db = null;
         $stmt = null;
-        header('Location:'anime/parts/login.php');
+        header('Location:https://animech2.herokuapp.com/parts/login.php');
         exit;
         } catch (PDOException $e) {
         echo $e->getMessage();
