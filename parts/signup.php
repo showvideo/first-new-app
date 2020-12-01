@@ -3,7 +3,7 @@
 ?>
 
 <?php
-    require('anime/func/function.php')
+    require('/func/function.php')
 ?>     
 
 <?php
