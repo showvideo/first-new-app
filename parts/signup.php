@@ -9,7 +9,7 @@
 if(isset($_POST['signin'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
-    
+        try{
         $sql = 'INSERT INTO users(email, pass) VALUES(:email, :pass)';
         $stmt = getDB()->prepare($sql);
         $stmt->bind_param(:email, $email, PDO_PARAM_STR);
@@ -19,7 +19,10 @@ if(isset($_POST['signin'])) {
         $db = null;
         header('Location: ../parts/login.php');
         exit;
-
+        } catch (PDOException $e) {
+        echo $e->getMessage();
+        exit;
+        }
 }
 
 ?>
