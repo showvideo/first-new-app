@@ -18,7 +18,7 @@ if(isset($_POST['signin'])) {
         $stmt->execute();
         $db = null;
         $stmt = null;
-        header('Location: ../parts/login.php');
+        header('Location: $_SERVER['DOCUMENT_ROOT'] . '/anime/parts/login.php');
         exit;
         } catch (PDOException $e) {
         echo $e->getMessage();
