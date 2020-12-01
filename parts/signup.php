@@ -1,4 +1,12 @@
 <?php
+    require('head.php');
+?>
+
+<?php
+    require('../func/function.php')
+?>
+
+<?php
 if(isset($_POST['signin'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
@@ -20,13 +28,7 @@ if(isset($_POST['signin'])) {
 }
 
 ?>
-<?php
-    require('head.php');
-?>
 
-<?php
-    require('../func/function.php')
-?>
 
 <div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;height:1000px;">
     <form action="" method="post">
