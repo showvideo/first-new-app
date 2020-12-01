@@ -15,8 +15,7 @@ if(isset($_POST['signin'])) {
         $stmt->bind_param(:email, $email, PDO_PARAM_STR);
         $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
         $stmt->execute();
-        $stmt = null;
-        $db = null;
+
         header('Location: ../parts/login.php');
         exit;
         } catch (PDOException $e) {
