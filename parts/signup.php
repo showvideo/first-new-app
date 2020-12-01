@@ -1,12 +1,12 @@
 <?php
 if(isset($_POST['signin'])) {
-    $name = $_POST['name'];
+    $e-mail = $_POST['e-mail'];
     $pass = $_POST['pass'];
     try {
         $db = getDB();
-        $sql = 'INSERT INTO users(username, password) values(:name, :pass)
+        $sql = 'INSERT INTO users(username, password) values(:e-mail, :pass)
         $stmt = $db->prepare($sql);
-        $stmt->bind_param(:name, $name, PDO_PARAM_STR);
+        $stmt->bind_param(:e-mail, $e-mail, PDO_PARAM_STR);
         $stmt->bind_Param(:pass, $pass, PDO_PARAM_STR);
         $stmt->execute();
         $stmt = null;
