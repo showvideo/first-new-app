@@ -1,7 +1,3 @@
-<?php 
-  require ('func/function.php');
-?>
-
 <?php
   $db = getDB()
   
