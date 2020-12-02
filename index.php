@@ -24,7 +24,7 @@
 </div>
 
 <div style = "display:inline-block;vertical-align:top;border:ridge;height:700px;width:194px;">
-    ｶﾃｺﾞﾘ</br>
+    人気タイトル</br>
     <div>
         <?php
         require('parts/Category.php')
