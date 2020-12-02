@@ -29,6 +29,8 @@
         <?php
         require('parts/Category.php')
         ?>
+    最新ﾀｲﾑﾗｲﾝ
     </div>
+    
 
 </div>
