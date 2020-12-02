@@ -3,6 +3,5 @@
   $stmt = getDB()->prepare($sql);
   $stmt->execute();
   $result = $stmt->fetchAll();
-  return $result;
-  echo $result;
+  echo $reslut;
 ?>
