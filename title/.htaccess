@@ -1,6 +1,0 @@
-AddType application/x-httpd-php .php .html
-
-RewriteEngine on
-#以下はリダイレクト対象の除外拡張子設定
-RewriteCond %{REQUEST_FILENAME} !^(.*)\.(gif|png|jpg|jpeg|css|php|js|csv)$ [NC]
-RewriteRule ^(.*)$ index.html [L]
