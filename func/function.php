@@ -32,7 +32,7 @@ function getDB() {
 
         $sql = "SELECT animenon, title
                 FROM anime_title
-                WHERE 1";
+                WHERE category=1";
         
         $stmt = getDB()->prepare($sql);
         $stmt->execute();
