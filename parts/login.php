@@ -14,12 +14,12 @@ if(isset($_POST['login'])) {
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
         $stmt->execute();
-        $result = $stmt->fetch(FETCH_ASSOC);
+        $result = $stmt->fetch();
         $db = null;
         $stmt = null;
             
         if (count($result)>0) {
-            header('Location:');
+            header('Location:https://animech2.herokuapp.com/parts/signup.php');
             exit
         } else {
             $err_msg = "ユーザー名またはパスワードが誤りです。";
