@@ -28,7 +28,7 @@
     ｶﾃｺﾞﾘ</br>
     <div>
         <?php
-        require('parts/tl.php')
+        require('parts/Category.php')
         ?>
     </div>
 
