@@ -16,6 +16,7 @@
     ?>
     ｱﾆﾒ一覧</br>
     <div style = "margin-left:10px;">
+        人気ﾀｲﾄﾙ
         <?php
         require('parts/title.php')
         ?>
