@@ -4,4 +4,5 @@
   $stmt->execute();
   $result = $stmt->fetchAll();
   return $result;
+  echo $result;
 ?>
