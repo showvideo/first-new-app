@@ -15,7 +15,7 @@
     echo 'ﾃﾞｲ氏ね';
     ?>
     ｱﾆﾒ一覧</br>
-    <div style = "margin-left:10px;width:436px;">
+    <div style = "margin-left:10px;width:393px;padding-left:20px;">
         人気ﾀｲﾄﾙ
         <?php
         require('parts/title.php')
