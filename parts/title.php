@@ -1,7 +1,7 @@
 <table  cellspacing="1" bgcolor:black; border="1"; style="border-collapse:collapse;">
 
     <tr>
-        
+        ー人気ﾀｲﾄﾙー
             <?php 
 
                 $result = anime_title();
