@@ -48,7 +48,7 @@ function getDB() {
 
         <th style = "width:66px;height:35px;line-height:13px;background-color:white;display:inline-block;
         padding:6px;font-size:12px;">
-        <a href="/title/'.$title["animenon"].'/" style = "text-decoration:none;" >'."".$title["title"].'
+        <a href="/anime/title/'.$title["animenon"].'/" style = "text-decoration:none;" >'."".$title["title"].'
         </a></th>
 
         ');
