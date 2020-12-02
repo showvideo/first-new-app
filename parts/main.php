@@ -5,3 +5,9 @@
   $result = $stmt->fetchAll();
   echo $reslut;
 ?>
+<?php
+  $array = array_slice($result, 0 ,100);
+  foreach($array as $title) {
+  echo $title;
+  }
+?>
