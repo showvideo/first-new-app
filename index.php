@@ -25,7 +25,7 @@
 </div>
 
 <div style = "display:inline-block;vertical-align:top;border:ridge;height:700px;width:194px;">
-    最新ｱﾆﾒのTL</br>
+    ｶﾃｺﾞﾘ</br>
     <div>
         <?php
         require('parts/tl.php')
