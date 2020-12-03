@@ -1,0 +1,8 @@
+<?php
+  $sql = 'SELECT title FROM anime_title WHERE *;'
+  $stmt = getDB()->prepare($sql)
+  $stmt->execute();
+  
+  $result = $stmt->fetchAll();
+  echo $result;
+?>
