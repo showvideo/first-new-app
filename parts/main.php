@@ -7,6 +7,7 @@
 $titles = array_slice($result,0,100);
 foreach($titles as $title) {
   var_dump($title);
+  echo $title['name'];
 }
 ?>
 
