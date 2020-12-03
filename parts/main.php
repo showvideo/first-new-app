@@ -5,9 +5,11 @@
   $result = $stmt->fetchAll();
   echo $reslut;
   
-$title = array_slice($result,0,100);
-
+$titles = array_slice($result,0,100);
+foreach($titles as $title) {
 echo('
 <p>."".$tItem["title"].'</p>
 ');
+}
 ?>
+
