@@ -7,4 +7,5 @@
   var_dump($result);
 $title = array_slice($result,0,100);
 var_dump($title);
+echo $title['name'];
 ?>
