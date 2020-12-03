@@ -1,4 +1,7 @@
 <?php
+function p($str) {
+	echo $str;	
+}
 
 function getDB() {
 
