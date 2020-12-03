@@ -8,7 +8,9 @@
   
   $anime_titles = array_slice($result,0,100);
   foreach($anime_titles as $anime_title) {
-    echo $anime_title['title'];
+      p(' 
+    <p>'."".$anime_title['title'].'</P></br>
+      ');
   }
 
 ?>
