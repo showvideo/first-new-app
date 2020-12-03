@@ -8,6 +8,6 @@
 <?php
   $array = array_slice($result, 0 ,100);
   foreach($array as $title) {
-  var_dump $title;
+  var_dump ($title);
   }
 ?>
