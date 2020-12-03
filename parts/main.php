@@ -10,6 +10,6 @@
   foreach($array as $title) {
   echo('
     $title['name'].$title['message'];
-  ')
+  ');
   }
 ?>
