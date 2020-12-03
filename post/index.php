@@ -2,7 +2,7 @@
   require('../parts/head.php');
   require('../func/function.php');
 ?>
-<div style = "display:inline-block;border:ridge;margin-left:407px;width:450px;">
+<div style = "display:inline-block;border:ridge;margin-left:430px;width:450px;">
 
     <a style="font-size:25px;text-align;center;">投稿作成</a>
     <div style = "margin-left:10px;width:403px;padding-left:20px;">
