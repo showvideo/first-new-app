@@ -1,5 +1,5 @@
 <?php
-  $sql = 'SELECT name,old,prefucure,message,anime_title FROM user WHERE 1';
+  $sql = 'SELECT name,old,prefecure,message,anime_title FROM user WHERE 1';
   $stmt = getDB()->prepare($sql);
   $stmt->execute();
   $result = $stmt->fetchAll();
@@ -14,13 +14,13 @@ foreach($titles as $title) {
     <a>'."".$title["old"].'</a>
   ');
   p(' 
-    <a>'."".$title["prefucure"].'</a>
+    <a>'."".$title["prefecure"].'</a>
   ');
   p(' 
     <p>'."".$title["message"].'</P>
   ');
   p(' 
-    <p>'."".$title["anime_title"].'</P>
+    <a>'."".$title["anime_title"].'</a>
   ');
   
 }
