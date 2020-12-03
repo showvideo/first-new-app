@@ -8,8 +8,10 @@ $titles = array_slice($result,0,100);
 foreach($titles as $title) {
   
   p(' 
-    <p>'."".$tItem["title"].'</P>
+    <p>'."".$title["name"].'</P>
   ');
-
+  p(' 
+    <p>'."".$title["message"].'</P>
+  ');
 }
 ?>
