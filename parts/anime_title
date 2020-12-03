@@ -11,5 +11,7 @@
     echo $anime_title['title'];
   }
   
+  echo "継続は力なり、こつこつと
+  継続すれば、きっと報われるr。。
 
 ?>
