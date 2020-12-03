@@ -9,7 +9,7 @@
   $array = array_slice($result, 0 ,100);
   foreach($array as $title) {
   echo('
-    $title['name'].$title['message'];
+    $title['name']
   ');
   }
 ?>
