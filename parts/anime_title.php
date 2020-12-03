@@ -9,7 +9,7 @@
   $anime_titles = array_slice($result,0,100);
   foreach($anime_titles as $anime_title) {
       p(' 
-    <p>'."".$anime_title['title'].'</P></br>
+    <a href="">'."".$anime_title['title'].'</a></br>
       ');
   }
 
