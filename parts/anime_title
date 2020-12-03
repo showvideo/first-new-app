@@ -1,5 +1,5 @@
 <?php
-  $sql = 'SELECT title FROM anime_title WHERE 1';
+  $sql = "SELECT title FROM anime_title WHERE 1";
   $stmt = getDB()->prepare($sql);
   $stmt->execute();
   
