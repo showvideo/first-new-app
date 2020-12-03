@@ -11,7 +11,7 @@
       名前<input type="text" name="name">
       歳<input style="width:30px;" type="text" name="old">
       お住まい<input style="width:60px;" type="text" name="prefecture"></br>
-      コメント<textarea type="text" name="message"><\textarea>
+      コメント<textarea name="message" rows="4" cols="40"><\textarea>
       <input type="submit" value="新規投稿">
     </form>
 
