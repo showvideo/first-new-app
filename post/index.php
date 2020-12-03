@@ -9,7 +9,7 @@
      
     <form action="" method="post">
       <input type="text" name="name">
-      <input type="text" name="old">
+      <input type="text" name="old">{ width: 30px; }
       <input type="text" name="prefecture">
       <input type="text" name="message">
       <input type="submit" value="新規投稿">
