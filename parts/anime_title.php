@@ -4,11 +4,10 @@
   $stmt->execute();
   
   $result = $stmt->fetchAll();
-  var_dump ($result);
   
   $anime_titles = array_slice($result,0,100);
   foreach($anime_titles as $anime_title) {
-    echo $anime_title['title'];
+    echo $anime_title['title']</br>;
   }
   
   echo "継続は力なり、こつこつと
