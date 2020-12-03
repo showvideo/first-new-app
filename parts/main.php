@@ -6,7 +6,8 @@
 
 $titles = array_slice($result,0,100);
 foreach($titles as $title) {
-  echo $title['name'];
+  
+  echo <P>$title['name'];</P>
   echo $title['message'];
 }
 ?>
