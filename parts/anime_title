@@ -1,6 +1,6 @@
 <?php
   $sql = 'SELECT title FROM anime_title WHERE 1';
-  $stmt = getDB()->prepare($sql)
+  $stmt = getDB()->prepare($sql);
   $stmt->execute();
   
   $result = $stmt->fetchAll();
