@@ -9,7 +9,7 @@ foreach($titles as $title) {
   
   p(' 
     <p>'."".$tItem["title"].'</P>
-  ')
+  ');
 
 }
 ?>
