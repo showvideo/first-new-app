@@ -8,19 +8,13 @@ $titles = array_slice($result,0,100);
 foreach($titles as $title) {
   
   p(' 
+    <div style="width:350px;height:300px;border:ridge;>
     <a>'."".$title["name"].'</a>
-  ');
-  p(' 
     <a>'."".$title["old"].'</a>
-  ');
-  p(' 
     <a>'."".$title["prefecure"].'</a>
-  ');
-  p(' 
     <p>'."".$title["message"].'</P>
-  ');
-  p(' 
-    <a style = "border-top:ridge;padding-left:200px;font-size:15px;">'."".$title["anime_title"].'</a>
+    <a style = "border-top:ridge;padding-left:250px;font-size:15px;">'."".$title["anime_title"].'</a>
+    </div>
   ');
   
 }
