@@ -8,7 +8,8 @@
 <?php
   $array = array_slice($result, 0 ,100);
   foreach($array as $title) {
-  echo("
+  echo('
     $title['name'].$title['message'];
+  ')
   }
 ?>
