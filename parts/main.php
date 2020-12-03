@@ -4,9 +4,9 @@
   $stmt->execute();
   $result = $stmt->fetchAll();
   echo $reslut;
-  var_dump($result);
+  
 $title = array_slice($result,0,100);
-var_dump($title);
+
 echo('
 <p>."".$tItem["title"].'</p>
 ');
