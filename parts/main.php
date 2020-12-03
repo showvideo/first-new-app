@@ -14,7 +14,7 @@ foreach($titles as $title) {
     <a>'."".$title["prefecure"].'</a>
     <p>'."".$title["message"].'</P>
     <a style = "border-top:ridge;padding-left:250px;font-size:15px;">'."".$title["anime_title"].'</a>
-    
+    </br>
   ');
   
 }
