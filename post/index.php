@@ -8,10 +8,10 @@
     <div style = "margin-left:10px;width:403px;padding-left:20px;">
      
     <form action="" method="post">
-      <input type="text" name="name">
-      <input style="width:30px;" type="text" name="old">
-      <input type="text" name="prefecture">
-      <input type="text" name="message">
+      ＜名前＞<input type="text" name="name">
+      ＜歳＞<input style="width:30px;" type="text" name="old">
+      ＜お住まい＞<input style="width:60px;" type="text" name="prefecture"></br>
+      ＜コメント＞<textarea type="text" name="message"><\textarea>
       <input type="submit" value="新規投稿">
     </form>
 
