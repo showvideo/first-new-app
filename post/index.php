@@ -25,8 +25,7 @@
       
       
       $sql = 'INSERT INTO (name,old,comment)
-              FROM user
-              WHERE VALUES(:name,:old,:comment)';
+              VALUES(:name,:old,:comment)';
       $stmt = getDB()->prepare($sql)
       $stmt->bindParam(:user, $user, PDO::PARAM_STR);
       $stmt->bindParam(:old, $old, PDO::PARAM_STR);
