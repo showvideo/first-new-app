@@ -24,14 +24,16 @@
         
         $name = $_POST['name'];
         $old = $_POST['old'];
+        $pref = $_POST['pref'];
         $comment = $_POST['comment'];
 
 
-        $sql = 'INSERT INTO user(name,old,comment)
-                VALUES(:name,:old,:comment)';
+        $sql = 'INSERT INTO user(name,old,pref,comment)
+                VALUES(:name,:old,:pref,:comment)';
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':old', $old, PDO::PARAM_STR);
+        $stmt->bindParam(':pref', $pref, PDO::PARAM_STR);
         $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
         $stmt->execute();
       } catch(PDOException $e) {
