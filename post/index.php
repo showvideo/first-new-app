@@ -17,7 +17,26 @@
       アニメタイトル予測変換機能をつける<input type="text" name="title"></br>
       <input type="submit" value="新規投稿"></br>      
     </form>
-
+    
+    <?php
+      $user = $_POST['name'];
+      $old = $_POST['old'];
+      $prefuctures = $_POST['prefucures'];
+      $comment = $_POST['comment'];
+      $title = $_POST['title'];
+      
+      
+      $sql = 'INSERT INTO user,old,prefuctures,comment,title
+              FROM user
+              WHERE (user=:user, old=:old, prefucures-:prefucures, title=:title)';
+      $stmt = getDB()->prepare($sql)
+      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
+      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
+      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
+      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
+      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
+      $stmt->execute();
+    ?>
     </div>
 </div>
       
