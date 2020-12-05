@@ -11,16 +11,17 @@ if(isset($_POST['login'])) {
         try{
         $db = getDB();
         $sql = 'SELECT * FROM users WHERE email=:email and pass=:pass';
-        $stmt = getDB()->prepare($sql);
+        $stmt = $db->prepare($sql);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
         $stmt->execute();
         $result = $stmt->fetch();
-        $db = null;
-        $stmt = null;
+
             
         if (count($result)>0) {
         header('Location:'../index.html');
+        $db = null;
+        $stmt = null;
         exit;
         } else {
             $err_msg = "ユーザー名またはパスワードが誤りです。";
