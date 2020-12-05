@@ -16,7 +16,6 @@ if(isset($_POST['login'])) {
         $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
         $stmt->execute();
         $result = $stmt->fetch();
-
             
         if (count($result)>0) {
         header('Location:'../index.html');
