@@ -14,6 +14,7 @@
       <a style="padding-top:30px;">コメント<br>
       <textarea name="message" rows="4" cols="40"placeholder="コメント入力"><\textarea></a></br>
       <input type="submit" value="新規投稿">
+      アニメタイトル予測変換機能をつける<input type="text" name="title">
     </form>
 
     </div>
