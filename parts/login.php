@@ -10,7 +10,7 @@ if(isset($_POST['login'])) {
     $pass = $_POST['pass'];
         try{
         $db = getDB();
-        $sql = 'SELECT * FROM users WHERE email=:eamil and pass=:pass';
+        $sql = 'SELECT * FROM users WHERE email=:email and pass=:pass';
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
