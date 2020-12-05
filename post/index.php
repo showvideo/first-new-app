@@ -19,22 +19,18 @@
     </form>
     
     <?php
-      $user = $_POST['name'];
+      $name = $_POST['name'];
       $old = $_POST['old'];
-      $prefuctures = $_POST['prefucures'];
       $comment = $_POST['comment'];
-      $title = $_POST['title'];
       
       
-      $sql = 'INSERT INTO (user,old,prefuctures,comment,title)
+      $sql = 'INSERT INTO (name,old,comment)
               FROM user
-              WHERE VALUES(:user,:old,:prefucures,:comment,:title)';
+              WHERE VALUES(:name,:old,:comment)';
       $stmt = getDB()->prepare($sql)
       $stmt->bindParam(:user, $user, PDO::PARAM_STR);
       $stmt->bindParam(:old, $old, PDO::PARAM_STR);
-      $stmt->bindParam(:prefuctures, $prefuctures, PDO::PARAM_STR);
       $stmt->bindParam(:comment, $comment, PDO::PARAM_STR);
-      $stmt->bindParam(:title, $title, PDO::PARAM_STR);
       $stmt->execute();
     ?>
     </div>
