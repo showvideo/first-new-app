@@ -11,11 +11,14 @@ if(isset($_POST['signin'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
         try{
+        $db=getDB()
         $sql = 'INSERT INTO users(email, pass) VALUES(:email, :pass)';
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
         $stmt->execute();
+        $stmt=null;
+        $db=null;
         exit;
         } catch (PDOException $e) {
         echo $e->getMessage();
