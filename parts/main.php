@@ -1,4 +1,4 @@
-<div style="width:400px;border:rdge;">
+<div style="width:400px;border:ridge;">
   <?php
   $sql = 'SELECT name,old,prefecure,message,anime_title FROM user WHERE 1';
   $stmt = getDB()->prepare($sql);
