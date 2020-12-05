@@ -19,18 +19,23 @@
     </form>
     
     <?php
-      $name = $_POST['name'];
-      $old = $_POST['old'];
-      $comment = $_POST['comment'];
-      
-      
-      $sql = 'INSERT INTO (name,old,comment)
-              VALUES(:name,:old,:comment)';
-      $stmt = getDB()->prepare($sql)
-      $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-      $stmt->bindParam(':old', $old, PDO::PARAM_STR);
-      $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
-      $stmt->execute();
+      try{
+        
+        $name = $_POST['name'];
+        $old = $_POST['old'];
+        $comment = $_POST['comment'];
+
+
+        $sql = 'INSERT INTO (name,old,comment)
+                VALUES(:name,:old,:comment)';
+        $stmt = getDB()->prepare($sql)
+        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+        $stmt->bindParam(':old', $old, PDO::PARAM_STR);
+        $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
+        $stmt->execute();
+      } catch(PDOException $e) {
+        exit('ﾃﾞｰﾀﾍﾞｰｽに接続できませんでした。　' . $e->getMessage());
+      }
     ?>
     </div>
 </div>
