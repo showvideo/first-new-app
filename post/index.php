@@ -13,15 +13,16 @@
       <a style = "padding-top:20px;">お住まい<?php require('../parts/prefecturs.php'); ?></a></br>
       <a style="padding-top:30px;">コメント<br>
       <input type="text" name="comment">
-      <input type="submit" value="新規投稿">
+
       アニメタイトル予測変換機能をつける<input type="text" name="title">
+      <input type="submit" value="新規投稿"></br>      
     </form>
 
     </div>
 </div>
       
-    <div style = "display:inline-block;vertical-align:top;border:ridge;height:700px;width:144px;">
-    <a style="text-align:center;">ーﾀｲﾄﾙー<\a></br>
+    <div style = "display:inline-block;vertical-align:top;height:700px;width:184px;">
+    <a style="text-align:center;">ーﾀｲﾄﾙー<a></br>
     <div>
         <?php
         require('../parts/anime_title.php');
