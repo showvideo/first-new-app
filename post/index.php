@@ -10,8 +10,9 @@
     <form action="" method="post">
       名前<input type="text" name="name">
       歳<input style="width:30px;" type="text" name="old"></br>
-      <a style = "paddimg-top:20px;">お住まい<?php require('../parts/prefecturs.php'); ?></a></br>
-      <a style="padding-top:30px;">コメント<textarea name="message" rows="4" cols="40"placeholder="コメント入力"><\textarea></a></br>
+      <a style = "padding-top:20px;">お住まい<?php require('../parts/prefecturs.php'); ?></a></br>
+      <a style="padding-top:30px;">コメント<br>
+      <textarea name="message" rows="4" cols="40"placeholder="コメント入力"><\textarea></a></br>
       <input type="submit" value="新規投稿">
     </form>
 
