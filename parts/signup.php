@@ -3,7 +3,7 @@
 ?>
 
 <?php
-   include($_SERVER['DOCUMENT_ROOT'] . '/anime/func/function.php') 
+    require('../func/function.php');
 ?>     
 
 <?php
