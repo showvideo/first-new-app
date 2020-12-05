@@ -16,7 +16,7 @@
         <input type="text" name="comment"></br>
 
       アニメタイトル予測変換機能をつける   
-      <input type="submit" value="s
+      <input type="submit" value="新規登録">
     </form>
     
     <?php
