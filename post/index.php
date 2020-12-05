@@ -26,15 +26,15 @@
       $title = $_POST['title'];
       
       
-      $sql = 'INSERT INTO user,old,prefuctures,comment,title
+      $sql = 'INSERT INTO (user,old,prefuctures,comment,title)
               FROM user
-              WHERE (user=:user, old=:old, prefucures-:prefucures, title=:title)';
+              WHERE VALUES(:user,:old,:prefucures,:comment,:title)';
       $stmt = getDB()->prepare($sql)
       $stmt->bindParam(:user, $user, PDO::PARAM_STR);
-      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
-      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
-      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
-      $stmt->bindParam(:user, $user, PDO::PARAM_STR);
+      $stmt->bindParam(:old, $old, PDO::PARAM_STR);
+      $stmt->bindParam(:prefuctures, $prefuctures, PDO::PARAM_STR);
+      $stmt->bindParam(:comment, $comment, PDO::PARAM_STR);
+      $stmt->bindParam(:title, $title, PDO::PARAM_STR);
       $stmt->execute();
     ?>
     </div>
