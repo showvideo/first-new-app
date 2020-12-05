@@ -10,7 +10,7 @@
     <form action="" method="post">
       名前<input type="text" name="name">
       歳<input style="width:30px;" type="text" name="old">
-      お住まい<select name="pref"><?php require('../parts/prefecture.php); ?></select>
+      お住まい<select name="pref"><?php require('../parts/prefectures.php); ?></select>
       コメント<textarea name="message" rows="4" cols="40"><\textarea>
       <input type="submit" value="新規投稿">
     </form>
