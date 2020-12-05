@@ -19,6 +19,7 @@ if(isset($_POST['signin'])) {
         $stmt->execute();
         $stmt=null;
         $db=null;
+        header('Location: loign.php');
         exit;
         } catch (PDOException $e) {
         echo $e->getMessage();
