@@ -1,4 +1,4 @@
-
+<select naem="pref">
 <option value="">選択してください</option>
 <option value="北海道">北海道</option>
 <option value="青森県">青森県</option>
@@ -47,3 +47,4 @@
 <option value="宮崎県">宮崎県</option>
 <option value="鹿児島県">鹿児島県</option>
 <option value="沖縄県">沖縄県</option>
+</select>
