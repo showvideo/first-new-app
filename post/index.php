@@ -12,9 +12,9 @@
       歳<input style="width:30px;" type="text" name="old"></br>
       <a style = "padding-top:20px;">お住まい<?php require('../parts/prefecturs.php'); ?></a></br>
       <a style="padding-top:30px;">コメント<br>
-      <input type="text" name="comment">
+        <input type="text" name="comment"></br>
 
-      アニメタイトル予測変換機能をつける<input type="text" name="title">
+      アニメタイトル予測変換機能をつける<input type="text" name="title"></br>
       <input type="submit" value="新規投稿"></br>      
     </form>
 
