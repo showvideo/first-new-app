@@ -15,8 +15,7 @@
       <a style="padding-top:30px;">コメント<br>
         <input type="text" name="comment"></br>
 
-      アニメタイトル予測変換機能をつける<input type="text" name="title"></br>
-      <input type="submit" value="新規投稿"></br>      
+      アニメタイトル予測変換機能をつける   
     </form>
     
     <?php
