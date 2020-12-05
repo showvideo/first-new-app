@@ -1,4 +1,5 @@
-<?php
+<div style="width:400px;border:rdge;">
+  <?php
   $sql = 'SELECT name,old,prefecure,message,anime_title FROM user WHERE 1';
   $stmt = getDB()->prepare($sql);
   $stmt->execute();
@@ -19,3 +20,4 @@ foreach($titles as $title) {
   
 }
 ?>
+</div>
