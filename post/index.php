@@ -9,11 +9,11 @@
     <div style = "margin-left:10px;width:403px;padding-left:20px;">
      
     <form action="" method="post">
-      名前<input type="text" name="name">
+      名前 <input style="width:60px;" type="text" name="name">
       歳<input style="width:30px;" type="text" name="old"></br>
       <a style = "padding-top:20px;">お住まい<?php require('../parts/prefecturs.php'); ?></a></br>
       <a style="padding-top:30px;">コメント<br>
-        <input type="text" name="comment"></br>
+        <input type="text" name="comment">
 
       アニメタイトル予測変換機能をつける   
       <input type="submit" value="新規登録">
