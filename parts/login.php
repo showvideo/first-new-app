@@ -2,13 +2,14 @@
     require('head.php');
 ?>
 <?php
-   include($_SERVER['DOCUMENT_ROOT'] . '/anime/func/function.php') 
+   require('../func/function.php') 
 ?>     
 <?php
 if(isset($_POST['login'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
         try{
+        $db = getDB();
         $sql = 'SELECT * FROM users WHERE email=:eamil and pass=:pass';
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
@@ -19,8 +20,8 @@ if(isset($_POST['login'])) {
         $stmt = null;
             
         if (count($result)>0) {
-            header('Location:https://animech2.herokuapp.com/parts/signup.php');
-            exit
+        header('Location:'../index.html');
+        exit;
         } else {
             $err_msg = "ユーザー名またはパスワードが誤りです。";
         } catch (PDOException $e) {
