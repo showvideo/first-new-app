@@ -1,4 +1,4 @@
-<div style="width:400px;border:ridge;">
+
   <?php
   $sql = 'SELECT name,old,prefecure,message,anime_title FROM user WHERE 1';
   $stmt = getDB()->prepare($sql);
@@ -9,15 +9,14 @@ $titles = array_slice($result,0,100);
 foreach($titles as $title) {
   
   p(' 
-    
+    <div style="width:400px;border:ridge;"
     <a>'."".$title["name"].'</a>
     <a>'."".$title["old"].'</a>
     <a>'."".$title["prefecure"].'</a>
     <p>'."".$title["message"].'</P>
     <a style = "border-top:ridge;padding-left:250px;font-size:15px;">'."".$title["anime_title"].'</a>
-    </br>
+    </div></br>
   ');
   
 }
 ?>
-</div>
