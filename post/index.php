@@ -21,7 +21,7 @@
     人気ｱﾆﾒﾀｲﾄﾙ</br>
     <div>
         <?php
-        require('parts/anime_title.php')
+        require('../parts/anime_title.php');
         ?>
     </br>
 
