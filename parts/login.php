@@ -45,9 +45,7 @@ if(isset($_POST['login'])) {
 <div style = "display:inline-block;vertical-align:top;border:ridge;height:700px;width:194px;">
     最新ｱﾆﾒのTL</br>
     <div>
-        <?php
-        require('tl.php')
-        ?>
+
     </div>
 
 </div>
