@@ -9,7 +9,13 @@
   $anime_titles = array_slice($result,0,100);
   foreach($anime_titles as $anime_title) {
       p(' 
-    <a href="" style="text-decoration:none;">＃'."".$anime_title['title'].'</a>
+    <a href="" style="text-decoration:none;
+  color: #000;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+
+}
+">＃'."".$anime_title['title'].'</a>
       ');
   }
 
