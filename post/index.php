@@ -26,7 +26,7 @@
         $comment = $_POST['comment'];
 
 
-        $sql = 'INSERT INTO (name,old,comment)
+        $sql = 'INSERT INTO user(name,old,comment)
                 VALUES(:name,:old,:comment)';
         $stmt = getDB()->prepare($sql)
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
