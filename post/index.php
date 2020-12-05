@@ -16,6 +16,7 @@
     </form>
 
     </div>
+</div>
       
     <div style = "display:inline-block;vertical-align:top;border:ridge;height:700px;width:194px;">
     人気ｱﾆﾒﾀｲﾄﾙ</br>
@@ -24,5 +25,5 @@
         require('../parts/anime_title.php');
         ?>
     </br>
-
+  </div>
 </div>
