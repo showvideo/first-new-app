@@ -9,7 +9,7 @@ $titles = array_slice($result,0,100);
 foreach($titles as $title) {
   
   p(' 
-    <div style="width:400px;border:ridge;"
+    <div style="width:450px;border:ridge;"
     <a>'."".$title["name"].'</a>
     <a>'."".$title["old"].'</a>
     <a>'."".$title["prefecure"].'</a>
