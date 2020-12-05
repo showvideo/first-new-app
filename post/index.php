@@ -2,9 +2,10 @@
   require('../parts/head.php');
   require('../func/function.php');
 ?>
+<a style="font-size:25px;text-align;center;">投稿作成</a>
 <div style = "display:inline-block;border:ridge;margin-left:414px;width:450px;">
 
-    <a style="font-size:25px;text-align;center;">投稿作成</a>
+    
     <div style = "margin-left:10px;width:403px;padding-left:20px;">
      
     <form action="" method="post">
