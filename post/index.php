@@ -12,8 +12,7 @@
       名前 <input style="width:60px;" type="text" name="name">
       歳<input style="width:30px;" type="text" name="old"></br>
       <a style = "padding-top:20px;">お住まい<?php require('../parts/prefecturs.php'); ?></a></br>
-      <a style="padding-top:30px;">コメント<br>
-        <input type="text" name="comment">
+      <a style="padding-top:30px;">コメント<br><input type="text" name="messagme">
 
       アニメタイトル予測変換機能をつける   
       <input type="submit" value="新規登録">
@@ -25,16 +24,15 @@
         $name = $_POST['name'];
         $old = $_POST['old'];
         $pref = $_POST['pref'];
-        $comment = $_POST['comment'];
-
-
-        $sql = 'INSERT INTO user(name,old,pref,comment)
-                VALUES(:name,:old,:pref,:comment)';
+        $message = $_POST['message'];
+        
+        $sql = 'INSERT INTO user(name,old,pref,message)
+                VALUES(:name,:old,:pref,:message)';
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
         $stmt->bindParam(':old', $old, PDO::PARAM_STR);
         $stmt->bindParam(':pref', $pref, PDO::PARAM_STR);
-        $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
+        $stmt->bindParam(':message', $message, PDO::PARAM_STR);
         $stmt->execute();
       } catch(PDOException $e) {
         exit('ﾃﾞｰﾀﾍﾞｰｽに接続できませんでした。　' . $e->getMessage());
