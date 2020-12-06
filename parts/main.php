@@ -12,7 +12,7 @@ foreach($titles as $title) {
     <div style="width:450px;border:ridge;"
     <a>'."".$title["name"].'</a>
     <a>'."".$title["old"].'</a>
-    <a>'."".$title["prefecure"].'</a>
+    <a>'."".$title["pref"].'</a>
     <p>'."".$title["message"].'</P>
     <a style = "border-top:ridge;padding-left:250px;font-size:15px;">'."".$title["anime_title"].'</a>
     </div></br>
