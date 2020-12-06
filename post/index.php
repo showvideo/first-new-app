@@ -1,6 +1,6 @@
 <?php
-  require('../parts/head.php');
-  require('../func/function.php');
+  require_once('../parts/head.php');
+  require_once('../func/function.php');
 ?>
 
 <div style = "display:inline-block;border:ridge;margin-left:414px;width:450px;">
@@ -47,7 +47,7 @@
     <a style="text-align:center;">ーﾀｲﾄﾙー<a></br>
     <div>
         <?php
-        require('../parts/anime_title.php');
+        require_once('../parts/anime_title.php');
         ?>
     </br>
   </div>
