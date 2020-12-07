@@ -14,13 +14,13 @@
     <tr>
    
         <?php
-            $sql = "SELECT name, visit, notices FROM user WHERE 1";
+            $sql = "SELECT id,name, visit, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
-
-        ?>
+            $id = $user['id'];       
+        ?>          
             <tr>
                 <td><?php echo $user['name']; ?></td>
                 <td><?php echo $user['visit']; ?></td>
@@ -29,6 +29,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <?php var_dump($id); ?>
             </tr>
         <?php
         }
