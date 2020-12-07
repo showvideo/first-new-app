@@ -21,14 +21,12 @@
             var_dump ($result);
 
             foreach($result as $user){
-            echo ('<td>'."".$user["name"].'</td></br>');
-            }
         ?>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+            <tr>
+                <td><?php echo $user['name']; ?></td>
+            </tr>
+        <?php
+        }
+        ?>
     </tr>
 </table>
