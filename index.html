@@ -14,10 +14,10 @@
     <tr>
    
         <?php
-            $sql = "SELECT name FROM user WHERE 1";
+            $sql = "SELECT name, visit, exit, vital, bath, meal, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
-            $result = $stmt->fetchAll();
+            $result = $stmt->fetchA'll();
             foreach($result as $user){
             var_dump ($user);
         ?>
