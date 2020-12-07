@@ -14,7 +14,7 @@
     <tr>
    
         <?php
-            $sql = "SELECT name, visit, exit FROM user WHERE 1";
+            $sql = "SELECT name, visit, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
@@ -24,7 +24,7 @@
             <tr>
                 <td><?php echo $user['name']; ?></td>
                 <td><?php echo $user['visit']; ?></td>
-                <td><?php echo $user['exit']; ?></td>
+                <td><?php echo $user['notices']; ?></td>
             </tr>
         <?php
         }
