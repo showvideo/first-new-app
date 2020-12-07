@@ -18,8 +18,6 @@
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
-            var_dump ($result);
-
             foreach($result as $user){
         ?>
             <tr>
