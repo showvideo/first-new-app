@@ -17,7 +17,7 @@
             $sql = "SELECT name, visit, exit, vital, bath, meal, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
-            $result = $stmt->fetchA'll();
+            $result = $stmt->fetchAll();
             foreach($result as $user){
             var_dump ($user);
         ?>
