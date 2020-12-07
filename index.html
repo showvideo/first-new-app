@@ -12,11 +12,14 @@
         <th>特記事項</th>
     </tr>
     <tr style="height:50px;">
-        <td>
+   
         <?php
-            $sql = "SELECT FROM user
+            $sql = "SELECT name FROM user WHERE 1";
+            $stmt = getDB()->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            echo $result;
         ?>
-        </td>
         <td></td>
         <td></td>
         <td></td>
