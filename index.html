@@ -24,7 +24,7 @@
             <tr>
                 <td><?php echo $user['name']; ?></td>
                 <td><?php echo $user['visit']; ?></td>
-                <td><?php echo $user['exit']; ?></td>
+                <td><?php if(isset($user['exit']) {echo $user['exit'];} ?></td>
             </tr>
         <?php
         }
