@@ -19,10 +19,16 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
+            var_dump ($user);
         ?>
             <tr>
                 <td><?php echo $user['name']; ?></td>
-
+                <td><?php echo $user['visit']; ?></td>
+                <td><?php echo $user['exit']; ?></td>
+                <td><?php echo $user['vital']; ?></td>
+                <td><?php echo $user['bath']; ?></td>
+                <td><?php echo $user['meal']; ?></td>
+                <td><?php echo $user['notices']; ?></td>
             </tr>
         <?php
         }
