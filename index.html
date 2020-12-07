@@ -18,7 +18,7 @@
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
-            echo $result;
+            var_dump $result;
         ?>
         <td></td>
         <td></td>
