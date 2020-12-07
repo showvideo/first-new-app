@@ -19,6 +19,10 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             var_dump ($result);
+
+            foreach($result as $user){
+            echo $user['name'];
+            }
         ?>
         <td></td>
         <td></td>
