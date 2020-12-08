@@ -23,7 +23,7 @@
         ?>          
             <tr>
                 <td><?php echo $user['name']; ?></a></td>
-                <td><?php if(!isset($user['visit'])){ header('Location:post/index.php'); } </td>
+                <td><?php if(!isset($user['visit'])){ echo null; } </td>
                 <td><?php echo $user['notices']; ?></td>
                 <td></td>
                 <td></td>
