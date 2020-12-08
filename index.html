@@ -27,7 +27,7 @@
                 <td><?php echo $user['notices']; ?><?php echo $id; ?></td>
                 <td></td>
                 <td><?php if(empty($user['exit'])){ ?><a href="input/index.php" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['exit'];} ?>
-                <form action="input/index.php"><input type="hidden" value="echo $id"></form></td>
+                <form action="input/index.php"　method="post"><input type="hidden" value="echo $id"></form></td>
                 <td></td>
                 <td></td>
                 <?php var_dump($id); ?>
