@@ -22,7 +22,7 @@
             $id = $user['id'];       
         ?>          
             <tr>
-                <td><?php echo $user['name']; ?><input type="hidden" value="$user['id']><?php echo $id; ?>"</a></td>
+                <td><?php echo $user['name']; ?><?php echo $id; ?>"</td>
 <td><?php if(!isset($user['visit'])){ ?> <a href="post/index.php" style="display: block;width:100%;height: 100%;"><?php echo 'こんにちは';?></a> <?php } else {echo $user['visit'];} ?></td>
                 <td><?php echo $user['notices']; ?></td>
                 <td></td>
