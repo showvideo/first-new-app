@@ -1,2 +1,2 @@
 <input type="text">
-<?php echo $id; ?>
+<?php var_dump($id); ?>
