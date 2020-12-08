@@ -3,4 +3,4 @@
 <?php $id = getInfomation(); ?>
 <?php echo $id; ?>
 
-入浴<?php if(empty($user['bath'])) {?><input type="text"> <?php } ?> 
+入浴<?php if(empty($user['visit'])) {?><input type="text"> <?php } ?> 
