@@ -20,7 +20,7 @@
             $id = $user['id'];   
         ?>          
             <tr>
-                <td><?php if(empty($user['name'])){ echo null; } else { echo $user['name']; } ?></td>
+                <td><?php if(empty($user['name'])){ echo null; } else { ?><a href="infomaion/index.php"><?php echo $user['name']; ?></a><?php } ?></td>
                 <td><?php if(empty($user['visit'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['visit'];} ?></td>
                 <td></td>
                 <td></td>
