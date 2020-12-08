@@ -14,7 +14,7 @@
     <tr>
    
         <?php
-            $sql = "SELECT id,name, visit, notices FROM user WHERE 1";
+            $sql = "SELECT id,name, visit, notices, bath FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
