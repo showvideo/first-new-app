@@ -23,7 +23,7 @@
         ?>          
             <tr>
                 <td><?php echo $user['name']; ?></a></td>
-                <td><?php if(!isset($user['visit'])){ echo null; } else {echo $user['visit'];} ?></td>
+<td><?php if(!isset($user['visit'])){ ?> <a href=""><?php echo null;?></a> <?php } else {echo $user['visit'];} ?></td>
                 <td><?php echo $user['notices']; ?></td>
                 <td></td>
                 <td></td>
