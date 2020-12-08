@@ -24,10 +24,10 @@ function getDB() {
         return $_SERVER["REQUEST_URI"];
     }
 
-    function getinfomation() {
+    function getInfomation() {
         $urlarray = explode('/', getURL());
-        $aninon = $urlarray[3];
-        return $aninon;
+        $ID = $urlarray[3];
+        return $ID;
     }
     
 
