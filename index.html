@@ -19,7 +19,8 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
-            $id = $user['id'];       
+            $id = $user['id'];    
+            }
         ?>          
             <tr>
                 <td><?php if(empty($user['name'])){ echo null; } else { echo $user['name']; } ?></td>
@@ -30,8 +31,5 @@
                 <td></td>
                 <td></td>
             </tr>
-        <?php
-        }
-        ?>
     </tr>
 </table>
