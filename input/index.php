@@ -1,4 +1,4 @@
-
+<body style="border:ridge;width:500px;">
 <?php require_once('../func/function.php'); ?>
 <?php $id = getInfomation(); ?>
 <?php echo $id; ?>
@@ -12,3 +12,4 @@
 特記事項<?php if(empty($user['notices'])) {?><input type="text" name="notices"> <?php } ?> 
 <input type="submit" name="submit" value="送信"> 
 </form>
+</body>
