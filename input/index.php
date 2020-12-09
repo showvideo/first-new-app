@@ -1,7 +1,8 @@
-<body style="border:ridge;width:500px;">
+
 <?php require_once('../func/function.php'); ?>
 <?php $id = getInfomation(); ?>
 <?php echo $id; ?>
+<div style-"border:ridge;">
 <form action=""method="post">
 来所<?php if(empty($user['visit'])) {?><input type="text" name="visit"> <?php } ?> 
 <?php if(isset($_POST['submit'])) {
@@ -13,4 +14,4 @@
 特記事項<?php if(empty($user['notices'])) {?><input type="text" name="notices"> <?php } ?> 
 <input type="submit" name="submit" value="送信"> 
 </form>
-</body>
+</div>
