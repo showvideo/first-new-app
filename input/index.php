@@ -17,7 +17,7 @@
 <?php if(isset($_POST['submit'])) { 
   $sql = 'INSERT INTO user(visit) VALUES(:visit)';
   $stmt = getDB()->prepare($sql);
-  $stmt->bindParam(:visit, $visit, PDO_PARAM_STR);
+  $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
   $stmt->execute();
 }
 ?>
