@@ -1,4 +1,4 @@
-<body style="border:ridge;width:500px;">
+
 <?php require_once('../func/function.php'); ?>
 <?php $id = getInfomation(); ?>
 
@@ -13,7 +13,7 @@
 
 ?>
 <form action="" method="post">
-<?php if(!isset($user['visit'])) { echo null; } else {?> 来所:<input type="text" name="visit"></br> <?php } ?> 
+<?php if(!isset($user['visit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:500px;">来所:<input type="text" name="visit"></br></div> <?php } ?> 
 <?php if(isset($_POST['submit'])) { 
   $sql = 'UPDATE user SET visit=:visit WHERE id= :id';
   $stmt = getDB()->prepare($sql);
