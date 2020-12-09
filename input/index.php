@@ -19,6 +19,7 @@
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(:visit, $visit, PDO_PARAM_STR);
   $stmt->execute();
+}
 ?>
 退所<?php if(empty($user['exit'])) {?><input type="text" name="exit"> <?php } ?> 
 バイタル<?php if(empty($user['vital'])) {?><input type="text" name="vital"> <?php } ?> 
