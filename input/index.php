@@ -15,7 +15,7 @@
 <form action=""method="post">
 来所<?php if(empty($user['visit'])) {?><input type="text" name="visit"> <?php } ?> 
 <?php if(isset($_POST['submit'])) { 
-  $sql = 'UPDATE user SET visit=:visit WHERE id = :id';
+  $sql = 'INSERT INTO user(id, visit) VALUES(:id, :visit) WHERE id=:id';
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR);
   $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
