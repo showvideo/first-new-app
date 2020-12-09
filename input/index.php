@@ -23,10 +23,10 @@
 }
 ?>
 退所<?php if(isset($user['exit'])) { echo null; } else {?> <input type="text" name="exit"> <?php } ?> 
-バイタル<?php if(empty($user['vital'])) {?><input type="text" name="vital"> <?php } ?> 
-入浴<?php if(empty($user['bath'])) {?><input type="text" name="bath"> <?php } ?> 
-食事<?php if(empty($user['meal'])) {?><input type="text" name="meal"> <?php } ?> 
-特記事項<?php if(empty($user['notices'])) {?><input type="text" name="notices"> <?php } ?> 
+バイタル<?php if(isset($user['vital'])) { echo null; } else {?> <input type="text" name="vital"> <?php } ?>
+入浴<?php if(isset($user['bath'])) { echo null; } else {?> <input type="text" name="bath"> <?php } ?>
+食事<?php if(isset($user['meal'])) { echo null; } else {?> <input type="text" name="meal"> <?php } ?>
+特記事項<?php if(isset($user['notices'])) { echo null; } else {?> <input type="text" name="notices"> <?php } ?>
 <input type="submit" name="submit" value="送信"> 
 </form>
 </body>
