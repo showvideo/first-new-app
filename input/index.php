@@ -13,7 +13,7 @@
 
 ?>
 <form action="" method="post">
-来所<?php if(!isset($user['visit'])) { echo null; } else { <?php <input type="text" name="visit"> ?>} ?> 
+来所<?php if(!isset($user['visit'])) { echo null; } else {?> <input type="text" name="visit"> <?php } ?> 
 <?php if(isset($_POST['submit'])) { 
   $sql = 'UPDATE user SET visit=:visit WHERE id= :id';
   $stmt = getDB()->prepare($sql);
