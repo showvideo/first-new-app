@@ -1,3 +1,4 @@
+<?php $id = getInfomation(); ?>
 <div style="border:ridge;width:500px;height:700px;">
      
 <?php
