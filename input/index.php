@@ -22,7 +22,7 @@
   $stmt->execute();
 }
 ?>
-<?php if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;">退所:<input type="text" name="exit"></br></div> <?php } ?> 
+<?php if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:400px;">退所:<input type="text" name="exit"></br></div> <?php } ?> 
 <?php if(isset($user['vital'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;">バイタル:<input type="text" name="vital" pattern="^[0~9]+$"></div></br> <?php } ?>
 <?php if(isset($user['bath'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;">入浴:<input type="text" name="bath"></br></div> <?php } ?>
 <?php if(isset($user['meal'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;">食事:<input type="text" name="meal"></br></div> <?php } ?>
