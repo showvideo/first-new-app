@@ -22,7 +22,7 @@
   $stmt->execute();
 }
 ?>
-退所<?php if(!isset($user['exit'])) { echo null; } else {?> <input type="text" name="exit"> <?php } ?> 
+退所<?php if(isset($user['exit'])) { echo null; } else {?> <input type="text" name="exit"> <?php } ?> 
 バイタル<?php if(empty($user['vital'])) {?><input type="text" name="vital"> <?php } ?> 
 入浴<?php if(empty($user['bath'])) {?><input type="text" name="bath"> <?php } ?> 
 食事<?php if(empty($user['meal'])) {?><input type="text" name="meal"> <?php } ?> 
