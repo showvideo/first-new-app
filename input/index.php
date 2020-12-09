@@ -1,5 +1,5 @@
-<head><?php require_once('../func/function.php'); ?></head>
 <body style="border:ridge;width:500px;">
+<?php require_once('../func/function.php'); ?>
 <?php $id = getInfomation(); ?>
 <?php echo $id; ?>
 <form action=""method="post">
