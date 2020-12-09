@@ -4,8 +4,7 @@
 <?php echo $id; ?>
 <form action=""method="post">
 来所<?php if(empty($user['visit'])) {?><input type="text" name="visit"> <?php } ?> 
-/*<?php if(isset($_POST['submit'])) {
-  $sql = 'INSERT INTO user(visit) VALUES(:visit)?>*/
+<?php /* if(isset($_POST['submit'])) { $sql = 'INSERT INTO user(visit) VALUES(:visit) */?>
 退所<?php if(empty($user['exit'])) {?><input type="text" name="exit"> <?php } ?> 
 バイタル<?php if(empty($user['vital'])) {?><input type="text" name="vital"> <?php } ?> 
 入浴<?php if(empty($user['bath'])) {?><input type="text" name="bath"> <?php } ?> 
