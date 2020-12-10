@@ -11,6 +11,9 @@
      $result = $stmt->fetchAll();
      foreach($result as $user) {
           echo $user['name'];
+          echo $user['old'];
+          echo $user['pref'];
+          echo $user['date'];
      }
 ?>     
 </div>  
