@@ -21,7 +21,7 @@
         ?>
             <tr>
                 <?php echo $user['id']; ?>
-                <td><?php /*if(empty($user['name'])){  ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } else { echo null; } */?></td>
+                <td><?php if(empty($user['name'])){  ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
                 <td><?php if(empty($user['visit'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['visit'];} ?></td>
                 <td><?php if(empty($user['exit'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['exit'];} ?></td>
                 <td><?php if(empty($user['vital'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['vital'];} ?></td>
