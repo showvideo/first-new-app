@@ -13,7 +13,7 @@
           ?><a style="font-size:20px;"><?php echo $user['name'] ?></a></br><?php ;
           ?><a><?php echo $user['old'] ?></a><?php ;
           ?><a><?php echo $user['plef'] ?></a><?php ;
-          ?><a><?php echo $user['name'] ?></a><?php ;
+          ?><a><?php echo $user['date'] ?></a><?php ;
      }
 ?>     
 </div>  
