@@ -10,7 +10,7 @@
      $stmt->execute();
      $result = $stmt->fetchAll();
      foreach($result as $user) {
-          ?><a><?php echo $user['name'] ?></a><?php ;
+          ?><a style="font-size:20px;"><?php echo $user['name'] ?></a></br><?php ;
           ?><a><?php echo $user['old'] ?></a><?php ;
           ?><a><?php echo $user['plef'] ?></a><?php ;
           ?><a><?php echo $user['name'] ?></a><?php ;
