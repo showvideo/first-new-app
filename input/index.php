@@ -20,10 +20,10 @@
 <?php if(isset($user['bath'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">入浴:<input type="text" name="bath"></br></div> <?php } ?>
 <?php if(isset($user['meal'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">食事:<input type="text" name="meal"></br></div> <?php } ?>
 <?php if(isset($user['notices'])) { echo null; } else {?><div style="display:inline-block;border:ridge;width:490px;height:600px;">特記事項:<input type="text" name="notices"></br></div> <?php } ?>
-<input type="submit" name="submit" value="送信"> 
+<input type="submit" name="submit" value="送信"> 　
 </form>
 <?php if(isset($_POST['submit'])) { 
-  $sql = "REPLACE INTO user(visit,vital,bath,meal,notices) VALUES(:visit,:vital,:bath,:meal,:notices)";
+  $sql = "REPLACE INTO user(visit,vital,bath,meal,notices) VALUES(:visit,:vital,:bath,:meal,:notices) SELECT id=:id";
   /*$sql = "UPDATE user SET visit=':visit',vital=':vital',bath=':bath',meal=':meal',notices=':notices' WHERE id= ':id'";*/
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR);
