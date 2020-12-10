@@ -26,7 +26,7 @@
                 <td><?php if(empty($user['vital'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['vital'];} ?></td>
                 <td><?php if(empty($user['bath'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['bath'];} ?></td>
                 <td><?php if(empty($user['meal'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['meal'];} ?></td>
-                <td><?php if(empty($user['notices'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo "済"} ?></td>
+                <td><?php if(empty($user['notices'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo "(済)";} ?></td>
             </tr>
         <?php
             }
