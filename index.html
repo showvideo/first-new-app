@@ -18,6 +18,7 @@
             $result = $stmt->fetchAll();
             foreach($result as $user){
             $id = $user['id'];   
+            }
         ?>
         <?php
             $sql = "SELECT id, name, visit FROM user WHERE id=:id";
