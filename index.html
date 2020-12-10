@@ -12,24 +12,13 @@
 
    
         <?php
-            $sql = "SELECT id, name, visit FROM user WHERE 1";
+            $sql = "SELECT id, name, visit, exit, vital, bath, meal, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
             $id = $user['id'];   
-            }
         ?>
-        <?php
-            $sql = "SELECT id, name, visit FROM user WHERE id=:id";
-            $stmt = getDB()->prepare($sql);
-            $stmt = bindParam(':id', $id, PDO::PARAM_STR);
-            $stmt->execute();
-            $result = $stmt->fetchAll();
-            foreach($result as $user){
-            $id = $user['id'];   
-        ?>
-        <?
             <tr>
                 <?php echo $user['id']; ?>
                 <td><?php if(empty($user['name'])){ echo null; } else { ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } ?></td>
