@@ -12,7 +12,7 @@
 
    
         <?php
-            $sql = "SELECT id, name, visit FROM user WHERE 1";
+            $sql = "SELECT id, name, visit FROM user WHERE id=:id";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
