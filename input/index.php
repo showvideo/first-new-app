@@ -5,7 +5,7 @@
 <?php
   
   $visit = $_POST['visit'];
-  $exit = $_POST['exit'];
+  /*$exit = $_POST['exit'];*/
   $vital = $_POST['vital'];
   $bath = $_POST['bath'];
   $meal = $_POST['meal'];
@@ -24,7 +24,7 @@
 </form>
 <?php if(isset($_POST['submit'])) { 
   /*$sql = "INSERT INTO user(visit,exit,vital,bath,meal,notices) VALUES(':visit',':exit',':vital',':bath',':meal',':notices') WHERE id= :'id'";*/
-  $sql = "UPDATE user SET visit=':visit',exit=':exit',vital=':vital',bath=':bath',meal=':meal',notices=':notices' WHERE id= ':id'";
+  $sql = "UPDATE user SET visit=':visit',vital=':vital',bath=':bath',meal=':meal',notices=':notices' WHERE id= ':id'";
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR);
   $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
