@@ -9,9 +9,6 @@
      foreach($result as $user){
      $id = $user['id'];   
 */?>     
-<?php 
-  $name = $_POST['name'];
-  echo $namel;
-?>
+
 
 </div>  
