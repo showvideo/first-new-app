@@ -14,6 +14,6 @@
      }
 ?>     
 <?php
-     echo $name;
+     echo $id;
 ?>
 </div>  
