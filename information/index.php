@@ -10,10 +10,10 @@
      $stmt->execute();
      $result = $stmt->fetchAll();
      foreach($result as $user) {
-          echo $user['name'];
-          echo $user['old'];
-          echo $user['pref'];
-          echo $user['date'];
+          ?><a><?php echo $user['name'] ?></a><?php ;
+          ?><a><?php echo $user['old'] ?></a><?php ;
+          ?><a><?php echo $user['plef'] ?></a><?php ;
+          ?><a><?php echo $user['name'] ?></a><?php ;
      }
 ?>     
 </div>  
