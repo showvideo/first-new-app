@@ -9,7 +9,7 @@
   $vital = $_POST['vital'];
   $bath = $_POST['bath'];
   $meal = $_POST['meal'];
-  $notiices = $_POST['notices'];
+  $notices = $_POST['notices'];
 
 ?>
 <form action="" method="post">
