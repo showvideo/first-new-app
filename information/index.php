@@ -9,9 +9,10 @@
      $stmt->bindParam(':id', $id, PDO::PARAM_STR);
      $stmt->execute();
      $result = $stmt->fetchAll();
-     foreach($result as $user)
+     foreach($result as $user) {
+          $name = $user['name'];
 ?>     
 <?php
-     echo $user['name'];
+     echo $name;
 ?>
 </div>  
