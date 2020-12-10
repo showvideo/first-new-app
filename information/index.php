@@ -11,9 +11,9 @@
      $result = $stmt->fetchAll();
      foreach($result as $user) {
           ?><a style="font-size:20px;"><?php echo $user['name'] ?></a></br><?php ;
-          ?><a><?php echo $user['old'] ?></a><?php ;
-          ?><a><?php echo $user['plef'] ?></a><?php ;
-          ?><a><?php echo $user['date'] ?></a><?php ;
+          ?><a>歳<?php echo $user['old'] ?></a></br><?php ;
+          ?><a>住所/<?php echo $user['plef'] ?></a></br><?php ;
+          ?><a>利用日/<?php echo $user['date'] ?></a></br><?php ;
      }
 ?>     
 </div>  
