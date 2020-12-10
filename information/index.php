@@ -1,8 +1,8 @@
 <?php require_once('../func/function.php'); ?>
-<?php $id = getInformation(); ?>
+<?php $id = getInfomation(); ?>
 
 <div style="border:ridge;width:500px;height:700px;">     
-<?php
+<?php/*
      $id = $user['id'];   
      $sql = "SELECT id, name, old, pref, date FROM user WHERE id=:id";
      $stmt = getDB()->prepare($sql);
@@ -11,7 +11,7 @@
      $result = $stmt->fetchAll();
      foreach($result as $user) {
           $name = $user['name'];
-     }
+     }*/
 ?>     
 <?php
      echo $id;
