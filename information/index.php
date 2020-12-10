@@ -11,6 +11,7 @@
      $result = $stmt->fetchAll();
      foreach($result as $user) {
           $name = $user['name'];
+     }
 ?>     
 <?php
      echo $name;
