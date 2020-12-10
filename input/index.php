@@ -15,8 +15,8 @@
 <form action="" method="post">
 <?php if(isset($user['visit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br></div> <?php } ?> 
 
-<?php if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } ?> 
-<?php if(isset($user['vital'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital" pattern="^[0~9]+$"></div></br> <?php } ?>
+<?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
+<?php if(isset($user['vital'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br> <?php } ?>
 <?php if(isset($user['bath'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">入浴:<input type="text" name="bath"></br></div> <?php } ?>
 <?php if(isset($user['meal'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">食事:<input type="text" name="meal"></br></div> <?php } ?>
 <?php if(isset($user['notices'])) { echo null; } else {?><div style="display:inline-block;border:ridge;width:490px;height:600px;">特記事項:<input type="text" name="notices"></br></div> <?php } ?>
@@ -28,7 +28,7 @@
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR);
   $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
-  $stmt->bindParam(':exit', $exit, PDO::PARAM_STR);
+  /*$stmt->bindParam(':exit', $exit, PDO::PARAM_STR);*/
   $stmt->bindParam(':vital', $vital, PDO::PARAM_STR);
   $stmt->bindParam(':bath', $bath, PDO::PARAM_STR);
   $stmt->bindParam(':meal', $meal, PDO::PARAM_STR);
