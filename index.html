@@ -12,7 +12,7 @@
 
    
         <?php
-            $sql = "SELECT id, name, visit, exit, vital FROM user WHERE 1";
+            $sql = "SELECT id, name, visit FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
@@ -21,7 +21,7 @@
         ?>
             <tr>
                 <?php echo $user['id']; ?>
-                
+                <td><?php /*if(empty($user['name'])){ echo null; } else { ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } */?></td>
                 <td><?php if(empty($user['visit'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['visit'];} ?></td>
                 <td><?php if(empty($user['exit'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['exit'];} ?></td>
                 <td><?php if(empty($user['vital'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['vital'];} ?></td>
