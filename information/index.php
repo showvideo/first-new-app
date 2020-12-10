@@ -1,5 +1,5 @@
 <?php require_once('../func/function.php'); ?>
-<?php $id = getInfomation(); ?>
+<?php $id = getInformation(); ?>
 
 <div style="border:ridge;width:500px;height:700px;">     
 <?php
