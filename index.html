@@ -1,5 +1,4 @@
 <?php require_once("func/function.php"); ?>
-<?php $id = getInfomation() ?>
 <table border="1" width="600" cellspacing="0">
     <tr>
         <th>名前</th>
@@ -13,16 +12,16 @@
 
    
         <?php
-            $sql = "SELECT id, name, visit FROM user WHERE id=:id";
+            $sql = "SELECT id, name, visit FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
-            $stmt=bindParam(':id', $id, PDO::PARAM_STR);
+            
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
             $id = $user['id'];   
         ?>          
             <tr>
-                <?php echo $user['name']; ?>
+                <?php echo $user['id']; ?>
                 <td><?php if(empty($user['name'])){ echo null; } else { ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } ?></td>
                 <td><?php if(empty($user['visit'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['visit'];} ?></td>
                 <td><?php if(empty($user['exit'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['exit'];} ?></td>
