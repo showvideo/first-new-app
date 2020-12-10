@@ -15,7 +15,7 @@
 <form action="" method="post">
 <?php if(isset($user['visit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br></div> <?php } ?> 
 <?php if(isset($_POST['submit'])) { 
-  $sql = 'UPDATE user SET visit=':visit',exit=':exit',vital=':vital',bath=':bath',meal=':meal',notices=':notices' WHERE id= :id';
+  $sql = "UPDATE user SET visit=':visit',exit=':exit',vital=':vital',bath=':bath',meal=':meal',notices=':notices' WHERE id= ':id'";
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR);
   $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
