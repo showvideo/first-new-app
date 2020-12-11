@@ -28,9 +28,9 @@
                 <td><?php if(!empty($user['name'])){  ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
                 
                 <td><?php if(empty($user['visit'])){ ?>
-                <form name="form" method="post" action="index.php/<?php echo $id ?>/">
-                <input type="hidden" name="posts" value="100">
-                <a href="javascript:form.submit()" style="opacity:0;"><?php echo "opacity";?>input/index.php/<?php echo $id ?>/</a>    
+                <form name="form" method="post" action="input/index.php/<?php echo $id ?>/">
+                    <input type="hidden" name="posts" value="100">
+                    <a href="javascript:form.submit()" style="opacity:0;"><?php echo "opacity";?>"input/index.php/"<?php echo $id ?>/</a>    
                 </form>
                 
                 
