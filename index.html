@@ -30,9 +30,9 @@
                 <td><?php if(empty($user['visit'])){ ?>
                 
                        
-                           <form style="display:none;" name="form_hoge" action="input/index.php/<?php echo $id ?>/" method="post">
-                            <input type="hidden" name="posts" value="100">
-                            <a href="input/index.php/<?php echo $id ?>/" onclick="document.form_hoge.submit()" style="opacity:0;"><input type="submit" value="佐藤"></a>
+                           <form style="display:none;" name="form_hoge" action="input/index.php/<?php echo $id ?>/" method="post">                           
+                           <a href="input/index.php/<?php echo $id ?>/" onclick="document.form_hoge.submit()" style="opacity:0;"><input type="submit" value="佐藤"></a>
+                           <input type="hidden" name="posts" value="100">
                            </form>
                 
                 <?php }else { echo $user['visit'];} ?></td>
