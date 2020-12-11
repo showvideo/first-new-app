@@ -26,11 +26,13 @@
                 <form method="post" action="input/index.php"><input type="hidden" name="post" value="post"></form>
                 <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['visit'];} ?></td>
                 
-                <td><?php if(empty($user['exit'])){ ?>
-                <form method="post" action="input/index.php"><input type="hidden" name="post1" value="post"></form>
-                <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['exit'];} ?></td>
+                <td><?php /*if(empty($user['exit'])){ ?>
+                <form method="post" action="input/index.php"><input type="hidden" name="post1" value="post1"></form>
+                <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['exit'];} */?></td>
                 
-                <td><?php if(empty($user['vital'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['vital'];} ?></td>
+                <td><?php if(empty($user['vital'])){ ?>
+                <form method="post" action="input/index.php"><input type="hidden" name="post2" value="post2"></form>
+                <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['vital'];} ?></td>
                 <td><?php if(empty($user['bath'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['bath'];} ?></td>
                 <td><?php if(empty($user['meal'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['meal'];} ?></td>
                 <td><?php if(empty($user['notices'])){ ?><a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo "(済)";} ?></td>
