@@ -1,4 +1,6 @@
-
+<head>
+    <script type="text/javascript"></script>
+</head>    
 <?php require_once('../func/function.php'); ?>
 <?php $id = getInfomation(); ?>
 
