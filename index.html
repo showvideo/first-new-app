@@ -29,12 +29,10 @@
                 
                 <td><?php if(empty($user['visit'])){ ?>
                 
-                    
-                    <a href="input/index.php/<?php echo $id ?>/" 
-                    onclick="<form name="form" method="post" action="input/index.php/<?php echo $id ?>/"><input type="hidden" name="posts" value="100"></form>"
-                    style="opacity:0;"><?php echo "opacity";?></a>    
                 
-                
+                    <form name="form1" method="post" action="input/index.php/<?php echo $id ?>/">
+                    <a href="#" onClick="document.form1.submit();">？？？</a>
+                    </form>
                 
                 <?php }else { echo $user['visit'];} ?></td>
                 
