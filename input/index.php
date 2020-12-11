@@ -49,7 +49,6 @@
   $data[]=$visit;
   $data[]=$id;
   $stmt->execute($data);
-  getDB() = null;
   header('Location: https://animech2.herokuapp.com/');
   exit;
 }
