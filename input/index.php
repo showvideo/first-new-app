@@ -23,12 +23,12 @@
 <input type="submit" name="submit" value="送信"> 　
 </form>
 <?php if(isset($_POST['submit'])) { 
-  $sql = "SELECT id FROM user WHERE id=:id";
+  /*$sql = "SELECT id FROM user WHERE id=:id";
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR);
   $result = $stmt->execute()
   return $result; 
-}
+}*/
   
   /*$sql = "INSERT INTO user(id,visit,vital,bath,meal,notices) VALUES(:id,:visit,:vital,:bath,:meal,:notices)"; */
   $sql = "UPDATE user SET visit=:visit,vital=:vital,bath=:bath,meal=:meal,notices=:notices WHERE id= ':id' ";
