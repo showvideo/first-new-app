@@ -23,8 +23,8 @@
                 <td><?php if(!empty($user['name'])){  ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
                 
                 <td><?php if(empty($user['visit'])){ ?>
-                <form method="post" action="input/index.php"><input type="hidden" name="post" value="post"></form>
-                <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a><?php }else { echo $user['visit'];} ?></td>
+                <form method="post" action="input/index.php/<?php echo $id ?>/"><input type="hidden" name="posts" value="100">
+                <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a></form><?php }else { echo $user['visit'];} ?></td>
                 
                 <td><?php /*if(empty($user['exit'])){ ?>
                 <form method="post" action="input/index.php"><input type="hidden" name="post1" value="post1"></form>
