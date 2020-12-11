@@ -17,7 +17,7 @@
 ?>
 <form action="" method="post">
 <?php if(!empty($post)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
-<input type="submit" name="submit" value="送信"></div> <?php  } else {echo null:} ?> 
+<input type="submit" name="submit" value="送信"></div> <?php  } else {echo null;} ?> 
 
 <?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
 <?php if(isset($post1)) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br>
