@@ -23,11 +23,6 @@
                 <td><?php if(!empty($user['name'])){  ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
                 
                 <td><?php if(empty($user['visit'])){ ?>
-                ＜A HREF="" onclick="document.form1.submit();return false;" ＞ テスト＜/A＞
-                ＜form name="form1" method="POST" action="http://127.0.0.1/test.php"＞
-                ＜input type=hidden name="aaa" value="bbb"＞
-                ＜/form＞
-                
                 <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a>    
                 <form name="form" method="post" action="input/index.php/<?php echo $id ?>/">
                 <input type="hidden" name="posts" value="100">
