@@ -29,10 +29,10 @@
                 
                 <td><?php if(empty($user['visit'])){ ?>
                 
-                       <a href="javascript:document.form_hoge.submit; return false;" style="opacity:0;"><?php echo "opacity";?></a>
-                       <form style="display:none;" name="form_hoge" action="input/index.php/<?php echo $id ?>/" method="get">
-                         <input type="hidden" name="number" value="100">
-                       </form>
+                       <a href="input/index.php/<?php echo $id ?>/" onclick="document.form_hoge.submit" style="opacity:0;"><?php echo "opacity";?></a>
+                           <form style="display:none;" name="form_hoge" action="input/index.php/<?php echo $id ?>/" method="post">
+                            <input type="hidden" name="posts" value="100">
+                           </form>
                 
                 <?php }else { echo $user['visit'];} ?></td>
                 
