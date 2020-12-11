@@ -31,26 +31,6 @@
 
 </form>
 <?php if(isset($_POST['submit'])) { 
-  /*$sql = "SELECT id FROM user WHERE id=:id";
-  $stmt = getDB()->prepare($sql);
-  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-  $result = $stmt->execute()
-  return $result; 
-}*/
-  
-  /*$sql = "INSERT INTO user(id,visit,vital,bath,meal,notices) VALUES(:id,:visit,:vital,:bath,:meal,:notices)"; */
-  /*$sql = "UPDATE user SET visit=:visit,vital=:vital,bath=:bath,meal=:meal,notices=:notices WHERE id= ':id' ";
-  $stmt = getDB()->prepare($sql);
-  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-  $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
-  /*$stmt->bindParam(':exit', $exit, PDO::PARAM_STR);*/
-  /*$stmt->bindParam(':vital', $vital, PDO::PARAM_STR);
-  $stmt->bindParam(':bath', $bath, PDO::PARAM_STR);
-  $stmt->bindParam(':meal', $meal, PDO::PARAM_STR);
-  $stmt->bindParam(':notices', $notices, PDO::PARAM_STR);
-  $stmt->execute();
-  header('Location: https://animech2.herokuapp.com/');
-  exit;*/
   
   $sql = 'UPDATE user SET visit=? WHERE id=?';
   $stmt = getDB()->prepare($sql);
@@ -61,4 +41,51 @@
   exit;
 }
 ?>
+<?php if(isset($_POST['submit1'])) { 
+  
+  $sql = 'UPDATE user SET vital=? WHERE id=?';
+  $stmt = getDB()->prepare($sql);
+  $data[]=$vital;
+  $data[]=$id;
+  $stmt->execute($data);
+  header('Location: https://animech2.herokuapp.com/');
+  exit;
+}
+?>
+<?php if(isset($_POST['submit2'])) { 
+  
+  $sql = 'UPDATE user SET bath=? WHERE id=?';
+  $stmt = getDB()->prepare($sql);
+  $data[]=$bath;
+  $data[]=$id;
+  $stmt->execute($data);
+  header('Location: https://animech2.herokuapp.com/');
+  exit;
+}
+?>
+
+<?php if(isset($_POST['submit3'])) { 
+  
+  $sql = 'UPDATE user SET meal=? WHERE id=?';
+  $stmt = getDB()->prepare($sql);
+  $data[]=$meal;
+  $data[]=$id;
+  $stmt->execute($data);
+  header('Location: https://animech2.herokuapp.com/');
+  exit;
+}
+?>
+
+<?php if(isset($_POST['submit4'])) { 
+  
+  $sql = 'UPDATE user SET notices=? WHERE id=?';
+  $stmt = getDB()->prepare($sql);
+  $data[]=$notices;
+  $data[]=$id;
+  $stmt->execute($data);
+  header('Location: https://animech2.herokuapp.com/');
+  exit;
+}
+?>
+
 </body>
