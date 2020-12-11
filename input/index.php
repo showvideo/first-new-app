@@ -11,6 +11,8 @@
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
   $post = $_POST['post'];
+  $post1 = $_POST['post1'];
+  $post2 = $_POST['post2'];
   echo $id;
 ?>
 <form action="" method="post">
