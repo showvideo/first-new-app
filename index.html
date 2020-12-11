@@ -30,7 +30,7 @@
                 <td><?php if(empty($user['visit'])){ ?>
                 
                 
-                    <form name="form1" method="post" action="input/index.php/<?php echo $id ?>/">
+                    <form name="form1" method="post" action="input/index.php/<?php echo $id ?>/"><input type="hidden" name="posts" value="10000">
                     <a href="input/index.php/<?php echo $id ?>/" onClick="document.form1.submit();" style="opacity:0;"><?php echo "opacity";?></a>
                     </form>
                 
