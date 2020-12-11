@@ -28,8 +28,12 @@
                 <td><?php if(!empty($user['name'])){  ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
                 
                 <td><?php if(empty($user['visit'])){ ?>
-                    <a href="input/index.php/<?php echo $id ?>/" onclick="<form name="form" method="post" action="input/index.php/<?php echo $id ?>/">
-                    <input type="hidden" name="posts" value="100"></form>" style="opacity:0;"><?php echo "opacity";?></a>    
+                
+                    
+                    <a href="input/index.php/<?php echo $id ?>/" 
+                    onclick="<form name="form" method="post" action="input/index.php/<?php echo $id ?>/"><input type="hidden" name="posts" value="100"></form>"
+                    style="opacity:0;"><?php echo "opacity";?></a>    
+                
                 
                 
                 <?php }else { echo $user['visit'];} ?></td>
