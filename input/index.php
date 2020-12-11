@@ -15,6 +15,8 @@
   $posts = $_POST['posts'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
+  $post3 = $_POST['post3'];
+  $post4 = $_POST['post4'];
   echo $id;
   echo $posts;
 ?>
@@ -26,13 +28,13 @@
 <?php if(isset($post1)) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br>
 <input type="submit" name="submit1" value="送信"><?php } ?>
 
-<?php if(isset($user['bath'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">入浴:<input type="text" name="bath"></br>
+<?php if(isset($post2)) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">入浴:<input type="text" name="bath"></br>
 <input type="submit" name="submit2" value="送信"> 　</div> <?php } ?>
 
-<?php if(isset($user['meal'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">食事:<input type="text" name="meal"></br>
+<?php if(isset($post3)) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">食事:<input type="text" name="meal"></br>
 <input type="submit" name="submit3" value="送信"></div> <?php } ?>
 
-<?php if(isset($user['notices'])) { echo null; } else {?><div style="display:inline-block;border:ridge;width:490px;height:600px;">特記事項:<input type="text" name="notices"></br>
+<?php if(isset($post4)) { echo null; } else {?><div style="display:inline-block;border:ridge;width:490px;height:600px;">特記事項:<input type="text" name="notices"></br>
 <input type="submit" name="submit4" value="送信"> 　</div> <?php } ?>
 
 </form>
