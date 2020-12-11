@@ -31,15 +31,23 @@
 }*/
   
   /*$sql = "INSERT INTO user(id,visit,vital,bath,meal,notices) VALUES(:id,:visit,:vital,:bath,:meal,:notices)"; */
-  $sql = "UPDATE user SET visit=:visit,vital=:vital,bath=:bath,meal=:meal,notices=:notices WHERE id= ':id' ";
+  /*$sql = "UPDATE user SET visit=:visit,vital=:vital,bath=:bath,meal=:meal,notices=:notices WHERE id= ':id' ";
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR);
   $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
   /*$stmt->bindParam(':exit', $exit, PDO::PARAM_STR);*/
-  $stmt->bindParam(':vital', $vital, PDO::PARAM_STR);
+  /*$stmt->bindParam(':vital', $vital, PDO::PARAM_STR);
   $stmt->bindParam(':bath', $bath, PDO::PARAM_STR);
   $stmt->bindParam(':meal', $meal, PDO::PARAM_STR);
   $stmt->bindParam(':notices', $notices, PDO::PARAM_STR);
+  $stmt->execute();
+  header('Location: https://animech2.herokuapp.com/');
+  exit;*/
+  
+  $sql = "UPDATE user SET visit=:visit WHERE id= ':id' ";
+  $stmt = getDB()->prepare($sql);
+  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+  $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
   $stmt->execute();
   header('Location: https://animech2.herokuapp.com/');
   exit;
