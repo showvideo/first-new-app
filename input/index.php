@@ -44,11 +44,12 @@
   header('Location: https://animech2.herokuapp.com/');
   exit;*/
   
-  $sql = "UPDATE user SET visit=:visit WHERE id= ':id' ";
+  $sql = 'UPDATE user SET visit=? WHERE id=?';
   $stmt = getDB()->prepare($sql);
-  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-  $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
-  $stmt->execute();
+  $data[]=$visit;
+  $data[]=$id;
+  $stmt->execute($data);
+  getDB() = null;
   header('Location: https://animech2.herokuapp.com/');
   exit;
 }
