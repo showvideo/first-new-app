@@ -41,7 +41,8 @@
   $stmt->bindParam(':meal', $meal, PDO::PARAM_STR);
   $stmt->bindParam(':notices', $notices, PDO::PARAM_STR);
   $stmt->execute();
-  header('Location: "anime/index.html/"');
+  header('Location: https://animech2.herokuapp.com/');
+  exit;
 }
 ?>
 </body>
