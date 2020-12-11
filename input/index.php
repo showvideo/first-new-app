@@ -14,8 +14,8 @@
   echo $id;
 ?>
 <form action="" method="post">
-<?php /*if(!isset($post])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
-<input type="submit" name="submit" value="送信"> 　</div> <?php } */?> 
+<?php if(empty($post)) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
+<input type="submit" name="submit" value="送信"> 　</div> <?php } ?> 
 
 <?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
 <?php if(isset($user['vital'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br>
