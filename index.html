@@ -1,3 +1,6 @@
+<head>
+    <script type="text/javascript"></script>
+</head>    
 <?php require_once("func/function.php"); ?>
 <table border="1" width="600" cellspacing="0">
     <tr>
@@ -11,9 +14,7 @@
     </tr>
 
    
-        <head>
-            <script type="text/javascript"></script>
-        </head>    
+
             <?php
             $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
