@@ -23,7 +23,7 @@
 <input type="submit" name="submit" value="送信"> 　
 </form>
 <?php if(isset($_POST['submit'])) { 
-  $sql = "REPLACE INTO user(visit,vital,bath,meal,notices) VALUES(:visit,:vital,:bath,:meal,:notices) SELECT id=:id";
+  $sql = "REPLACE INTO user(id,visit,vital,bath,meal,notices) VALUES(:id,:visit,:vital,:bath,:meal,:notices)";
   /*$sql = "UPDATE user SET visit=':visit',vital=':vital',bath=':bath',meal=':meal',notices=':notices' WHERE id= ':id'";*/
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR);
