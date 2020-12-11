@@ -10,13 +10,14 @@
   $bath = $_POST['bath'];
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
-  $post = $_POST['post'];
+  $posts = $_POST['posts'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
   echo $id;
+  echo $posts;
 ?>
 <form action="" method="post">
-<?php if(isset($post)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
+<?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
 <input type="submit" name="submit" value="送信"></div> <?php  } else {echo null;} ?> 
 
 <?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
