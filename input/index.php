@@ -21,21 +21,21 @@
   echo $posts;
 ?>
 <form action="" method="post">
-<?php if(!empty($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
+<?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
 <input type="submit" name="submit" value="送信"></div> <?php  } else {echo null;} ?> 
 
 <?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
-<?php if(isset($post1)) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br>
-<input type="submit" name="submit1" value="送信"><?php } ?>
+<?php if(isset($post1)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br>
+<input type="submit" name="submit1" value="送信"><?php } else { echo null;} ?>
 
-<?php if(isset($post2)) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">入浴:<input type="text" name="bath"></br>
-<input type="submit" name="submit2" value="送信"> 　</div> <?php } ?>
+<?php if(isset($post2)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">入浴:<input type="text" name="bath"></br>
+<input type="submit" name="submit2" value="送信"> 　</div> <?php } else { echo null; } ?>
 
-<?php if(isset($post3)) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">食事:<input type="text" name="meal"></br>
-<input type="submit" name="submit3" value="送信"></div> <?php } ?>
+<?php if(isset($post3)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">食事:<input type="text" name="meal"></br>
+<input type="submit" name="submit3" value="送信"></div> <?php } else { echo null; } ?>
 
-<?php if(isset($post4)) { echo null; } else {?><div style="display:inline-block;border:ridge;width:490px;height:600px;">特記事項:<input type="text" name="notices"></br>
-<input type="submit" name="submit4" value="送信"> 　</div> <?php } ?>
+<?php if(isset($post4)) { ?><div style="display:inline-block;border:ridge;width:490px;height:600px;">特記事項:<input type="text" name="notices"></br>
+<input type="submit" name="submit4" value="送信"> 　</div> <?php } else { echo null;} ?>
 
 </form>
 <?php if(isset($_POST['submit'])) { 
