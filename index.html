@@ -11,7 +11,10 @@
     </tr>
 
    
-        <?php
+        <head>
+            <script type="text/javascript"></script>
+        </head>    
+            <?php
             $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
@@ -19,14 +22,16 @@
             foreach($result as $user){
             $id = $user['id'];   
         ?>
+            
             <tr>
                 <td><?php if(!empty($user['name'])){  ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
                 
                 <td><?php if(empty($user['visit'])){ ?>
                 <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><?php echo "opacity";?></a>    
-                <form name="form" method="post" action="input/index.php/<?php echo $id ?>/">
-                <input type="hidden" name="posts" value="100">
-                </form><?php }else { echo $user['visit'];} ?></td>
+                <form name="form" method="post" action="javascript:input/index.php/<?php echo $id ?>/.submit()">
+                <input type="hidden" name="posts" value="100"></form>
+                
+                <?php }else { echo $user['visit'];} ?></td>
                 
                 <td><?php /*if(empty($user['exit'])){ ?>
                 <form method="post" action="input/index.php"><input type="hidden" name="post1" value="post1"></form>
