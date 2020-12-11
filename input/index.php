@@ -10,7 +10,7 @@
   $bath = $_POST['bath'];
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
-  $posts = $_POST['form'];
+  $posts = $_POST['posts'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
   echo $id;
