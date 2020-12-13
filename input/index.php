@@ -17,8 +17,7 @@
   $post2 = $_POST['post2'];
   $post3 = $_POST['post3'];
   $post4 = $_POST['post4'];
-  echo $id;
-  echo $posts;
+
 ?>
 <form action="" method="post">
 <?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
