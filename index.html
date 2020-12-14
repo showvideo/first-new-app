@@ -44,11 +44,9 @@
                     <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;"></a>
                     <input type="hidden" name="posts" value="100">
                     </form>
-                    <?php }else { ?><form method="post" name="form_1" id="form_1" action="data/post">
+                    <?php }else { ?><form method="post" action="input/index.php/<?php echo $id; ?>/">
                     <a href="input/index.php/<?php echo $id; ?>/" style="text-decoration:none;color:black;"><?php echo $user['visit']; ?></a> <?php } ?>
-                    <form method="post" name="form_1" id="form_1" action=""input/index.php/<?php echo $id; ?>/"">
                     <input type="hidden" name="user_name" value="posts">
-                        
                     </form>    
                 </td>
                 <td style="width:100px;height:40px; border: 1px solid #ccc; background:#fff; padding: 4px;"><?php /*if(empty($user['exit'])){ ?>
