@@ -23,7 +23,8 @@
 ?>
 <form action="" method="post">
 <?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
-<input type="submit" name="submit" value="送信"></div> <?php  } else {echo null;} ?> 
+<input type="submit" name="submit" value="送信"><input type="submit" name="delete" value="削除"></div> 
+<?php  } else {echo null;} ?> 
 
 <?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
 <input type="submit" name="submit" value="送信"></div> <?php  } else {echo null;} ?> 
@@ -51,6 +52,16 @@
   $stmt->execute($data);
   header('Location: https://animech2.herokuapp.com/');
   exit;
+}
+?>
+<?php if(isset($_POST['delete'])) {
+    $sql = "DELETE FROM user WHERE id=:id";
+    $stmt = getDB()->prepare($sql);
+    $data[]=$visit;
+    $data[]=$id;
+    $stmt->execute($data);
+    header('Location: https://animech2.herokuapp.com/');
+    exit;
 }
 ?>
 <?php if(isset($_POST['submit1'])) { 
