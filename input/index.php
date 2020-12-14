@@ -17,6 +17,7 @@
   $post2 = $_POST['post2'];
   $post3 = $_POST['post3'];
   $post4 = $_POST['post4'];
+  echo $posts;
 
 ?>
 <form action="" method="post">
