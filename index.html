@@ -44,10 +44,8 @@
                     <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;"></a>
                     <input type="hidden" name="posts" value="100">
                     </form>
-                    <?php }else { ?><form name="form1" method="post" action="input/index.php/<?php echo $id ?>/">
-                    <a href="input/index.php/<?php echo $id ?>/" onClick="document.form1.submit();"><?php echo $user['visit']; ?></a>
-                    <input type="hidden" name="posts" value="aaa">
-                    </form>
+                    <?php }else { ?>
+                    <a href="input/index.php/<?php echo $id ?>/?=posts"><?php echo $user['visit']; ?></a>
                     <?php } ?>
                 </td>
                 <td style="width:100px;height:40px; border: 1px solid #ccc; background:#fff; padding: 4px;"><?php /*if(empty($user['exit'])){ ?>
