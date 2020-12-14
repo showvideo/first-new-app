@@ -17,11 +17,15 @@
   $post2 = $_POST['post2'];
   $post3 = $_POST['post3'];
   $post4 = $_POST['post4'];
+  $post10 = $GET['posts'];
   echo $posts;
 
 ?>
 <form action="" method="post">
 <?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
+<input type="submit" name="submit" value="送信"></div> <?php  } else {echo null;} ?> 
+
+<?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit"></br>
 <input type="submit" name="submit" value="送信"></div> <?php  } else {echo null;} ?> 
 
 <?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
