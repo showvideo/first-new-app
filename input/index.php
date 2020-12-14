@@ -23,7 +23,8 @@
 ?>
 <form action="" method="post">
 <?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
-<input type="submit" name="submit" value="送信"><input type="submit" name="delete" value="削除"></div> 
+<input type="submit" name="submit" value="送信">
+<p><input type="submit" name="delete" value="削除"></p></div> 
 <?php  } else {echo null;} ?> 
 
 <?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
