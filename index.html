@@ -45,9 +45,9 @@
                     <input type="hidden" name="posts" value="100">
                     </form>
                     <?php }else { ?><form method="post" action="input/index.php/<?php echo $id; ?>/">
-                    <a href="javascript:submitForm()"><?php echo $user['visit']; ?></a> <?php } ?>
-                    <input type="hidden" name="user_name" value="posts">
-                    </form>    
+                    <a href="javascript:submitForm()"><?php echo $user['visit']; ?></a> 
+                    <input type="hidden" value="posts">
+                    </form>    <?php } ?>
                 </td>
                 <td style="width:100px;height:40px; border: 1px solid #ccc; background:#fff; padding: 4px;"><?php /*if(empty($user['exit'])){ ?>
                 <form "method="post" action="input/index.php">
