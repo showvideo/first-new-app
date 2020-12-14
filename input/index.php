@@ -55,11 +55,10 @@
 }
 ?>
 <?php if(isset($_POST['delete'])) {
-    $sql = 'DELETE FROM user visit=? WHERE id=?';
+    $sql = 'DELETE FROM user WHERE id=:id';
     $stmt = getDB()->prepare($sql);
-    $data[]=$visit;
-    $data[]=$id;
-    $stmt->execute($data);
+    $stmt->bindValue(':id', $id );
+    $stmt->execute();
     header('Location: https://animech2.herokuapp.com/');
     exit;
 }
