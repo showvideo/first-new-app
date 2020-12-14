@@ -2,7 +2,14 @@
     <script type="text/javascript"></script>
 </head>    
 <?php require_once("func/function.php"); ?>
-
+<?php
+    $sql = "SELECT name FROM user WHERE 1";
+    $stmt = getDB()->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    foreach($result as $user){
+    $name = $user['name'];
+?>
 <div style="display:inline-block;">
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
 
