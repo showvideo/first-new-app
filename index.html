@@ -25,7 +25,7 @@
             $id = $user['id'];   
         ?>
             
-            <tr>
+            <tr style="height:40px;">
                 <td style="width:100px;height:40px;border: 1px solid #ccc; background:#fff; padding: 4px;"><?php if(!empty($user['name'])){  ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:#;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
                 
                 <td style="width:100px;height:60px; border: 1px solid #ccc; background:#fff; padding: 4px;"><?php if(empty($user['visit'])){ ?>                       
