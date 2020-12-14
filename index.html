@@ -45,6 +45,10 @@
                     <input type="hidden" name="posts" value="100">
                     </form>
                     <?php }else { ?><a href="input/index.php/<?php echo $id; ?>/" style="text-decoration:none;color:black;"><?php echo $user['visit']; ?></a> <?php } ?></td>
+                    <form method="post" name="form_1" id="form_1" action="data/post">
+                    <input type="hidden" name="user_name" placeholder="ユーザー名">
+                    <a href="javascript:form_1.submit()">リンク名</a>
+                    </form>    
                 
                 <td style="width:100px;height:40px; border: 1px solid #ccc; background:#fff; padding: 4px;"><?php /*if(empty($user['exit'])){ ?>
                 <form "method="post" action="input/index.php">
