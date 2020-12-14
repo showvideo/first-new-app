@@ -2,7 +2,10 @@
     <script type="text/javascript"></script>
 </head>    
 <?php require_once("func/function.php"); ?>
-    <?php
+
+<div style="display:inline-block;">
+<table border="1" cellspacing="0" style="border-collaspe:collapse;">
+        <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE 1";
         $stmt = getDB()->prepare($sql);
         $stmt->execute();
@@ -11,8 +14,6 @@
         $id = $user['id'];
         $name = $user['name'];
      ?>
-<div style="display:inline-block;">
-<table border="1" cellspacing="0" style="border-collaspe:collapse;">
     <tr>
         <th style="width:100px;height:40px;border: 1px solid #ccc; background:#fff; padding: 4px;">ご利用者(計<?php echo count($name); ?>人)</th>
         <th style="width:100px;height:40px;border: 1px solid #ccc; background:#fff; padding: 4px;">来所</th>
