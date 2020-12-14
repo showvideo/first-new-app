@@ -5,15 +5,7 @@
 
 <div style="display:inline-block;">
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
-        <?php
-        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE 1";
-        $stmt = getDB()->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-     ?>
+
     <tr>
         <th style="width:100px;height:40px;border: 1px solid #ccc; background:#fff; padding: 4px;">ご利用者(計<?php echo count($name); ?>人)</th>
         <th style="width:100px;height:40px;border: 1px solid #ccc; background:#fff; padding: 4px;">来所</th>
@@ -23,7 +15,15 @@
         <th style="width:100px;height:40px;border: 1px solid #ccc; background:#fff; padding: 4px;">食事</th>
         <th style="width:200px;height:40px;border: 1px solid #ccc; background:#fff; padding: 4px;">特記事項</th>
     </tr>
-
+        <?php
+        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE 1";
+        $stmt = getDB()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        foreach($result as $user){
+        $id = $user['id'];
+        $name = $user['name'];
+     ?>
    
 
 
