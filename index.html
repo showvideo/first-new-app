@@ -44,8 +44,8 @@
                     <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;"></a>
                     <input type="hidden" name="posts" value="100">
                     </form>
-                    <?php }else { ?><form method="post" action="input/index.php/<?php echo $id; ?>/">
-                    <a href="javascript:submitForm()"><?php echo $user['visit']; ?></a> 
+                    <?php }else { ?><form method="post" name="form1" action="input/index.php/<?php echo $id; ?>/">
+                    <a href="javascript:from1.submit()"><?php echo $user['visit']; ?></a> 
                     <input type="hidden" value="posts">
                     </form>    <?php } ?>
                 </td>
