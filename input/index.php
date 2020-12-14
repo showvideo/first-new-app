@@ -55,7 +55,7 @@
 }
 ?>
 <?php if(isset($_POST['delete'])) {
-    $sql = 'DELETE FROM user WHERE visit=:visit && id=:id';
+    $sql = 'DELETE FROM user WHERE visit=:'visit' && id=':id'";
     $stmt = getDB()->prepare($sql);
     $stmt->bindValue(':visit', $visit );
     $stmt->bindValue(':id', $id );
