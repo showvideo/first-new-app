@@ -45,7 +45,7 @@
                     <input type="hidden" name="posts" value="100">
                     </form>
                     <?php }else { ?><form method="post" action="input/index.php/<?php echo $id; ?>/">
-                    <a href="input/index.php/<?php echo $id; ?>/" style="text-decoration:none;color:black;"><?php echo $user['visit']; ?></a> <?php } ?>
+                    <a href="javascript:submitForm()"><?php echo $user['visit']; ?></a> <?php } ?>
                     <input type="hidden" name="user_name" value="posts">
                     </form>    
                 </td>
