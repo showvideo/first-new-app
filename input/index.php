@@ -35,7 +35,7 @@
     ?>
     <h3><?php echo $name."様"; ?></h3></br>
     来所時間</br>
-    <input type="text" name="visit" style="width:50px;height:20px;"></br>
+    <input type="text" name="visit" style="width:100px;height:40px;"></br>
     <input type="submit" name="submit" value="送信" style="margin-left:400px;margin-top:400px;">
     <?php  } else {echo null;} ?> 
 
