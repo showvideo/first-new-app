@@ -55,7 +55,7 @@
 }
 ?>
 <?php if(isset($_POST['delete'])) {
-    $sql = "ALTER TABLE user DROP COLUMN visit=:visit";
+    $sql = "DELETE FROM user WHERE id=:id AND visit=:visit";
     $stmt = getDB()->prepare($sql);
     $stmt->bindValue(':visit', $visit );
     $stmt->bindValue(':id', $id );
