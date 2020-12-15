@@ -1,4 +1,4 @@
-
+<?php require_once('../common/function.php'); ?>
     <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
