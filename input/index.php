@@ -59,7 +59,6 @@
 <?php echo $visit; ?></div><?php  } else {echo null;} ?> 
 
 <?php if(isset($_POST['edit']) {
-    <div style="display:inline-block;border:ridge;width:490px;height:600px;">
    <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -73,8 +72,8 @@
         }
     ?>
     <h3><?php echo $name."様"; ?></h3></br>
-        来所時間:<?php echo $visit; ?></br>
-<form action="" method="post"><input type="submit" name="edit1" value="編集"></form>
+        来所時間:<form action="" method="post"><input type="text" placeholder="<?php echo $visit; ?>"></br>
+<input type="submit" name="edit1" value="編集決定"></form>
     <?php if(isset($_POST['edit1'])) { 
   
   $sql = 'UPDATE user SET visit=? WHERE id=?';
