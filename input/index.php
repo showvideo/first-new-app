@@ -18,7 +18,6 @@
   $post3 = $_POST['post3'];
   $post4 = $_POST['post4'];
   $post10 = $_GET['posts'];
-  echo $posts;
 
 ?>
 <?php /*来所*/ ?>
@@ -35,9 +34,9 @@
         $name = $user['name'];}
     ?>
     <h3><?php echo $name."様"; ?></h3></br>
-    来所:</br>
+    来所時間</br>
     <input type="text" name="visit" width="50px"></br>
-    <input type="submit" name="submit" value="送信">
+    <input type="submit" name="submit" value="送信" style="margin-left:200px;margin-top:400px;">
     <?php  } else {echo null;} ?> 
 
 <?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
