@@ -1,4 +1,4 @@
-<?php if(isset($_POST['edit'])) { ?>
+
     <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -16,4 +16,3 @@
     <form action="" method="post">
     <input type="text" name="visit" style="width:100px;height:40px;" placeholder="<?php echo $visit; ?>"></br>
 <input type="submit" name="edit1" value="編集決定"></form>
-    <?php } ?>
