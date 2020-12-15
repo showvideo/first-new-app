@@ -60,7 +60,7 @@
 </div><?php  } else {echo null;} ?> 
 
 
-<?php if(isset($_POST['edit1'])) {
+<?php if(isset($_POST['delete'])) {
   
     $sql = 'UPDATE user SET visit=NULL WHERE id=:id';
   $stmt = getDB()->prepare($sql);
