@@ -60,13 +60,9 @@
 </div><?php  } else {echo null;} ?> 
 
 <?php if(isset($_POST['edit'])) {
-  header('Location: https://animech2.herokuapp.com/edit/index.php');
-  exit;
+    echo "こんにちは";
 }
 ?>
-
-
-
 <?php if(isset($_POST['delete'])) {
   
     $sql = 'UPDATE user SET visit=NULL WHERE id=:id';
