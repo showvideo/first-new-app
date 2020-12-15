@@ -22,7 +22,18 @@
 
 ?>
 <form action="" method="post">
-<?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
+<?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">
+<?php 
+    $sql = "SELECT id, name FROM user WHERE id=:id";
+    $stmt = getDB()->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAMA_STR);
+    $result = $stmt->fetchAll();
+    foreach($result as $user) {
+        $user = $user['name']
+    }
+ ?>
+ <?php echo $user; ?>
+ 来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
 <input type="submit" name="submit" value="送信">
 <?php  } else {echo null;} ?> 
 
