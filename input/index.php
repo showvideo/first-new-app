@@ -39,7 +39,21 @@
     <input type="submit" name="submit" value="送信" style="margin-left:400px;margin-top:400px;">
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
+<?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">
+   <?php
+       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+        $stmt = getDB()->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        foreach($result as $user){
+        $id = $user['id'];
+        $name = $user['name'];
+        $visit = $user['visit'];
+        }
+    ?>
+    <h3><?php echo $name."様"; ?></h3></br>
+        来所時間:<?php echo $visit; ?>"></br>
 <input type="submit" name="submit" value="送信"><p><input type="submit" name="delete" value="削除"></p><?php echo $visit; ?></div> </div> <?php  } else {echo null;} ?> 
 
 <?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
