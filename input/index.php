@@ -21,6 +21,7 @@
   echo $posts;
 
 ?>
+<?php /*来所*/ ?>
 <form action="" method="post">
 <?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">
     <?php
@@ -33,10 +34,11 @@
         $id = $user['id'];
         $name = $user['name'];}
     ?>
- <?php echo $name; ?>
- 来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
-<input type="submit" name="submit" value="送信">
-<?php  } else {echo null;} ?> 
+    <h3><?php echo $name."様"; ?></h3></br>
+    来所:</br>
+    <input type="text" name="visit" width="50px"></br>
+    <input type="submit" name="submit" value="送信">
+    <?php  } else {echo null;} ?> 
 
 <?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
 <input type="submit" name="submit" value="送信"><p><input type="submit" name="delete" value="削除"></p><?php echo $visit; ?></div> </div> <?php  } else {echo null;} ?> 
