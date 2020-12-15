@@ -1,4 +1,4 @@
-<?php require_once('../func/function.php'); ?>
+<?php require_once('../common/function.php'); ?>
 <?php $id = getInfomation(); ?>
 
 <div style="border:ridge;width:500px;height:700px;">     
