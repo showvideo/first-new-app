@@ -54,7 +54,8 @@
     ?>
     <h3><?php echo $name."様"; ?></h3></br>
         来所時間:<?php echo $visit; ?></br>
-<form action="../edit/index.php" method="post"><a href="../edit/index.php"><input type="submit" name="edit" value="編集"></a></form>
+<form action="../edit/index.php" method="post">
+<button type="button" onclick="location.href='../edit/index.php'" name="edit">編集</button></form>
 <input type="submit" name="delete" value="削除">
 </div><?php  } else {echo null;} ?> 
 
