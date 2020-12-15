@@ -27,7 +27,7 @@
 <?php  } else {echo null;} ?> 
 
 <?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
-<input type="submit" name="submit" value="送信"><p><input type="submit" name="delete" value="削除"></p></div> </div> <?php  } else {echo null;} ?> 
+<input type="submit" name="submit" value="送信"><p><input type="submit" name="delete" value="削除"></p><?php echo $visit; ?></div> </div> <?php  } else {echo null;} ?> 
 
 <?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
 <?php if(isset($post1)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br>
