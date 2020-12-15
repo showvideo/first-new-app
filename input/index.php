@@ -29,10 +29,10 @@
     $stmt->bindParam(':id', $id, PDO::PARAMA_STR);
     $result = $stmt->fetchAll();
     foreach($result as $user) {
-        $user = $user['name'];
+        $user1 = $user['name'];
     }
  ?>
- <?php echo $user; ?>
+ <?php echo $user1; ?>
  来所:<input type="text" name="visit" placeholder="<?php echo $visit; ?>"></br>
 <input type="submit" name="submit" value="送信">
 <?php  } else {echo null;} ?> 
