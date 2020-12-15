@@ -60,7 +60,6 @@
 </div><?php  } else {echo null;} ?> 
 
 <?php if(isset($_POST['edit'])) {
-    echo "こんにちは";
 }
 ?>
 <?php if(isset($_POST['delete'])) {
