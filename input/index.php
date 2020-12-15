@@ -62,7 +62,7 @@
 
 <?php if(isset($_POST['edit1'])) {
   
-    $sql = 'UPDATE user SET visit=null';
+    $sql = 'UPDATE user SET visit=NULL';
   $stmt = getDB()->prepare($sql);
   $stmt->execute();
   header('Location: https://animech2.herokuapp.com/');
