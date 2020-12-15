@@ -29,7 +29,7 @@
     $stmt->bindParam(':id', $id, PDO::PARAMA_STR);
     $result = $stmt->fetchAll();
     foreach($result as $user) {
-        $user = $user['name']
+        $user = $user['name'];
     }
  ?>
  <?php echo $user; ?>
