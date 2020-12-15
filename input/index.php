@@ -62,8 +62,9 @@
 
 <?php if(isset($_POST['edit1'])) {
   
-    $sql = 'UPDATE user SET visit=NULL';
+    $sql = 'UPDATE user SET visit=NULL WHERE id=:id';
   $stmt = getDB()->prepare($sql);
+  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
   $stmt->execute();
   header('Location: https://animech2.herokuapp.com/');
   exit;
