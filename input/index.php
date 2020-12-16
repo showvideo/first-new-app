@@ -115,7 +115,7 @@
 <?php if(isset($post1)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br>
 <input type="submit" name="submit1" value="送信"><?php } else { echo null;} ?>
 
-<?php if(isset($post2)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">入浴:<input type="text" name="bath"></br>
+<?php if(isset($post21)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">入浴:<input type="text" name="bath"></br>
 <input type="submit" name="submit2" value="送信"> 　</div> <?php } else { echo null; } ?>
 
 <?php if(isset($post3)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">食事:<input type="text" name="meal"></br>
