@@ -87,7 +87,7 @@
     <h3><?php echo $name."様"; ?></h3></br>
     バイタル</br>
     <form action="" method="post">
-        <input type="text"> 
+        最高血圧(mmHg)<input type="text" style="width:40px;">/最小血圧(mmHg)<input type="text" style="width:40px;">脈拍/分<input type="text" style="width:40px;">
         <input type="submit" name="submit10" value="送信" style="margin-left:400px;margin-top:400px;">
     </form>
     <?php  } else {echo null;} ?> 
