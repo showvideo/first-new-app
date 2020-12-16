@@ -15,7 +15,18 @@
         <option value="12:00">12:00</option>
         </select>
     
-      <h4>退所</h4><input type="exit1">
+      <h4>退所</h4>
+        <select name="exit1">
+        <option value="">選択しない</option>    
+        <option value="13:30">13:30</option>
+        <option value="14:00">14:00</option>
+        <option value="14:30">14:30</option>
+        <option value="15:00">15:00</option>
+        <option value="15:30">15:30</option>
+        <option value="16:00">16:00</option>
+        <option value="16:30">16:30</option>
+        </select>
+        
       <h4>バイタル</h4><input type="text" name="vital1">以上
       拡張期血圧<input type="text" vital2>以上
       脈拍<input type="text" name="vital3">以上
