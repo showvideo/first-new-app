@@ -19,7 +19,7 @@
         <?php
             $visit1 = $_POST['visit1'];
     
-            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE visit = :visit1 or name LIKE '%".$_POST["name1"]."%' and visit=:visit";
+            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' and visit=:visit";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit1', $visit1, PDO::PARAM_STR);
             $stmt->execute();
