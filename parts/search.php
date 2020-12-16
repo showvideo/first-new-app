@@ -30,7 +30,7 @@
       <h4>バイタル</h4>
       血圧<input type="text" name="vital1" style="width:30px;">～<input type="text" name="vital1" style="width:30px;"></br>
       
-      脈拍<input type="text" name="vital2" style="width:30px;>～<input type="text" name="vital2" style="width:30px;">
+      脈拍<input type="text" name="vital2" style="width:30px;">～<input type="text" name="vital2" style="width:30px;">
         
       <h4>入浴ありで絞り込む</h4><input type="radio" name="bath1" value="はい"> はい
       <input type="radio" value="いいえ" checked> いいえ
