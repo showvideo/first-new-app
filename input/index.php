@@ -80,7 +80,8 @@
         $result = $stmt->fetchAll();
         foreach($result as $user){
         $id = $user['id'];
-        $name = $user['vital'];
+        $name = $user['name'];
+        $vital = $user['vital'];
         }
     ?>
     <h3><?php echo $name."様"; ?></h3></br>
