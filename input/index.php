@@ -95,7 +95,7 @@
   
   $sql = 'UPDATE user SET visit=? WHERE id=?';
   $stmt = getDB()->prepare($sql);
-  $data[]=$visit;
+  $data[]=$_POST['visit'];
   $data[]=$id;
   $stmt->execute($data);
   header('Location: https://animech2.herokuapp.com/');
