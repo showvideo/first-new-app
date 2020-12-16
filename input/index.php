@@ -93,11 +93,11 @@
 </form>
 <?php if(isset($_POST['submit10'])) { 
   
-  $sql = 'UPDATE user SET visit=? WHERE id=?';
+  $sql = 'UPDATE user SET visit=:visit WHERE id=:id';
   $stmt = getDB()->prepare($sql);
-  $data[]=$_POST['visit'];
-  $data[]=$id;
-  $stmt->execute($data);
+  $stmt->bindParam(':visit', $visit, PDO::PARAM_STR);
+  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+  $stmt->execute();
   header('Location: https://animech2.herokuapp.com/');
   exit;
 }
