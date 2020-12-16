@@ -37,7 +37,7 @@
     来所時間</br>
     <form action="" method="post">
         <input type="text" name="visit" style="width:100px;height:40px;"></br>
-        <input type="submit" name="submit" value="送信" style="margin-left:400px;margin-top:400px;">
+        <input type="submit" name="submit10" value="送信" style="margin-left:400px;margin-top:400px;">
     </form>
     <?php  } else {echo null;} ?> 
 
@@ -91,13 +91,13 @@
 <input type="submit" name="submit4" value="送信"> 　</div> <?php } else { echo null;} ?>
 
 </form>
-<?php if(isset($_POST['submit'])) { 
+<?php if(isset($_POST['submit10'])) { 
   
-  $sql = 'UPDATE user SET visit=? WHERE id=?';
+  $sql = 'INSERT INTO user(id, name) VALUES('':id', ':name')
   $stmt = getDB()->prepare($sql);
-  $data[]=$visit;
-  $data[]=$id;
-  $stmt->execute($data);
+  $stmt->bindParam(':id', $id, PDO::PARAM_STR)
+  $stmt->bindParam('visit', $visit, PDO::PARAM_STR)
+  $stmt->execute();
   header('Location: https://animech2.herokuapp.com/');
   exit;
 }
