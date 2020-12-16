@@ -20,10 +20,3 @@
    </form>
 </div>
 
-<?php if (isset($_POST['name1'])) {
-    $sql = 'SELECT name FROM user WHERE LIKE'%".$_POST['name1']."%';'
-    $stmt = getDB()->prepare($sql);
-    $result = $stmt->execute();
-    foreach($result as $name) {
-        $name1 = $name['name'];
-}
