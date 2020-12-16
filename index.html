@@ -26,13 +26,18 @@
     </tr>
     
         <?php
-            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE 1";
+            $sql = "SELECT id, name, exit, visit, vital, meal, bath, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
             $id = $user['id'];
             $name = $user['name'];
+            $exit = $user['exit'];
+            $vital = $user['vital'];
+            $bath = $user['bath'];
+            $meal = $user['meal'];
+            $notices = $user['notices'];
         ?>
             <tr>
                 <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(!empty($user['name'])){  
