@@ -18,6 +18,7 @@
     
         <?php
             $visit1 = $_POST['visit1'];
+            echo $visit1;
     
             $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' OR visit = :visit1";
             $stmt = getDB()->prepare($sql);
