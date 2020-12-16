@@ -17,13 +17,14 @@
     </tr>
     
         <?php
-            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' or visit;
+            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' or visit=$_POST['visit1'];
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
             $id = $user['id'];
             $name = $user['name'];
+            $visit = $user['visit'];
         ?>
             <tr>
                 <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(!empty($user['name'])){  
