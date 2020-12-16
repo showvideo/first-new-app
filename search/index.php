@@ -30,18 +30,9 @@
             $name = $user['name'];
             $visit = $user['visit'];
             echo $visit;
+            echo $name;
                 
-            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE visit = :visit100";
-            $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit100', $visit100, PDO::PARAM_STR);
-            $stmt->execute();
-            $result = $stmt->fetchAll();
-            foreach($result as $user){
-            $id = $user['id'];
-            $name = $user['name'];
-            $visit = $user['visit'];
-            echo $visit;
-            
+ 
         ?>
 
             <tr>
