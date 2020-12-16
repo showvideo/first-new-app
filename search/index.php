@@ -20,9 +20,8 @@
             $visit100 = $_POST['visit100'];
             echo $visit100;
     
-            $sql = "SELECT id, name, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' ";
+            $sql = "SELECT id, name, xisit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' ";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit1', $visit100, PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
@@ -92,7 +91,6 @@
             </tr>
         <?php
             }
-         }
         ?>
 </table>
     <input type="button" onclick="location.href='https://animech2.herokuapp.com/'" value="一覧へ戻る">
