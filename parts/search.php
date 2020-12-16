@@ -5,11 +5,14 @@
     
     <h4>来所</h4>
         <select name="visit1">
-        <option value="A">A型</option>
-        <option value="B">B型</option>
-        <option value="O">O型</option>
-        <option value="AB">AB型</option>
-        </select></p>
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="12:00">12:00</option>
+        </select></br>
       <h4>退所</h4><input type="exit1">
       <h4>バイタル</h4><input type="text" name="vital1">以上
       拡張期血圧<input type="text" vital2>以上
