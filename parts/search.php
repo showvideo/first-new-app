@@ -28,7 +28,7 @@
         </select>
         
       <h4>バイタル</h4>
-      血圧<input type="text" name="vital1" style="width:30px;">～<input type="text" name="vital1" style="width:30px;>
+      血圧<input type="text" name="vital1" style="width:30px;">～<input type="text" name="vital1" style="width:30px;></br>
       
       脈拍<input type="text" name="vital2" style="width:30px;>～<input type="text" name="vital2" style="width:30px;>
         
