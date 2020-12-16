@@ -87,8 +87,8 @@
     <h3><?php echo $name."様"; ?></h3></br>
     バイタル</br>
     <form action="" method="post">
-        最高血圧(mmHg)<input type="text" style="width:40px;">/最小血圧(mmHg)<input type="text" style="width:40px;">脈拍/分<input type="text" style="width:40px;">
-        <input type="submit" name="submit10" value="送信" style="margin-left:400px;margin-top:400px;">
+        最高血圧(mmHg)<input type="text" name="vital1" style="width:40px;">/最小血圧(mmHg)<input type="text" name="vital2" style="width:40px;">脈拍/分<input type="text" name="vital3" style="width:40px;">
+        <input type="submit" name="submit20" value="送信" style="margin-left:400px;margin-top:400px;">
     </form>
     <?php  } else {echo null;} ?> 
 
@@ -143,6 +143,19 @@
     $stmt->execute($data);
     header('Location: https://animech2.herokuapp.com/');
     exit;
+}
+?>
+<?php if(isset($_POST['submit20'])) { 
+  
+  $sql = 'UPDATE user SET vital=:vital WHERE id=:id';
+  $stmt = getDB()->prepare($sql);
+  $stmt->bindParam(':vital', $_POST['vital1'], PDO::PARAM_STR);
+  $stmt->bindParam(':vital', $_POST['vital2'], PDO::PARAM_STR);
+  $stmt->bindParam(':vital', $_POST['vital3'], PDO::PARAM_STR);
+  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+  $stmt->execute();
+  header('Location: https://animech2.herokuapp.com/');
+  exit;
 }
 ?>
 <?php if(isset($_POST['submit1'])) { 
