@@ -93,7 +93,7 @@
 </form>
 <?php if(isset($_POST['submit10'])) { 
   
-  $sql = 'INSERT INTO user(id, name) VALUES('':id', ':name')
+  $sql = 'INSERT INTO user(id, name) VALUES(':id', ':name')';
   $stmt = getDB()->prepare($sql);
   $stmt->bindParam(':id', $id, PDO::PARAM_STR)
   $stmt->bindParam('visit', $visit, PDO::PARAM_STR)
