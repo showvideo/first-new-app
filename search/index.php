@@ -84,5 +84,6 @@
             }
         ?>
 </table>
+    <input type="button" onclick="location.href='anime/index.html'" value="一覧へ戻る">
 </div>
 <?php require_once("../parts/search.php"); ?>
