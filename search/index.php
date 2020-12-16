@@ -28,6 +28,7 @@
             $id = $user['id'];
             $name = $user['name'];
             $visit = $user['visit'];
+                echo $visit;
         ?>
 
             <tr>
