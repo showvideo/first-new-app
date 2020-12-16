@@ -84,6 +84,6 @@
             }
         ?>
 </table>
-    <input type="button" onclick="location.href='anime/index.html'" value="一覧へ戻る">
+    <input type="button" onclick="location.href='https://animech2.herokuapp.com/'" value="一覧へ戻る">
 </div>
 <?php require_once("../parts/search.php"); ?>
