@@ -1,7 +1,9 @@
 
 <div style="display:inline-block;border:ridge;width:400px;vertical-align:top;margin-left:6px;">
 
-    <form action="../search/index.php" method="post"><h4>名前</h4><input type="text" name="name1">
+    <form action="../search/index.php" method="post">
+        
+    <h4>名前</h4><input type="text" name="name1">
     
     <h4>来所</h4>
         <select name="visit1">
