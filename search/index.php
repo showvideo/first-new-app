@@ -7,7 +7,7 @@
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
 
     <tr>
-        <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">御利用者</th>
+        <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">来所</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">退所</th>
         <th style="width:90px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">バイタル</th>
@@ -18,6 +18,16 @@
     
         <?php
             $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%'";
+            $stmt = getDB()->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            foreach($result as $user){
+            $id = $user['id'];
+            $name = $user['name'];
+            $visit = $user['visit'];
+        ?>
+        <?php
+            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE visit=$_POST['visit1']";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
