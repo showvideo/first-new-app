@@ -5,6 +5,7 @@
     
     <h4>来所</h4>
         <select name="visit1">
+        <option value="">選択しない</option>    
         <option value="09:00">09:00</option>
         <option value="09:30">09:30</option>
         <option value="10:00">10:00</option>
