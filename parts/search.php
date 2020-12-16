@@ -27,9 +27,11 @@
         <option value="16:30">16:30</option>
         </select>
         
-      <h4>バイタル</h4><input type="text" name="vital1">以上
-      拡張期血圧<input type="text" vital2>以上
-      脈拍<input type="text" name="vital3">以上
+      <h4>バイタル</h4>
+      血圧<input type="text" name="vital1">～<input type="text" name="vital1">
+      
+      脈拍<input type="text" name="vital2">～<input type="text" name="vital2">
+        
       <h4>入浴ありで絞り込む</h4><input type="radio" name="bath1" value="はい"> はい
       <input type="radio" value="いいえ" checked> いいえ
       <h4>食事ありで絞り込む</h4><input type="radio" name="meal1" value="はい"> はい
