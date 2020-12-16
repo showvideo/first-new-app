@@ -16,7 +16,7 @@
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
 
     <tr>
-        <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">御利用者</th>
+        <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">来所</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">退所</th>
         <th style="width:90px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">バイタル</th>
@@ -33,24 +33,29 @@
             foreach($result as $user){
             $id = $user['id'];
             $name = $user['name'];
-            /*$exit = $user['exit'];*/
+            $exits = $user['exits'];
             $vital = $user['vital'];
             $bath = $user['bath'];
             $meal = $user['meal'];
             $notices = $user['notices'];
         ?>
             <tr>
-                <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(!empty($user['name'])){  
-                ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
+                <!--お名前-->
+                <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+                    <?php if(!empty($user['name'])){ ?>
+                        <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $user['name']; ?></a>
+                    <?php } else { echo null; } ?>
+                </td>
                 
-                <?php /*来所*/ ?>
-                <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(empty($user['visit'])){ ?>                       
-                    <form action="input/index.php/<?php echo $id ?>/" method="post">                           
-                    <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;"></a>
-                    <input type="hidden" name="posts" value="100">
-                    </form>
+                <!--来所-->
+                <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+                    <?php if(empty($user['visit'])){ ?>                       
+                        <form action="input/index.php/<?php echo $id ?>/" method="post">                           
+                            <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;padding:0;"></a>
+                            <input type="hidden" name="posts" value="100">
+                        </form>
                     <?php }else { ?>
-                    <a href="input/index.php/<?php echo $id ?>/?posts=100" style="text-decoration:none;color:black;"><?php echo $user['visit']; ?></a>
+                        <a href="input/index.php/<?php echo $id ?>/?posts=100" style="text-decoration:none;color:black;"><?php echo $user['visit']; ?></a>
                     <?php } ?>
                 </td>
                 
