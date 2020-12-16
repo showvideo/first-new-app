@@ -35,8 +35,10 @@
     ?>
     <h3><?php echo $name."様"; ?></h3></br>
     来所時間</br>
-    <input type="text" name="visit" style="width:100px;height:40px;"></br>
-    <input type="submit" name="submit" value="送信" style="margin-left:400px;margin-top:400px;">
+    <form action="" method="post">
+        <input type="text" name="visit" style="width:100px;height:40px;"></br>
+        <input type="submit" name="submit" value="送信" style="margin-left:400px;margin-top:400px;">
+    </form>
     <?php  } else {echo null;} ?> 
 
 <?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">
