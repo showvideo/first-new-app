@@ -36,7 +36,16 @@
     <h3><?php echo $name."様"; ?></h3></br>
     来所時間</br>
     <form action="" method="post">
-        <input type="text" name="visit1" style="width:100px;height:40px;"></br>
+        
+        <select name="visit1">
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="12:00">12:00</option>
+        </select>
         <input type="submit" name="submit10" value="送信" style="margin-left:400px;margin-top:400px;">
     </form>
     <?php  } else {echo null;} ?> 
