@@ -17,12 +17,12 @@
     </tr>
     
         <?php
-            $visit1 = $_POST['visit1'];
-            echo $visit1;
+            $visit100 = $_POST['visit100'];
+            echo $visit100;
     
             $sql = "SELECT id, name, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' ";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit1', $visit1, PDO::PARAM_STR);
+            $stmt->bindParam(':visit1', $visit100, PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
@@ -31,9 +31,9 @@
             $visit = $user['visit'];
             echo $visit;
                 
-            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE visit = :visit1";
+            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE visit = :visit100";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit1', $visit1, PDO::PARAM_STR);
+            $stmt->bindParam(':visit100', $visit100, PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
