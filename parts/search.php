@@ -1,7 +1,7 @@
 
 <div style="display:inline-block;border:ridge;width:300px;vertical-align:top;margin-left:6px;">
 
-    <form action="" method="post"><h4>名前</h4><input type="text" name="name1">
+    <form action="../search/index.php" method="post"><h4>名前</h4><input type="text" name="name1">
     
       <h4>来所</h4><input type="text" name="visit1">
       <h4>退所</h4><input type="exit1">
