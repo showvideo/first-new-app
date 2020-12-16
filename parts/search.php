@@ -12,7 +12,8 @@
         <option value="11:00">11:00</option>
         <option value="11:30">11:30</option>
         <option value="12:00">12:00</option>
-        </select></br>
+        </select>
+    
       <h4>退所</h4><input type="exit1">
       <h4>バイタル</h4><input type="text" name="vital1">以上
       拡張期血圧<input type="text" vital2>以上
