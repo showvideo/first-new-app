@@ -33,7 +33,7 @@
             }
         ?>
         <?php
-            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE name visit=:visit";
+            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE visit=:visit";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', $visit100, PDO::PARAM_STR);
             $stmt->execute();
