@@ -41,7 +41,8 @@
             foreach($result as $user){
             $visit = $user['visit'];
             echo $visit;
-            }*/
+            }
+        }
         ?>
 
             <tr>
