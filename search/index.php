@@ -17,7 +17,7 @@
     </tr>
         
         <?php
-            if(isset($_POST['name1'] or $_POST['visit100'])){
+            if(isset($_POST['name1'])){
     
             $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE (name LIKE '%".$_POST["name1"]."%') or (visit = :visit)";
             $stmt = getDB()->prepare($sql);
