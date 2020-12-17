@@ -26,12 +26,11 @@
             foreach($result as $user){
             $id = $user['id'];
             $name = $user['name'];
-            echo $visit;
             echo $name;
             }
         }
         ?>
-        <?php
+        <?php/*
             $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE visit=:visit";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', $visit100, PDO::PARAM_STR);
@@ -40,7 +39,7 @@
             foreach($result as $user){
             $visit = $user['visit'];
             echo $visit;
-            }
+            }*/
         ?>
 
             <tr>
