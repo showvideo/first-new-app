@@ -85,7 +85,8 @@
 
             </tr>
             
-        <?php } ?>
+        <?php } 
+         }      ?>
         <?php
             if(isset($_POST['visit100'])){
                 
@@ -157,6 +158,7 @@
             </tr>
         <?php
             }
+        }
         ?>
 </table>
     <input type="button" onclick="location.href='https://animech2.herokuapp.com/'" value="一覧へ戻る">
