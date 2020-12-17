@@ -27,7 +27,6 @@
             foreach($result as $user){
             $id = $user['id'];
             $name = $user['name'];
-            $visit = $user['visit'];
             echo $visit;
             echo $name;
             }
@@ -39,11 +38,8 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
-            $ids = $user['id'];
-            $names = $user['name'];
-            $visits = $user['visit'];
-            echo $visits;
-            echo $names;
+            $visit = $user['visit'];
+            echo $visit;
             }
         ?>
 
