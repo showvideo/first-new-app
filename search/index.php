@@ -27,9 +27,8 @@
             foreach($result as $user){
             $id = $user['id'];
             $name11 = $user['name'];
-            $visit = $user['visit'];
+
             echo $name11;
-            echo $visit;
             
         ?>
     
