@@ -30,10 +30,12 @@
             }
         }
         ?>
-        <?php/*
+        <?php
+            if(isset($_POST['visit100'])){
+                
             $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE visit=:visit";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit', $visit100, PDO::PARAM_STR);
+            $stmt->bindParam(':visit', $_POST['visit100'], PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
