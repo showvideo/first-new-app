@@ -20,7 +20,7 @@
             $visit100 = $_POST['visit100'];
             echo $visit100;
     
-            $sql = "SELECT id, name, xisit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' ";
+            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' ";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
