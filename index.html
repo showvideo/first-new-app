@@ -5,7 +5,7 @@
 
 日誌作成
 
-<?php require_once("parts/search.php"); ?>
+
 <?php
     $sql = "SELECT name FROM user WHERE 1";
     $stmt = getDB()->prepare($sql);
@@ -129,8 +129,4 @@
         ?>
 </table>
 </div>
-
-
-<div style="display:inline-block;border:ridge;width:400px;vertical-align:-100px;margin-left:6px;"> 
-    業務日誌作成
-</div>
+<?php require_once("parts/search.php"); ?>
