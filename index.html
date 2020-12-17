@@ -2,6 +2,11 @@
     <script type="text/javascript"></script>
 </head>    
 <?php require_once("common/function.php"); ?>
+
+
+<div style="display:inline-block;border:ridge;width:60px;margin-left:500px;"> 
+    業務日誌作成
+</div>
 <?php
     $sql = "SELECT name FROM user WHERE 1";
     $stmt = getDB()->prepare($sql);
