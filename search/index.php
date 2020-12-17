@@ -39,12 +39,12 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
-            $id = $user['id'];
-            $name = $user['name'];
-            $visit = $user['visit'];
-            echo $visit;
-            echo $name;
- 
+            $ids = $user['id'];
+            $names = $user['name'];
+            $visits = $user['visit'];
+            echo $visits;
+            echo $names;
+            }
         ?>
 
             <tr>
