@@ -17,16 +17,20 @@
     </tr>
         
         <?php
-            if(isset($_POST['name1'])){
+            if(isset($_POST['name1'] or $_POST['visit100'])){
     
-            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST["name1"]."%' ";
+            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE (name LIKE '%".$_POST["name1"]."%') or (visit = :visit)";
             $stmt = getDB()->prepare($sql);
+            $stmt->bindParam(':visit', $_POST['visit'], PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
             $id = $user['id'];
             $name11 = $user['name'];
+            $visit = $user['visit'];
             echo $name11;
+            echo $visit;
+            
         ?>
     
             <tr>
