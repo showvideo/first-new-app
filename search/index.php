@@ -18,7 +18,7 @@
         
         <?php
     
-            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST['name1']."%' AND visit =:visit AND exits=:exits";
+            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE (name LIKE '%".$_POST['name1']."%') AND (visit =:visit) AND (exits=:exits)";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', $_POST['visit100'], PDO::PARAM_STR);
             $stmt->bindParam(':exits', $_POST['exits1'], PDO::PARAM_STR);
