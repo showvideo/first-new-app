@@ -15,9 +15,10 @@
         <th style="width:50px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">食事</th>
         <th style="width:170px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">特記事項</th>
     </tr>
-        if(isset($_POST['name1'])) {
+       
         <?php
-    
+            if(isset($_POST['name1'])) {
+                
             $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST['name1']."%'";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
