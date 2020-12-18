@@ -101,7 +101,7 @@
         ?>
     
             <tr>
-                <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(!empty($user['name'])){  
+                <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(isset($user['name'])){  
                 ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a><?php } else { echo null; } ?></td>
                 
                 <?php /*来所*/ ?>
