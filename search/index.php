@@ -26,6 +26,7 @@
             foreach($result as $user){
             $id = $user['id'];     
             $name = $user['name'];     
+            echo $name;
         ?>
     
             <tr>
