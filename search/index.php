@@ -88,7 +88,7 @@
         <?php } ?>
    <?php } ?>  
     <?php
-            if(isset($_POST['visit100'])) {
+            if(!empty($_POST['visit100'])) {
                 
             $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE visit=:visit";
             $stmt = getDB()->prepare($sql);
