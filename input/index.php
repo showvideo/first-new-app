@@ -50,7 +50,7 @@
     </form>
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:575px;height:600px;">
+<?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:575px;height:600px;position:relative;">
    <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -66,7 +66,7 @@
     <h3 style="padding-left:20px;"><?php echo $name."様"; ?></h3></br>
         <a style="padding-left:40px;">来所時間:<?php echo $visit; ?></br>
 <form action="" method="post">
-<input type="submit" name="edit" value="編集"></form>
+<input type="submit" name="edit" value="編集" style=" position:absolute;bottom: 5px;"></form>
 <input type="submit" name="delete" value="削除">
 </div><?php  } else {echo null;} ?> 
 
