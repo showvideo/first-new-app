@@ -25,6 +25,7 @@
             $result = $stmt->fetchAll();
             foreach($result as $user){
             $id = $user['id'];     
+            $name = $user['name'];     
         ?>
     
             <tr>
