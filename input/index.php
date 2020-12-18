@@ -50,7 +50,7 @@
     </form>
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">
+<?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:700px;height:600px;">
    <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
