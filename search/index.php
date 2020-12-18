@@ -18,7 +18,7 @@
         
         <?php
     
-            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE (name = LIKE '%".$_POST['name1']."%') and (visit=:visit)";
+            $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE (name LIKE '%".$_POST['name1']."%') and (visit=:visit)";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', $_POST['visit100'], PDO::PARAM_STR);
             $stmt->execute();
@@ -28,7 +28,7 @@
         ?>
     
             <tr>
-                <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(isset($name)){  
+                <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(!empty($user['name'])){  
                 ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a><?php } else { echo null; } ?></td>
                 
                 <?php /*来所*/ ?>
