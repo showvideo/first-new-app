@@ -96,13 +96,12 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
-                $visit=$user['visit'];
             echo $name;
         ?>
     
             <tr>
                 <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(empty($user['name'])){  
-                ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a><?php } else { echo null; } ?></td>
+                ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $user['name']; ?></a><?php } else { echo null; } ?></td>
                 
                 <?php /*来所*/ ?>
                 <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(empty($user['visit'])){ ?>                       
