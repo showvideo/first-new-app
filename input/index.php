@@ -64,7 +64,7 @@
         }
     ?>
     <h3 style="padding-left:20px;"><?php echo $name."様"; ?></h3></br>
-        <a style="padding-left:40px;"来所時間:<?php echo $visit; ?></br>
+        <a style="padding-left:40px;">来所時間:<?php echo $visit; ?></br>
 <form action="" method="post">
 <input type="submit" name="edit" value="編集"></form>
 <input type="submit" name="delete" value="削除">
