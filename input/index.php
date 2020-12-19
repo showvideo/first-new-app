@@ -64,7 +64,8 @@
         }
     ?>
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-        <a style="padding-left:40px;font-size:20px;">来所時間:<?php echo $visit; ?></br>
+        <a style="padding-left:40px;font-size:20px;">来所時間</br>
+<input type="text" placeholder="<?php echo $visit; ?>"></br>
 <form action="" method="post">
 <input type="submit" name="edit" value="編集" style=" position:absolute;bottom:5px;right:5px;"></form>
 <input type="submit" name="delete" value="削除">
