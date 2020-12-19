@@ -67,7 +67,7 @@
         <a style="padding-left:40px;">来所時間:<?php echo $visit; ?></br>
 <form action="" method="post">
 <input type="submit" name="edit" value="編集" style=" position:absolute;bottom: 5px;"></form>
-<input type="submit" name="delete" value="削除" style=" position:absolute;bottom:5px;rigth:5px;">
+<input type="submit" name="delete" value="削除" style=" position:absolute;bottom:5px;padding-left:100px;">
 </div><?php  } else {echo null;} ?> 
 
 <!--バイタル-->
