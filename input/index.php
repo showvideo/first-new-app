@@ -65,7 +65,8 @@
     ?>
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
         <a style="padding-left:40px;font-size:20px;">来所時間</br>
-<input type="text" placeholder="<?php echo substr($visit, 0, 2); ?>"></br>
+<input type="text" placeholder="<?php echo substr($visit, 0, 2); ?> style="width:40px;height:50px;padding-left:40px;">:
+<input type="text" placeholder="<?php echo substr($visit, 3, 5); ?> style="width:40px;height:50px;"></br>
 <form action="" method="post">
 <input type="submit" name="edit" value="編集" style=" position:absolute;bottom:5px;right:5px;"></form>
 <input type="submit" name="delete" value="削除">
