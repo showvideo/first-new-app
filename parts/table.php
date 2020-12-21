@@ -37,7 +37,7 @@
             <input type="hidden" name='visitname' value="1">
             </form>
             <?php }else { ?>
-            <a href="input/index.php/<?php echo $id ?>/?posts=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
+            <a href="input/index.php/<?php echo $id ?>/?visitname=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
             <?php } ?>
         </td>
                 
