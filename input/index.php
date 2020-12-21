@@ -22,7 +22,7 @@
 ?>
 <?php /*来所*/ ?>
 <form action="" method="post">
-<?php if(!empty($visitname)) { ?> <div style="display:inline-block;border:ridge;width:800px;height:600px;">
+<?php if(isset($visitname)) { ?> <div style="display:inline-block;border:ridge;width:800px;height:600px;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
