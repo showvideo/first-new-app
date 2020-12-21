@@ -33,12 +33,6 @@
                     <?php } ?>
                 </td>
                 
-                <form name='friendForm1' method='GET' action='http://www.yahoo.co.jp'>
-      <p><a href='http://www.google.com' onClick='document.friendForm1.submit();return false;'>yahoo</a></p>
-      <input type ='hidden' name='friend_name' value="1">
-      <input type ='hidden' name='friend_password' value="2">
-      <input type ='hidden' name='friend_address' value="3">
-</form>
                 <!--来所-->
                 <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
                     <?php if(empty($visit)){ ?>                       
