@@ -27,18 +27,24 @@
         ?>
             <tr>
                 <!--お名前-->
-                <td style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-                    <?php if(!empty($name)){ ?>
+                <td style="width:100px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+                    <?php if(isset($name)){ ?>
                         <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
-                    <?php } else { echo null; } ?>
+                    <?php } ?>
                 </td>
                 
+                <form name='friendForm1' method='GET' action='http://www.yahoo.co.jp'>
+      <p><a href='http://www.google.com' onClick='document.friendForm1.submit();return false;'>yahoo</a></p>
+      <input type ='hidden' name='friend_name' value="1">
+      <input type ='hidden' name='friend_password' value="2">
+      <input type ='hidden' name='friend_address' value="3">
+</form>
                 <!--来所-->
-                <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+                <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
                     <?php if(empty($visit)){ ?>                       
-                        <form action="input/index.php/<?php echo $id ?>/" method="post">                           
-                            <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;padding:0;"></a>
-                            <input type="hidden" name="posts" value="100">
+                        <form name='visitForm' action="input/index.php/" method="post">                           
+                            <a href="input/index.php/<?php echo $id ?>/" onClick='document.visitForm' style="opacity:0;"></a>
+                            <input type="hidden" name='visitname' value="1">
                         </form>
                     <?php }else { ?>
                         <a href="input/index.php/<?php echo $id ?>/?posts=100" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
