@@ -1,6 +1,6 @@
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
 
-    <tr bgcolor="#384D98">
+    <tr style="background-color:#384D98;">
         <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">来所</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">退所</th>
