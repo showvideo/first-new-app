@@ -7,12 +7,12 @@
 <?php
   
   $visit = $_POST['visit'];
-  /*$exit = $_POST['exit'];*/
+  $exit = $_POST['exits'];
   $vital = $_POST['vital'];
   $bath = $_POST['bath'];
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
-  $posts = $_POST['posts'];
+  $posts = $_POST['visitname'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
   $post3 = $_POST['post3'];
@@ -22,9 +22,9 @@
 ?>
 <?php /*来所*/ ?>
 <form action="" method="post">
-<?php if(isset($posts)) { ?> <div style="display:inline-block;border:ridge;width:800px;height:600px;">
+<?php if(isset($visitname)) { ?> <div style="display:inline-block;border:ridge;width:800px;height:600px;">
     <?php
-       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
@@ -36,17 +36,10 @@
     <h3><?php echo $name."様"; ?></h3></br>
     来所時間</br>
     <form action="" method="post">
+        <input type="text" style="width:40px;height:50px;margin-left:40px;color:black;font-weight:bold;">:
+        <input type="text" style="width:40px;height:50px;"></br>
         
-        <select name="visit1">
-        <option value="09:00">09:00</option>
-        <option value="09:30">09:30</option>
-        <option value="10:00">10:00</option>
-        <option value="10:30">10:30</option>
-        <option value="11:00">11:00</option>
-        <option value="11:30">11:30</option>
-        <option value="12:00">12:00</option>
-        </select>
-        <input type="submit" name="submit10" value="送信" style="margin-left:400px;margin-top:400px;">
+        <input type="submit" name="submit10" value="入力">
     </form>
     <?php  } else {echo null;} ?> 
 
