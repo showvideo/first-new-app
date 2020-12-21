@@ -17,34 +17,29 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
-            $id = $user['id'];
-            $name = $user['name'];
-            $visit = $user['visit'];
-            $exits = $user['exits'];
-            $vital = $user['vital'];
-            $bath = $user['bath'];
-            $meal = $user['meal'];
-            $notices = $user['notices'];
+            $id=$user['id']; $name=$user['name']; $visit=$user['visit']; $exits=$user['exits']; $vital=$user['vital'];
+            $bath=$user['bath']; $meal=$user['meal']; $notices=$user['notices'];
         ?>
-            <tr>
-                <!--お名前-->
-                <td style="width:100px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
-                    <?php if(isset($name)){ ?>
-                        <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
-                    <?php } ?>
-                </td>
+           
+    <tr>
+        <!--お名前-->
+        <td style="width:100px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php if(isset($name)){ ?>
+            <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
+        <?php } ?>
+        </td>
                 
-                <!--来所-->
-                <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
-                    <?php if(empty($visit)){ ?>                       
-                        <form name='visitForm' action="input/index.php/" method="post">                           
-                            <a href="input/index.php/<?php echo $id ?>/" onClick='document.visitForm' style="opacity:0;">VISIT</a>
-                            <input type="hidden" name='visitname' value="1">
-                        </form>
-                    <?php }else { ?>
-                        <a href="input/index.php/<?php echo $id ?>/?posts=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
-                    <?php } ?>
-                </td>
+        <!--来所-->
+        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php if(empty($visit)){ ?>                       
+            <form name='visitForm' action="input/index.php/" method="post">                           
+            <a href="input/index.php/<?php echo $id ?>/" onClick='document.visitForm' style="opacity:0;">VISIT</a>
+            <input type="hidden" name='visitname' value="1">
+            </form>
+            <?php }else { ?>
+            <a href="input/index.php/<?php echo $id ?>/?posts=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
+            <?php } ?>
+        </td>
                 
                 <!--退所-->
                 <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
