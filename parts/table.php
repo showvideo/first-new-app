@@ -1,5 +1,6 @@
-<table border="1" cellspacing="0" style="border-collaspe:collapse;">
 
+<table border="1" cellspacing="0" style="border-collaspe:collapse;">
+    
     <tr style="background-color:#384D98;">
         <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">来所</th>
@@ -37,11 +38,11 @@
                 <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
                     <?php if(empty($visit)){ ?>                       
                         <form name='visitForm' action="input/index.php/" method="post">                           
-                            <a href="input/index.php/<?php echo $id ?>/" onClick='document.visitForm' style="opacity:0;"></a>
+                            <a href="input/index.php/<?php echo $id ?>/" onClick='document.visitForm' style="opacity:0;">VISIT</a>
                             <input type="hidden" name='visitname' value="1">
                         </form>
                     <?php }else { ?>
-                        <a href="input/index.php/<?php echo $id ?>/?posts=100" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
+                        <a href="input/index.php/<?php echo $id ?>/?posts=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
                     <?php } ?>
                 </td>
                 
