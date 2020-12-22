@@ -13,7 +13,7 @@
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
   $visitname = $_POST['visitname'];
-  $visitname = $_GET['visitname'];
+  $visitnames = $_GET['visitname'];
   $visitform = $_POST['visitform'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
@@ -45,7 +45,7 @@
     </form>
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($post10)) { ?> <div style="display:inline-block;border:ridge;width:575px;height:600px;position:relative;">
+<?php if(isset($visitnames)) { ?> <div style="display:inline-block;border:ridge;width:575px;height:600px;position:relative;">
    <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
