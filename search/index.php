@@ -19,9 +19,8 @@
         <?php
             if(!empty($_POST['name1'])) {
                 
-            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE name LIKE '%".$_POST['name1']."%'";
-            $sql1 = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE visit=:visit";
-            $stmt = getDB()->prepare($sql,$sql1);
+            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE !isset(name LIKE '%".$_POST['name1']."%')=true ";
+            $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
