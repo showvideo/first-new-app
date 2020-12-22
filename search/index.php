@@ -29,6 +29,7 @@
             $name = $user['name']; 
             $visit = $user['visit']; 
             echo $name;
+            echo $visit;
         ?>
     
             <tr>
