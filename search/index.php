@@ -17,7 +17,7 @@
     </tr>
        
         <?php
-            if(!empty($_POST['name1'])) {
+            if(!empty($_POST['search_name'])) {
                 
             $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE name LIKE '%".searchName(var_dump($_POST['search_name']))."%'";
             $stmt = getDB()->prepare($sql);
