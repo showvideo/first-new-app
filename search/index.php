@@ -37,7 +37,7 @@
                 ?><a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a><?php } else { echo null; } ?></td>
                 
                 <?php /*来所*/ ?>
-                <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(empty($visit])){ ?>                       
+                <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php if(empty($visit)){ ?>                       
                     <form action="input/index.php/<?php echo $id ?>/" method="post">                           
                     <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;"></a>
                     <input type="hidden" name="posts" value="100">
