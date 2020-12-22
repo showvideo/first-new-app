@@ -44,7 +44,13 @@ function getDB() {
         return $result;
         
     }
-
+	
+	function searchName($naMe) {
+		if(isset($naMe) = true){
+			return $naMe; }
+		else {
+			return $naMe = null; } }
+		
     function table_title($title) {
 
         echo('	
