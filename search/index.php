@@ -2,6 +2,7 @@
     <script type="text/javascript"></script>
 </head>    
 <?php require_once("../common/function.php"); ?>
+<?php $search_name = $_POST['search_name'] ?>
 
 <div style="display:inline-block;">
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
@@ -19,7 +20,7 @@
         <?php
             if(!empty($_POST['search_name'])or($_POST['search_visit'])) {
                 
-            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') and (visit=:visit)";
+            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($search_name)."%') and (visit=:visit)";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', searchName($_POST['search_visit']), PDO::PARAM_STR);
             $stmt->execute();
