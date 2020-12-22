@@ -24,7 +24,7 @@
 ?>
 <?php /*来所*/ ?>
 <form action="" method="post">
-<?php if(isset($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:839px;">
+<?php if(isset($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -45,7 +45,7 @@
     </form>
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($visitTime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:839px;position:relative;">
+<?php if(isset($visitTime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
    <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -63,9 +63,9 @@
     <input type="text" placeholder="<?php echo substr($visit, 0, 2); ?>" style="width:60px;height:70px;margin-left:40px;color:black;font-weight:bold;">:
     <input type="text" placeholder="<?php echo substr($visit, 3, 5); ?>" style="width:60px;height:70px;">
     <form action="" method="post">
-    <input type="submit" name="edit" value="編集" style="margin-top:10px;margin-left:40px;"></form></br>
+    <input type="submit" name="edit" value="編集" style="margin-top:60px;margin-left:40px;"></form></br>
     <a href="" name="delete" value="削除">削除はこちらをクリック</a>
-    <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:7px;">
+    <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:8px;">
     </div><?php  } else {echo null;} ?> 
 
 <?php /*退所*/ ?>
