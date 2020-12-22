@@ -71,8 +71,7 @@
     </div><?php  } else {echo null;} ?> 
 
 <?php /*特記事項*/ ?>
-<form action="" method="post">
-<?php if(isset($notices0)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
+<?php if(isset($notices0)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -86,7 +85,7 @@
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
     <p style="padding-left:40px;font-size:20px;">特記事項</p></br>
     <form action="" method="post">
-        <textarea style="resize:none;width:300px;height:200px;"></textarea>
+        <!--<textarea style="resize:none;width:300px;height:200px;"></textarea>-->
         <input type="submit" name="submit" value="入力する。">
         <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
     </form>
