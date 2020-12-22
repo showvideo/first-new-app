@@ -32,7 +32,7 @@
         <!--来所-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($visit)){ ?>                       
-            <a href="../../input/index.php/<?php echo $id ?>/?visitTime=1"></a>                          
+            <a href="../../input/index.php/<?php echo $id ?>/?visitTime=1" style="opacity:0;">TIME</a>                          
             <?php }else { ?>
             <a href="../../input/index.php/<?php echo $id ?>/?visitTime1=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
             <?php } ?>
