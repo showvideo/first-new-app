@@ -89,9 +89,9 @@
                 <!--特記事項-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($notices)){ ?>                       
-            <a href="../../input/index.php/<?php echo $id ?>/?Notices=1" style="opacity:0;">AAA</a>                          
+            <a href="../../input/index.php/<?php echo $id ?>/?notices0=1" style="opacity:0;">AAA</a>                          
             <?php }else { ?>
-            <a href="../../input/index.php/<?php echo $id ?>/?Notices=1" style="text-decoration:none;color:black;"><?php echo $notices; ?></a>
+            <a href="../../input/index.php/<?php echo $id ?>/?notices1=1" style="text-decoration:none;color:black;"><?php echo $notices; ?></a>
             <?php } ?>
         </td>
             </tr>
