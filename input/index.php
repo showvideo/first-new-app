@@ -24,7 +24,7 @@
 ?>
 <?php /*来所*/ ?>
 <form action="" method="post">
-<?php if(isset($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:800px;height:600px;">
+<?php if(isset($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:839px;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -45,7 +45,7 @@
     </form>
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($visitTime1)) { ?> <div style="display:inline-block;border:ridge;width:575px;height:600px;position:relative;">
+<?php if(isset($visitTime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:839px;position:relative;">
    <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
