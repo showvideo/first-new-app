@@ -17,7 +17,7 @@
         <th style="width:170px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">特記事項</th>
     </tr>
        
-        <?php/*
+        <?php
             if(!empty($_POST['search_name'])) {
                 
             $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE  (name LIKE '%".searchName($_POST['search_name'])."%') and (visit=:visit)";
@@ -30,7 +30,7 @@
             $name = $user['name']; 
             $visit = $user['visit']; 
             echo $name;
-            echo $visit;*/
+            echo $visit;
         ?>
     
             <tr>
