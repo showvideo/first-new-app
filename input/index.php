@@ -64,8 +64,8 @@
     <input type="text" placeholder="<?php echo substr($visit, 3, 5); ?>" style="width:44px;height:55px;">
     <form action="" method="post">
     <input type="submit" name="edit" value="編集" style="margin-left:80px;"></form></br>
-    <a href="" name="delete" value="削除" style="margin-left:40px;margin-top:100px;">削除はこちらをクリック</a>
-    <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:8px;">
+    <a href="" name="delete" value="削除" style="margin-left:40px;padding-top:100px;">削除はこちらをクリック</a>
+    <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
     </div><?php  } else {echo null;} ?> 
 
 <?php /*退所*/ ?>
