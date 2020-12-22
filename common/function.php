@@ -45,11 +45,12 @@ function getDB() {
         
     }
 	
-	function searchName($naMe) {
-		if(isset($naMe) = true){
-			return $naMe; }
-		else {
-			return $naMe = null; } }
+	function searchName($names) {
+		if(isset($names) = true){
+			return $names; 
+		} else {
+			return $names = null; } 
+	}
 		
     function table_title($title) {
 
