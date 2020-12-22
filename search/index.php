@@ -19,7 +19,7 @@
         <?php
             if(!empty($_POST['search_name'])) {
                 
-            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE visit=:visit";
+            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE visit=':visit' ";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', $_POST['search_visit'], PDO::PARAM_STR);
             $stmt->execute();
