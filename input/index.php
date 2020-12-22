@@ -67,6 +67,53 @@
 <input type="submit" name="delete" value="削除"><input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:5px;">
 </div><?php  } else {echo null;} ?> 
 
+<?php /*退所*/ ?>
+<form action="" method="post">
+<?php if(isset($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:839px;">
+    <?php
+        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+        $stmt = getDB()->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        foreach($result as $user){
+        $id = $user['id'];
+        $name = $user['name'];}
+    ?>
+    <h3><?php echo $name."様"; ?></h3></br>
+    来所時間</br>
+    <form action="" method="post">
+        <input type="text" style="width:40px;height:50px;margin-left:40px;color:black;font-weight:bold;">:
+        <input type="text" style="width:40px;height:50px;"></br>
+        
+        <input type="submit" name="submit10" value="入力">
+    </form>
+    <?php  } else {echo null;} ?> 
+
+
+<?php if(isset($exitTime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:839px;position:relative;">
+   <?php
+       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+        $stmt = getDB()->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        foreach($result as $user){
+        $id = $user['id'];
+        $name = $user['name'];
+        $visit = $user['visit'];
+        }
+    ?>
+    <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
+        <a style="padding-left:40px;font-size:20px;">退所時間</br>
+<input type="text" placeholder="<?php echo substr($visit, 0, 2); ?>" style="width:40px;height:50px;margin-left:40px;color:black;font-weight:bold;">:
+<input type="text" placeholder="<?php echo substr($visit, 3, 5); ?>" style="width:40px;height:50px;"></br>
+<form action="" method="post">
+<input type="submit" name="edit" value="編集" style=""></form>
+<input type="submit" name="delete" value="削除"><input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:5px;">
+</div><?php  } else {echo null;} ?> 
+
+
 <!--バイタル-->
 <?php if(isset($post2)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">
     <?php
