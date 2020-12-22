@@ -1,33 +1,15 @@
 
-<div style="display:inline-block;border:ridge;width:400px;vertical-align:top;margin-left:6px;">
+<div style="display:inline-block;border:ridge;width:400px;vertical-align:top;margin-left:6px;padding-left:20px;">
 
     <form action="../search/index.php" method="post">
         
-    <h4>名前</h4><input type="text" name="name1">
+    <h4>名前</h4>
+        <input type="text" name="name1" style="width:100px;height:39px;">
     
     <h4>来所</h4>
-        <select name="visit100">
-        <option value="">選択しない</option>    
-        <option value="09:00">09:00</option>
-        <option value="09:30">09:30</option>
-        <option value="10:00">10:00</option>
-        <option value="10:30">10:30</option>
-        <option value="11:00">11:00</option>
-        <option value="11:30">11:30</option>
-        <option value="12:00">12:00</option>
-        </select>
-    
-      <h4>退所</h4>
-        <select name="exit1">
-        <option value="">選択しない</option>    
-        <option value="13:30">13:30</option>
-        <option value="14:00">14:00</option>
-        <option value="14:30">14:30</option>
-        <option value="15:00">15:00</option>
-        <option value="15:30">15:30</option>
-        <option value="16:00">16:00</option>
-        <option value="16:30">16:30</option>
-        </select>
+        <input type="text" name="visit" style="width:44px;height:55px;">
+    <h4>退所</h4>
+        <input type="text" name="visit" style="width:44px;height:55px;">
         
       <h4>バイタル</h4>
       血圧<input type="text" name="vital1" style="width:30px;">～<input type="text" name="vital1" style="width:30px;"></br>
