@@ -59,13 +59,14 @@
         }
     ?>
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-        <a style="padding-left:40px;font-size:20px;">来所時間</br>
-<input type="text" placeholder="<?php echo substr($visit, 0, 2); ?>" style="width:40px;height:50px;margin-left:40px;color:black;font-weight:bold;">:
-<input type="text" placeholder="<?php echo substr($visit, 3, 5); ?>" style="width:40px;height:50px;"></br>
-<form action="" method="post">
-<input type="submit" name="edit" value="編集" style=""></form>
-<input type="submit" name="delete" value="削除"><input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:5px;">
-</div><?php  } else {echo null;} ?> 
+    <p style="padding-left:40px;font-size:20px;">来所時間</p></br>
+    <input type="text" placeholder="<?php echo substr($visit, 0, 2); ?>" style="width:60px;height:70px;margin-left:40px;color:black;font-weight:bold;">:
+    <input type="text" placeholder="<?php echo substr($visit, 3, 5); ?>" style="width:60px;height:70px;">
+    <form action="" method="post">
+    <input type="submit" name="edit" value="編集" style=""></form>
+    <a href="" name="delete" value="削除">削除はこちらをクリック</a>
+    <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:10px;">
+    </div><?php  } else {echo null;} ?> 
 
 <?php /*退所*/ ?>
 <form action="" method="post">
