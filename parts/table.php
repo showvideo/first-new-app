@@ -32,10 +32,9 @@
         <!--来所-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($visit)){ ?>                       
-            <form name='visitForm' action="../input/index.php/<?php echo $id ?>/" method="post">                           
-            <input type="hidden" name="visitname" value="1">
+            <form name='visitForm' action="../input/index.php/<?php echo $id ?>/" method="post">                          
             <a href="input/index.php/<?php echo $id ?>/" onClick='document.visitForm.submit();' style="opacity:0;">visit</a>
-            
+            <input type="hidden" name="visitname" value="1">            
             </form>
             <?php }else { ?>
             <a href="../../input/index.php/<?php echo $id ?>/?visitname=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
