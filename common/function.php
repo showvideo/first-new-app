@@ -29,6 +29,13 @@ function getDB() {
         $ID = $urlarray[3];
         return $ID;
     }
+
+	function searchName($names) {
+		if(isset($names)){
+			return $names; 
+		} else {
+			return $names = null; } 
+	}
     
 
     function anime_title() {
