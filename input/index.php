@@ -39,7 +39,7 @@
     <p style="padding-left:40px;font-size:20px;">来所時間</p></br>
     <form action="" method="post">
         <input type="text" style="width:44px;height:55px;margin-left:40px;">:
-        <input type="text" style="width:44px;height:55px;"></br>
+        <input type="text" style="width:44px;height:55px;">
         <input type="submit" name="submit" value="入力">
         <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
     </form>
