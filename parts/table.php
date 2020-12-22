@@ -87,16 +87,13 @@
                 </td>
                 
                 <!--特記事項-->
-                <td style="width:170px;height:35px; border: 1px solid #ccc;background:#fff;padding:4px;">
-                    <?php if(empty($notices)){ ?>                       
-                        <form action="input/index.php/<?php echo $id ?>/" method="post">                           
-                            <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;padding:0;"></a>
-                            <input type="hidden" name="posts" value="100">
-                        </form>
-                    <?php }else { ?>
-                        <a href="input/index.php/<?php echo $id ?>/?posts=100" style="text-decoration:none;color:black;"><?php echo $notices; ?></a>
-                    <?php } ?>
-                </td>
+        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php if(empty($notices)){ ?>                       
+            <a href="../../input/index.php/<?php echo $id ?>/?Notices=1" style="opacity:0;">AAA</a>                          
+            <?php }else { ?>
+            <a href="../../input/index.php/<?php echo $id ?>/?Notices=1" style="text-decoration:none;color:black;"><?php echo $notices; ?></a>
+            <?php } ?>
+        </td>
             </tr>
         <?php
             }
