@@ -2,6 +2,7 @@
     <script type="text/javascript"></script>
 </head>    
 <?php require_once("../common/function.php"); ?>
+<?php $search_visit = $_POST['search_visit']; ?>
 
 <div style="display:inline-block;">
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
@@ -21,7 +22,7 @@
                 
             $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE  (name LIKE '%".searchName($_POST['search_name'])."%') and (visit=:visit)";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit', $_POST['search_visit'], PDO::PARAM_STR);
+            $stmt->bindParam(':visit', $search_visit, PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
