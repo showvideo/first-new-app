@@ -13,6 +13,7 @@
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
   $visitname = $_POST['visitname'];
+  $visitname = $_GET['visitname'];
   $visitform = $_POST['visitform'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
