@@ -15,8 +15,8 @@
   $visitTime = $_GET['visitTime'];
   $visitTime1 = $_GET['visitTime1'];
   $visitform = $_POST['visitform'];
-　$Notices = $_GET['Notices'];
-  $Notices1 = $_GET['Notices1'];
+　$notices0 = $_GET['Notices'];
+  $notices1 = $_GET['Notices1'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
   $post3 = $_POST['post3'];
@@ -72,7 +72,7 @@
 
 <?php /*特記事項*/ ?>
 <form action="" method="post">
-<?php if(isset($Notices)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
+<?php if(isset($notices0)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -92,7 +92,7 @@
     </form>
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($Notices1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
+<?php if(isset($notices1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
    <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
