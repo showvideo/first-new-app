@@ -15,8 +15,8 @@
   $visitTime = $_GET['visitTime'];
   $visitTime1 = $_GET['visitTime1'];
   $visitform = $_POST['visitform'];
-　$notices0 = $_GET['Notices'];
-  $notices1 = $_GET['Notices1'];
+　$notices0 = $_GET['notices0'];
+  $notices1 = $_GET['notices1'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
   $post3 = $_POST['post3'];
