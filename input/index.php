@@ -13,6 +13,7 @@
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
   $visitname = $_POST['visitname'];
+  $visitform = $_POST['visitform'];
   $post1 = $_POST['post1'];
   $post2 = $_POST['post2'];
   $post3 = $_POST['post3'];
@@ -22,7 +23,7 @@
 ?>
 <?php /*来所*/ ?>
 <form action="" method="post">
-<?php if(isset($visitname)) { ?> <div style="display:inline-block;border:ridge;width:800px;height:600px;">
+<?php if(isset($visitform)) { ?> <div style="display:inline-block;border:ridge;width:800px;height:600px;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
