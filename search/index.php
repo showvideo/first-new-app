@@ -18,7 +18,7 @@
     </tr>
        
         <?php
-            if(!empty($_POST['search_name'])or($_POST['search_visit'])) {
+            if(!empty($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])) {
                 
             $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') or (visit=:visit) 
                     or (exits=:exit)";
