@@ -5,19 +5,25 @@ function p($str) {
 
 function getDB() {
 
-    $dsn = 'mysql:dbname=heroku_dc6bcee06683c20;host=us-cdbr-east-02.cleardb.com';
-    $user = 'be79249baf2bce';
-    $pass = '032b4eaf';
+	try {
 
-    try {
-        $db = new PDO($dsn, $user, $pass);
-        $db->query('SET NAMES utf8');
-    }catch(PDOException $e) {
-        ('Error:'.$e->getMessage());
-        ('接続できませんでした');
-        die();
-    } return $db;
-
+		
+	    $pdo = new PDO(
+		    'mysql:dbname=heroku_dc6bcee06683c20;host=us-cdbr-east-02.cleardb.com;charset=utf8mb4',
+	   	    'mysql:dbname=heroku_dc6bcee06683c20;host=us-cdbr-east-02.cleardb.com'         
+		    '032b4eaf'
+	            [
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+		    ]
+	);
+	} catch (PDOException $e) {
+		
+		header('Content-Type: text/plain; charset=UTF-8', true, 500);
+		exit($e->getMessage());
+		
+	} return $pdo;
+		
 }
 
     function getURL() {
