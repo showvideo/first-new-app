@@ -36,11 +36,17 @@
             </form>    
         <?php } ?>
         </td>
-                
+        <form name="download" action="csv.php" method="post">
+        <input type="hidden" name="param" value="たこ">
+        </form>
+        <a href="csv.php" onclick="document.download.submit();return false;">ダウンロード</a>        
         <!--来所-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(!isset($visit)){ ?>                       
-            <form action="../../input/index.php/<?php echo $id ?>/" method="get"><a href="../../input/index.php/<?php echo $id ?>/?visitTime=1" style="opacity:0;">TIME</a></form>                       
+            <form name="visitTime" action="../../input/index.php/<?php echo $id ?>/" method="post">
+            <input type="hidden" name="visit1" value="来所">
+            </form>
+            <a href="../../input/index.php/<?php echo $id ?>/" onclick="document.visitTime.submit();return false;" style="opacity:0;">TIME</a>                       
             <?php }else { ?>
             <form action="../../input/index.php/<?php echo $id ?>/" method="get"><a href="../../input/index.php/<?php echo $id ?>/?visitTime1=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a></form>
         <?php } ?>
