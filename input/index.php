@@ -13,7 +13,7 @@
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
   $visitTime = $_POST['visit1'];
-
+var_dump($visitTime);
 ?>
 
 <?php /*来所*/ ?>
@@ -66,7 +66,7 @@
 
 
 
-
+<?php/*
 <?php /*if(isset($user['exit'])) { echo null; } else {?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">退所:<input type="text" name="exit"></br></div> <?php } */?> 
 <?php if(isset($post1)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">バイタル:<input type="text" name="vital"></div></br>
 <input type="submit" name="submit1" value="送信"><?php } else { echo null;} ?>
@@ -182,7 +182,7 @@
   $stmt->execute($data);
   header('Location: https://animech2.herokuapp.com/');
   exit;
-}
+} */
 ?>
 
 </body>
