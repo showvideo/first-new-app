@@ -10,7 +10,7 @@ function getDB() {
 		
 	    $pdo = new PDO(
 		    'mysql:dbname=heroku_dc6bcee06683c20;host=us-cdbr-east-02.cleardb.com;charset=utf8mb4',
-	   	    'mysql:dbname=heroku_dc6bcee06683c20;host=us-cdbr-east-02.cleardb.com'         
+	   	    'be79249baf2bce'; 
 		    '032b4eaf'
 	            [
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
