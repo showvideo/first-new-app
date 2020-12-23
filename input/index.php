@@ -13,6 +13,7 @@
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
   $visitTime = $_GET['visitTime'];
+  var_dump($visitTime);
   $visitTime1 = $_GET['visitTime1'];
   $visitform = $_POST['visitform'];
 　$notices0 = $_GET['notices0'];
