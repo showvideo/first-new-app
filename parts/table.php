@@ -31,7 +31,9 @@
         <!--お名前-->
         <td style="width:100px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(isset($name)){ ?>
+            <form action="information/index.php/<?php echo $id ?>/" method="post">
             <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
+            </form>    
         <?php } ?>
         </td>
                 
@@ -41,8 +43,9 @@
             <a href="../input/index.php/<?php echo $id ?>/?visitTime=1" style="opacity:0;">TIME</a>                          
             <?php }else { ?>
             <a href="../input/index.php/<?php echo $id ?>/?visitTime1=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
-            <?php } ?>
+        <?php } ?>
         </td>
+        
     </tr>
         <?php
             }
