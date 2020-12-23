@@ -36,10 +36,7 @@
             </form>    
         <?php } ?>
         </td>
-        <form name="download" action="csv.php" method="post">
-        <input type="hidden" name="param" value="たこ">
-        </form>
-        <a href="csv.php" onclick="document.download.submit();return false;">ダウンロード</a>        
+           
         <!--来所-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(!isset($visit)){ ?>                       
