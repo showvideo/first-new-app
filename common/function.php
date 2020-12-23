@@ -31,10 +31,10 @@ function getDB() {
     }
 
 	function searchName($names) {
-		if(!empty($names)){
+		if(isset($names)){
 			return $names; 
 		} else {
-			return $names = null; } 
+			$names = null; } 
 	}
     
 
