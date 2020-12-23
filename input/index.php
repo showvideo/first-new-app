@@ -12,7 +12,7 @@
   $bath = $_POST['bath'];
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
-  $visitTime = $_POST['visitTime'];
+  $visitTime = $_POST['visit1'];
 
 ?>
 
