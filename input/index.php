@@ -12,14 +12,14 @@
   $bath = $_POST['bath'];
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
-  $visitTime = $_POST['visitTime'];
-  $visitTime1 = $_POST['visitTime1'];
+  $visitime = $_POST['visitime'];
+  $visitime1 = $_POST['visitime1'];
 var_dump($visitTime);
 ?>
 
 <?php /*来所*/ ?>
 
-<?php if(!empty($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
+<?php if(!empty($visitime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -41,7 +41,7 @@ var_dump($visitTime);
     </form>
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($visitTime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
+<?php if(isset($visitime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
    <?php
        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
