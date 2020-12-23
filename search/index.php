@@ -20,9 +20,8 @@
         <?php
             if(!empty($_POST['search_name'])or($_POST['search_visit'])) {
                 
-            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE (name LIKE '%".':name'."%') and (visit=:visit)";
+            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE (name LIKE '%".$_POST['search_name']."%') and (visit=:visit)";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':name', searchName($_POST['search_name']), PDO::PARAM_STR);    
             $stmt->bindParam(':visit', searchName($_POST['search_visit']), PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
