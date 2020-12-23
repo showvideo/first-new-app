@@ -40,9 +40,9 @@
         <!--来所-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($visit)){ ?>                       
-            <a href="../input/index.php/<?php echo $id ?>/?visitTime=1" style="opacity:0;">TIME</a>                          
+            <form action="../input/index.php/<?php echo $id ?>/" method="post"><a href="../input/index.php/<?php echo $id ?>/?visitTime=1" style="opacity:0;">TIME</a></form>                       
             <?php }else { ?>
-            <a href="../input/index.php/<?php echo $id ?>/?visitTime1=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
+            <form action="../input/index.php/<?php echo $id ?>/" method="post"><a href="../input/index.php/<?php echo $id ?>/?visitTime1=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a></form>
         <?php } ?>
         </td>
         
