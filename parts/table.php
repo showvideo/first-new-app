@@ -41,11 +41,14 @@
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($visit)){ ?>                       
             <form name="visitTime" action="../../input/index.php/<?php echo $id ?>/" method="post">
-            <input type="hidden" name="visit1" value="来所">
+            <input type="hidden" name="visitime" value="来所">
             </form>
             <a href="../../input/index.php/<?php echo $id ?>/" onclick="document.visitTime.submit();return false;" style="opacity:0;">TIME</a>                       
             <?php }else { ?>
-            <form action="../../input/index.php/<?php echo $id ?>/" method="get"><a href="../../input/index.php/<?php echo $id ?>/?visitTime1=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a></form>
+            <form name="visitTime1" action="../../input/index.php/<?php echo $id ?>/" method="post">
+            <input type="hidden" name="visitime1" value="来所">
+            </form>
+            <a href="../../input/index.php/<?php echo $id ?>/" onclick="document.visitTime1.submit();return false;"><?php echo $id ?></a>     
         <?php } ?>
         </td>
         
