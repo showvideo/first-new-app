@@ -31,7 +31,7 @@ function getDB() {
     }
 
 	function searchName($names) {
-		if(isset($names)){
+		if(!empty($names)){
 			return $names; 
 		} else {
 			return $names = 0; } 
