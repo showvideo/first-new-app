@@ -39,7 +39,7 @@
            
         <!--来所-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
-        <?php if(!isset($visit)){ ?>                       
+        <?php if(empty($visit)){ ?>                       
             <form name="visitTime" action="../../input/index.php/<?php echo $id ?>/" method="post">
             <input type="hidden" name="visit1" value="来所">
             </form>
