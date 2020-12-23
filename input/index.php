@@ -12,20 +12,12 @@
   $bath = $_POST['bath'];
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
-  $visitTime = $_GET['visitTime'];
-  var_dump($visitTime);
-  $visitTime1 = $_GET['visitTime1'];
-  $visitform = $_POST['visitform'];
-　$notices0 = $_GET['notices0'];
-  $notices1 = $_GET['notices1'];
-  $post1 = $_POST['post1'];
-  $post2 = $_POST['post2'];
-  $post3 = $_POST['post3'];
-  $post4 = $_POST['post4'];
-  $post10 = $_GET['posts'];
+  $visitTime = $_POST['visitTime'];
 
 ?>
+
 <?php /*来所*/ ?>
+
 <?php if(isset($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
@@ -70,135 +62,7 @@
     <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;"></form>
     </div><?php  } else {echo null;} ?> 
 
-<?php /*特記事項*/ ?>
-<?php if(isset($notices0)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
-    <?php
-        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];}
-    ?>
-    <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-    <p style="padding-left:40px;font-size:20px;">特記事項</p></br>
-    <form action="" method="post">
-        <!--<textarea style="resize:none;width:300px;height:200px;"></textarea>-->
-        <input type="submit" name="submit" value="入力する。">
-        <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
-    </form>
-    <?php  } else {echo null;} ?> 
 
-<?php if(isset($notices1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
-   <?php
-       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        $visit = $user['visit'];
-        }
-    ?>
-    <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-    <p style="padding-left:40px;font-size:20px;">来所時間</p></br>
-    <input type="text" placeholder="<?php echo substr($visit, 0, 2); ?>" style="width:44px;height:55px;margin-left:40px;color:black;font-weight:bold;">:
-    <input type="text" placeholder="<?php echo substr($visit, 3, 5); ?>" style="width:44px;height:55px;">
-    <form action="" method="post">
-    <input type="submit" name="edit" value="編集"></form></br>
-    <a href="" name="delete" value="削除" style="margin-left:40px;">削除はこちらをクリック</a>
-    <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
-    </div><?php  } else {echo null;} ?> 
-
-<?php /*退所*/ ?>
-<form action="" method="post">
-<?php if(isset($exitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:839px;">
-    <?php
-        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];}
-    ?>
-    <h3><?php echo $name."様"; ?></h3></br>
-    来所時間</br>
-    <form action="" method="post">
-        <input type="text" style="width:40px;height:50px;margin-left:40px;color:black;font-weight:bold;">:
-        <input type="text" style="width:40px;height:50px;"></br>
-        
-        <input type="submit" name="submit10" value="入力">
-    </form>
-    <?php  } else {echo null;} ?> 
-
-
-<?php if(isset($exitTime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:839px;position:relative;">
-   <?php
-       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        $visit = $user['visit'];
-        }
-    ?>
-    <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-        <a style="padding-left:40px;font-size:20px;">退所時間</br>
-<input type="text" placeholder="<?php echo substr($visit, 0, 2); ?>" style="width:40px;height:50px;margin-left:40px;color:black;font-weight:bold;">:
-<input type="text" placeholder="<?php echo substr($visit, 3, 5); ?>" style="width:40px;height:50px;"></br>
-<form action="" method="post">
-<input type="submit" name="edit" value="編集" style=""></form>
-<input type="submit" name="delete" value="削除"><input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:5px;">
-</div><?php  } else {echo null;} ?> 
-
-
-<!--バイタル-->
-<?php if(isset($post2)) { ?> <div style="display:inline-block;border:ridge;width:490px;height:600px;">
-    <?php
-       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        $vital = $user['vital'];
-        }
-    ?>
-    <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-    <a style="padding-left:40px;font-size:20px;">バイタル</br></a>
-    <form action="" method="post">
-        最高血圧(mmHg)<input type="text" name="vital1" style="width:40px;">/最小血圧(mmHg)<input type="text" name="vital2" style="width:40px;">脈拍/分<input type="text" name="vital3" style="width:40px;">
-        <input type="submit" name="submit20" value="送信" style="margin-left:400px;margin-top:400px;">
-    </form>
-    <?php  } else {echo null;} ?> 
-
-
-
-
-<?php if(isset($_POST['edit'])) {
-}
-?>
-<?php if(isset($_POST['delete'])) {
-  
-    $sql = 'UPDATE user SET visit=NULL WHERE id=:id';
-  $stmt = getDB()->prepare($sql);
-  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-  $stmt->execute();
-  header('Location: https://animech2.herokuapp.com/');
-  exit;
-}
-?>
 
 
 
