@@ -17,7 +17,7 @@
       
         <a style="margin-left:20px;">最低血圧(mmhg)</a><input type="text" name="vital2" style="width:40px;height:50px;margin-left:20px;">～<input type="text" name="vital2" style="width:40px;height:50px;"></br>
         
-        <a style="margin-left:20px;">脈拍(拍/分)</a><input type="text" name="vital3" style="width:40px;height:50px;margin-left:20px;">～<input type="text" name="vital3" style="width:40px;height:50px;">
+        <a style="margin-left:20px;">脈拍(拍/分)</a><input type="text" name="vital3" style="width:40px;height:50px;margin-left:63px;">～<input type="text" name="vital3" style="width:40px;height:50px;">
         
       <h4>入浴ありで絞り込む</h4><input type="radio" name="bath1" value="はい"> はい
         <input type="radio" value="いいえ" checked> いいえ
