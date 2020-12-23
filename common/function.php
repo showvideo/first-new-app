@@ -34,7 +34,7 @@ function getDB() {
 		if(isset($names)){
 			return $names; 
 		} else {
-			$names = null; } 
+			return $names = 0; } 
 	}
     
 
