@@ -17,8 +17,14 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user){
-            $id=$user['id']; $name=$user['name']; $visit=$user['visit']; $exits=$user['exits']; $vital=$user['vital'];
-            $bath=$user['bath']; $meal=$user['meal']; $notices=$user['notices'];
+            $id=$user['id'];
+            $name=$user['name']; 
+            $visit=$user['visit']; 
+            $exits=$user['exits']; 
+            $vital=$user['vital'];
+            $bath=$user['bath']; 
+            $meal=$user['meal']; 
+            $notices=$user['notices'];
         ?>
            
     <tr>
@@ -37,64 +43,7 @@
             <a href="../../input/index.php/<?php echo $id ?>/?visitTime1=1" style="text-decoration:none;color:black;"><?php echo $visit; ?></a>
             <?php } ?>
         </td>
-                
-                <!--退所-->
-                <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-                    <?php if(empty($exits)){ ?>                       
-                        <form action="input/index.php/<?php echo $id ?>/" method="post">                           
-                            <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;padding:0;"></a>
-                            <input type="hidden" name="posts" value="100">
-                        </form>
-                    <?php }else { ?>
-                        <a href="input/index.php/<?php echo $id ?>/?post10=100" style="text-decoration:none;color:black;"><?php echo $exits ?></a>
-                    <?php } ?>
-                </td>
-                
-                <!--バイタル-->
-                <td style="width:130px;height:35px; border: 1px solid #ccc;background:#fff;padding:4px;">
-                    <?php if(empty($vital)){ ?>                       
-                        <form action="input/index.php/<?php echo $id ?>/" method="post">                           
-                            <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;padding:0;"></a>
-                            <input type="hidden" name="post2" value="100">
-                        </form>
-                    <?php }else { ?>
-                        <a href="input/index.php/<?php echo $id ?>/?post20=100" style="text-decoration:none;color:black;"><?php echo $vital; ?></a>
-                    <?php } ?>
-                </td>
-                
-                <!--入浴-->  
-                <td style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-                    <?php if(empty($bath)){ ?>                       
-                        <form action="input/index.php/<?php echo $id ?>/" method="post">                           
-                            <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;padding:0;"></a>
-                            <input type="hidden" name="posts" value="100">
-                        </form>
-                    <?php }else { ?>
-                        <a href="input/index.php/<?php echo $id ?>/?posts=100" style="text-decoration:none;color:black;"><?php echo $bath; ?></a>
-                    <?php } ?>
-                </td>
-                
-                <!--食事-->
-                <td style="width:60px;height:35px; border:1px solid #ccc;background:#fff;padding:4px;">
-                    <?php if(empty($meal)){ ?>                       
-                        <form action="input/index.php/<?php echo $id ?>/" method="post">                           
-                            <a href="input/index.php/<?php echo $id ?>/" style="opacity:0;"><input type="submit" value="submit" style="height:30px;margin:0;padding:0;"></a>
-                            <input type="hidden" name="posts" value="100">
-                        </form>
-                    <?php }else { ?>
-                        <a href="input/index.php/<?php echo $id ?>/?posts=100" style="text-decoration:none;color:black;"><?php echo $meal; ?></a>
-                    <?php } ?>
-                </td>
-                
-                <!--特記事項-->
-        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
-        <?php if(empty($notices)){ ?>                       
-            <a href="../../input/index.php/<?php echo $id ?>/?notices0=1" style="opacity:0;">AAA</a>                          
-            <?php }else { ?>
-            <a href="../../input/index.php/<?php echo $id ?>/?notices1=1" style="text-decoration:none;color:black;"><?php echo $notices; ?></a>
-            <?php } ?>
-        </td>
-            </tr>
+    </tr>
         <?php
             }
         ?>
