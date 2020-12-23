@@ -10,8 +10,8 @@ function getDB() {
 		
 	    $pdo = new PDO(
 		    'mysql:dbname=heroku_dc6bcee06683c20;host=us-cdbr-east-02.cleardb.com;charset=utf8mb4',
-	   	    'be79249baf2bce'; 
-		    '032b4eaf'
+	   	    'be79249baf2bce',
+		    '032b4eaf',
 	            [
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -22,7 +22,8 @@ function getDB() {
 		header('Content-Type: text/plain; charset=UTF-8', true, 500);
 		exit($e->getMessage());
 		
-	} return $pdo;
+	} header('Content-Type: text/html; charset=utf-8');
+	  return $pdo;
 		
 }
 
