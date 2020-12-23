@@ -4,12 +4,13 @@
     <form action="../search/index.php" method="post">
         
     <h4>名前</h4>
-        <input type="text" name="search_name" style="width:100px;height:34px;">
+        <input type="text" name="search_name" style="width:100px;height:34px;margin-left:20px;">
     
     <h4>来所</h4>
-        <input type="text" name="search_visit" style="width:30px;height:40px;">
+        <input type="text" name="search_visit" style="width:30px;height:40px;margin-left:20px;">時<input type="text" name="search_visit" style="width:30px;height:40px;">分
+        
     <h4>退所</h4>
-        <input type="text" name="search_exit" style="width:30px;height:40px;">:<input type="text" name="visit" style="width:30px;height:40px;">
+        <input type="text" name="search_exit" style="width:30px;height:40px;margin-left:20px;">時<input type="text" name="visit" style="width:30px;height:40px;">分
         
       <h4>バイタル</h4>
       血圧<input type="text" name="vital1" style="width:30px;">～<input type="text" name="vital1" style="width:30px;">
