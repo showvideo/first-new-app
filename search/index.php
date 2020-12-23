@@ -2,7 +2,7 @@
     <script type="text/javascript"></script>
 </head>    
 <?php require_once("../common/function.php"); ?>
-<?php $search_name = $_POST['search_name'] ?>
+<?php $search_name = $_POST['search_name']; ?>
 
 <div style="display:inline-block;">
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
