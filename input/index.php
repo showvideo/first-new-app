@@ -18,7 +18,7 @@
 
 <?php /*来所*/ ?>
 
-<?php if(isset($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
+<?php if(!empty($visitTime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
     <?php
         $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -27,7 +27,8 @@
         $result = $stmt->fetchAll();
         foreach($result as $user){
         $id = $user['id'];
-        $name = $user['name'];}
+        $name = $user['name'];
+        }
     ?>
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
     <p style="padding-left:40px;font-size:20px;">来所時間</p></br>
