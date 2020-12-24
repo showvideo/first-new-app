@@ -3,15 +3,19 @@
 </head>    
 <?php require_once("common/function.php"); ?>
 <?php
-    $sql = "SELECT name FROM user WHERE 1";
-    $stmt = getDB()->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-    foreach($result as $user){
-    $name = $user['name'];
-    }
+
+    try {
+        $db = getDB();
+        $stt = $db->prepare('SELECT name FROM user WHERE 1');
+        $stt->execute();
+        while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+        $name = $user['name'];
+        
 ?>
 <div style="display:inline-block;">
 <?php require_once("parts/table.php"); ?>
 </div>
+} catch(PDOException $e) {
+            echo "erorrmessage : {$e->getMessage()}";
+        }
 <?php require_once("parts/search.php"); ?>
