@@ -7,15 +7,6 @@
 <div style="display:inline-block;">
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
 
-    <tr>
-        <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
-        <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">来所</th>
-        <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">退所</th>
-        <th style="width:90px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">バイタル</th>
-        <th style="width:50px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">入浴</th>
-        <th style="width:50px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">食事</th>
-        <th style="width:170px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">特記事項</th>
-    </tr>
        
         <?php
             if(!empty($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])) {
