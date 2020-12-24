@@ -6,7 +6,7 @@
 
 <div style="display:inline-block;">
             <?php
-                try {
+        
                     $db = getDB();
                     $stt = $db->preapre('SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1');
                     $stt->execute();
@@ -21,8 +21,7 @@
                         $bath=$user['bath']; 
                         $meal=$user['meal']; 
                         $notices=$user['notices'];
-            }
- require_once("parts/table.php");
+            
             } ?>
 <?php require_once("parts/table.php"); ?>
 </div>
