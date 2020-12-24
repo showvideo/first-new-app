@@ -233,6 +233,7 @@
     ?>
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
     <p style="padding-left:40px;font-size:20px;">特記事項</p></br>
+    <textarea type="text" value="<?php echo $notices; ?>" style="margin-left:40px;color:black;font-weight:bold;"></textarea>
     <input type="text" value="$notices" style="width:44px;height:55px;margin-left:40px;color:black;font-weight:bold;">:
     <form action="" method="post">
     <input type="submit" name="edit" value="編集"></br>
