@@ -19,7 +19,7 @@
 
 <?php if(!empty($visitime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
     <?php
-        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
@@ -43,7 +43,7 @@
 
 <?php if(isset($visitime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
    <?php
-       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+       $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
@@ -64,11 +64,12 @@
     <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;"></form>
     </div><?php  } else {echo null;} ?> 
 
+
 <?php /*退所*/ ?>
 
 <?php if(!empty($exitime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
     <?php
-        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
@@ -90,7 +91,7 @@
 
 <?php if(isset($exitime1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
    <?php
-       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+       $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
@@ -115,7 +116,7 @@
 
 <?php if(!empty($bloodp)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
     <?php
-        $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
@@ -168,7 +169,7 @@
 
 <?php if(isset($bloodp1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
    <?php
-       $sql = "SELECT id, name, visit, vital, meal, bath, notices FROM user WHERE id=:id";
+       $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
