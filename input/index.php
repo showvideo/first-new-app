@@ -15,8 +15,10 @@
   $visitime = $_POST['visitime'];
   $visitTime = $_POST['visitTime'];
   $visitime1 = $_POST['visitime1'];
+  $visitime1 = $_POST['visitime1'];
 var_dump($visitime);
 var_dump($visitTime);
+var_dump($visitime1);
 ?>
 
 <?php /*来所*/ ?>
