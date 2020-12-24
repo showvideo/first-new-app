@@ -57,7 +57,7 @@
         $visit = $user['visit'];
         }
     ?>
-    <a href="" name="delete" value="削除" style="margin-left:200px;">削除はこちらをクリック</a>
+    <a href="" name="delete" value="削除" style="margin-left:250px;margin-top:20px;">削除する</a>
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
     <a style="margin-left:40px;font-size:20px;padding-bottom:10px;">来所時間</a></br>
     <input type="text" value="<?php echo substr($visit, 0, 2); ?>" style="width:44px;height:55px;margin-left:47px;color:black;font-weight:bold;">:
@@ -65,7 +65,7 @@
     <form action="" method="post">
     <input type="submit" name="edit" value="更新" style="margin-left:244px;margin-bottom:40px;"></br>
     
-    <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;"></form>
+    <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;margin-right:auto;margin-left:auto;"></form>
     </div><?php  } else {echo null;} ?> 
 
 
