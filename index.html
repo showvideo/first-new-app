@@ -1,27 +1,34 @@
 <head>
-    <script type="text/javascript"></script>
+       <script type="text/javascript"></script>
 </head>    
 <?php require_once("common/function.php"); ?>
 
-
+<?php
+    $sql = "SELECT name FROM user WHERE 1";
+    $stmt = getDB()->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    foreach($result as $user){
+    $name = $user['name'];
+    }
+?>
 <div style="display:inline-block;">
             <?php
-        
-                    $db = getDB();
-                    $stt = $db->preapre('SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1');
-                    $stt->execute();
-                    $stt->setFetchMode(PDO::FETCH_ASSOC);
-                    foreach($stt as $user) {
-                   
-                        $id=$user['id'];
-                        $name=$user['name']; 
-                        $visit=$user['visit']; 
-                        $exits=$user['exits']; 
-                        $maxblood=$user['maxblood'];
-                        $bath=$user['bath']; 
-                        $meal=$user['meal']; 
-                        $notices=$user['notices'];
-            
+            $sql = "SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1";
+            $stmt = getDB()->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            foreach($result as $user){
+            $id=$user['id'];
+            $name=$user['name']; 
+            $visit=$user['visit']; 
+            $exits=$user['exits']; 
+            $maxblood=$user['maxblood'];
+            $bath=$user['bath']; 
+            $meal=$user['meal']; 
+            $notices=$user['notices'];
+
+ require_once("parts/table.php");
             } ?>
 <?php require_once("parts/table.php"); ?>
 </div>
