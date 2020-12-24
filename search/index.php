@@ -31,6 +31,7 @@
             $id = $user['id'];     
             $name = $user['name']; 
             $visit = $user['visit']; 
+            $exit = $user['exit'];
             echo $name;
             echo $visit;
         ?>
