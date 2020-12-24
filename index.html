@@ -4,6 +4,13 @@
 <?php require_once("common/function.php"); ?>
 
 <?php
+    try {
+        $db = getDB();
+        $stt = $db->preapre('SELECT name FROM user WHERE 1');
+        $stt->execute();
+        $stt->setFetchMode(PDO::FETCH_ASSOC);
+        foreach($stt as $row) {
+?>
     $sql = "SELECT name FROM user WHERE 1";
     $stmt = getDB()->prepare($sql);
     $stmt->execute();
@@ -14,20 +21,22 @@
 ?>
 <div style="display:inline-block;">
             <?php
-            $sql = "SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1";
-            $stmt = getDB()->prepare($sql);
-            $stmt->execute();
-            $result = $stmt->fetchAll();
-            foreach($result as $user){
-            $id=$user['id'];
-            $name=$user['name']; 
-            $visit=$user['visit']; 
-            $exits=$user['exits']; 
-            $maxblood=$user['maxblood'];
-            $bath=$user['bath']; 
-            $meal=$user['meal']; 
-            $notices=$user['notices'];
-
+                try {
+                    $db = getDB();
+                    $stt = $db->preapre('SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1');
+                    $stt->execute();
+                    $stt->setFetchMode(PDO::FETCH_ASSOC);
+                    foreach($stt as $user) {
+                   
+                        $id=$user['id'];
+                        $name=$user['name']; 
+                        $visit=$user['visit']; 
+                        $exits=$user['exits']; 
+                        $maxblood=$user['maxblood'];
+                        $bath=$user['bath']; 
+                        $meal=$user['meal']; 
+                        $notices=$user['notices'];
+            }
  require_once("parts/table.php");
             } ?>
 <?php require_once("parts/table.php"); ?>
