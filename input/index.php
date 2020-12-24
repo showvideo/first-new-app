@@ -230,6 +230,7 @@
         $name = $user['name'];
         $visit = $user['visit'];
         $notices = $user['notices'];
+        var_dump($notices);
         }
     ?>
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
