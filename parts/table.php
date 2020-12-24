@@ -73,14 +73,12 @@
         <!--入浴-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
             <?php echo $bath ?>     
-        <?php } ?>
         </td>
         
         
         <!--食事-->
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
             <?php echo $meal ?>     
-        <?php } ?>
         </td>
         
         
