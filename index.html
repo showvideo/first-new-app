@@ -3,17 +3,6 @@
 </head>    
 <?php require_once("common/function.php"); ?>
 
-
-
-<?php
-    $sql = "SELECT name FROM user WHERE 1";
-    $stmt = getDB()->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-    foreach($result as $user){
-    $name = $user['name'];
-    }
-?>
 <div style="display:inline-block;">
             <?php
             $sql = "SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1";
