@@ -134,7 +134,15 @@
     <form action="" method="post">
         <input type="text" name="blood" style="width:44px;height:55px;margin-left:40px;">
         <?php if(isset($_POST['blood'])) {
-                $sql = "UPDATE user SET vital = $_POST['blood']"
+                $sql = 'UPDATE user SET vital = :blood WHERE id = :id';
+                $stmt = getDB()->prepare($sql);
+                $stmt->bindParam(':blood', $_POST['blood'], PDO::PARAM_STR);
+                $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+                $stmt->execute();
+                header('Location: https://animech2.herokuapp.com/');
+                exit;
+        }
+        ?>
         <input type="submit" name="submit" value="入力">
         <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
     </form>
