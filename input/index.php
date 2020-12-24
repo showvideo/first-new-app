@@ -14,7 +14,7 @@
   $notices = $_POST['notices'];
   $visitime = $_POST['visitime'];
   $visitime = $_GET['visitime'];
-  var_dump($visitime);
+  $visitime1 = $_GET['visitime1'];
 ?>
 
 <?php /*来所*/ ?>
