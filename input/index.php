@@ -64,7 +64,7 @@
     <input type="text" value="<?php echo substr($visit, 3, 5); ?>" style="width:44px;height:55px;">
     <form action="" method="post">
     <input type="submit" name="edit" value="更新" style="margin-left:244px;margin-bottom:40px;"></br>
-    <a href="" name="delete" value="削除" style="margin-left:auto;margin-right:auto;margin-top:100px;">データを削除する</a>
+    <a href="" name="delete" value="削除" style="text-align:center;margin-top:120px;">データを削除する</a>
     </form>
     </div><?php  } else {echo null;} ?> 
 
