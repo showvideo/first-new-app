@@ -45,7 +45,7 @@
             </form>
             <a href="../../input/index.php/<?php echo $id ?>/" onclick="document.visitTime.submit();return false;" style="opacity:0;">TIME</a>                       
             <?php }else { ?>
-            <form name="visitTime1" action="../../input/index.php/<?php echo $id ?>/" method="post">
+            <form name="visitTime1" action="../input/index.php/<?php echo $id ?>/" method="post">
             <input type="hidden" name="visitime1" value="来所">
             </form>
             <a href="../../input/index.php/<?php echo $id ?>/" onclick="document.visitTime1.submit();return false;"><?php echo $visit ?></a>     
