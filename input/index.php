@@ -63,8 +63,8 @@
     <a style="margin-left:40px;font-size:20px;padding-bottom:10px;">来所時間</a></br>
     <input type="text" value="<?php echo substr($visit, 0, 2); ?>" style="width:44px;height:55px;margin-left:47px;color:black;font-weight:bold;">:
     <input type="text" value="<?php echo substr($visit, 3, 5); ?>" style="width:44px;height:55px;"></br>
-    <input type="submit" name="edit" value="更新"　style="margin-left:140px;"></br>
-    <a href="" name="delete" value="削除" style="margin-top:100px;margin-left:130px;">データを削除する</a>
+    <input type="submit" name="edit" value="更新"　style="margin-left:200px;"></br>
+    <a href="" name="delete" value="削除" style="padding-top:100px;margin-left:115px;">データを削除する</a>
     </form>
     </div><?php  } else {echo null;} ?> 
 
