@@ -41,10 +41,10 @@
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($visit)){ ?>                       
           
-            <a href="../../input/index.php/<?php echo $id ?>/?visitime=1" style="opacity:0;">TIME</a>                       
+            <a href="../../input/index.php/<?php echo $id; ?>/?visitime=1" style="opacity:0;">TIME</a>                       
             <?php }else { ?>
         
-            <a href="../../input/index.php/<?php echo $id ?>/?visitime1=1" ><?php echo $visit ?></a>     
+            <a href="../../input/index.php/<?php echo $id; ?>/?visitime1=1" ><?php echo $visit; ?></a>     
         <?php } ?>
         </td>
         
@@ -52,10 +52,10 @@
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($exits)){ ?>                       
           
-            <a href="../../input/index.php/<?php echo $id ?>/?exitime=1" style="opacity:0;">TIME</a>                       
+            <a href="../../input/index.php/<?php echo $id; ?>/?exitime=1" style="opacity:0;">TIME</a>                       
             <?php }else { ?>
         
-            <a href="../../input/index.php/<?php echo $id ?>/?exitime1=1" ><?php echo $exits ?></a>     
+            <a href="../../input/index.php/<?php echo $id; ?>/?exitime1=1" ><?php echo $exits; ?></a>     
         <?php } ?>
         </td>
         
@@ -63,10 +63,10 @@
         <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($maxblood)){ ?>                       
           
-            <a href="../../input/index.php/<?php echo $id ?>/?bloodp=1" style="opacity:0;">TIME</a>                       
+            <a href="../../input/index.php/<?php echo $id; ?>/?bloodp=1" style="opacity:0;">TIME</a>                       
             <?php }else { ?>
         
-            <a href="../../input/index.php/<?php echo $id ?>/?bloodp1=1" ><?php echo $maxblood ?></a>     
+            <a href="../../input/index.php/<?php echo $id; ?>/?bloodp1=1" ><?php echo $maxblood ?></a>     
         <?php } ?>
         </td>
         
