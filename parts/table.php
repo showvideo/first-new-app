@@ -5,7 +5,7 @@
         <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">来所</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">退所</th>
-        <th style="width:130px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">バイタル</th>
+        <th style="width:130px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">最高・最低血圧/脈拍</th>
         <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">入浴</th>
         <th style="width:60px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">食事</th>
         <th style="width:170px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">特記事項</th>
@@ -21,7 +21,7 @@
             $name=$user['name']; 
             $visit=$user['visit']; 
             $exits=$user['exits']; 
-            $vital=$user['vital'];
+            $bloodpressure=$user['vital'];
             $bath=$user['bath']; 
             $meal=$user['meal']; 
             $notices=$user['notices'];
@@ -56,6 +56,17 @@
             <?php }else { ?>
         
             <a href="../../input/index.php/<?php echo $id ?>/?exitime1=1" ><?php echo $exits ?></a>     
+        <?php } ?>
+        </td>
+        
+        <!--最高・最低血圧/脈拍-->
+        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php if(empty($bloodpressure)){ ?>                       
+          
+            <a href="../../input/index.php/<?php echo $id ?>/?bloodp=1" style="opacity:0;">TIME</a>                       
+            <?php }else { ?>
+        
+            <a href="../../input/index.php/<?php echo $id ?>/?bloodp1=1" ><?php echo $bloodpressure ?></a>     
         <?php } ?>
         </td>
         
