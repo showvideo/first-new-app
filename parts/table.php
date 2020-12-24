@@ -12,7 +12,7 @@
     </tr>
     
         <?php
-            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE 1";
+            $sql = "SELECT id, name, visit, exits, bloodpressure, meal, bath, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
@@ -21,7 +21,7 @@
             $name=$user['name']; 
             $visit=$user['visit']; 
             $exits=$user['exits']; 
-            $bloodpressure=$user['vital'];
+            $bloodpressure=$user['bloodpresure'];
             $bath=$user['bath']; 
             $meal=$user['meal']; 
             $notices=$user['notices'];
