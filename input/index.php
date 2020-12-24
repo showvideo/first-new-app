@@ -164,6 +164,7 @@
                 header('Location: https://animech2.herokuapp.com/');
                 exit;
         }
+        ?>
         <input type="submit" name="submit" value="入力">
         <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
     </form>
