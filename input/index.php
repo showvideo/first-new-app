@@ -13,8 +13,10 @@
   $meal = $_POST['meal'];
   $notices = $_POST['notices'];
   $visitime = $_POST['visitime'];
+  $visitTime = $_POST['visitTime'];
   $visitime1 = $_POST['visitime1'];
 var_dump($visitime);
+var_dump($visitTime);
 ?>
 
 <?php /*来所*/ ?>
