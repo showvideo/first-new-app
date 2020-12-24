@@ -8,8 +8,9 @@
         $db = getDB();
         $stt = $db->prepare('SELECT name FROM user WHERE 1');
         $stt->execute();
-        while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
-        $name = $user['name'];
+        $stt->fetch(PDO::FETCH_ASSOC);
+        foreach($stt as $row ) {
+        $name = $row['name'];
         
 ?>
 <div style="display:inline-block;">
