@@ -70,6 +70,40 @@
         <?php } ?>
         </td>
         
+        <!--入浴-->
+        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php if(empty($bath)){ ?>                       
+          
+            <a href="../../input/index.php/<?php echo $id; ?>/?bathing=1" style="opacity:0;">TIME</a>                       
+            <?php }else { ?>
+        
+            <a href="../../input/index.php/<?php echo $id; ?>/?bathing1=1" ><?php echo $bath ?></a>     
+        <?php } ?>
+        </td>
+        
+        
+        <!--食事-->
+        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php if(empty($meal)){ ?>                       
+          
+            <a href="../../input/index.php/<?php echo $id; ?>/?mealing=1" style="opacity:0;">TIME</a>                       
+            <?php }else { ?>
+        
+            <a href="../../input/index.php/<?php echo $id; ?>/?mealing1=1" ><?php echo $meal ?></a>     
+        <?php } ?>
+        </td>
+        
+        
+        <!--特記事項-->
+        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php if(empty($notices)){ ?>                       
+          
+            <a href="../../input/index.php/<?php echo $id; ?>/?noticesing=1" style="opacity:0;">TIME</a>                       
+            <?php }else { ?>
+        
+            <a href="../../input/index.php/<?php echo $id; ?>/?noticesing1=1" ><?php echo $notices ?></a>     
+        <?php } ?>
+        </td>
     </tr>
         <?php
             }
