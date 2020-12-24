@@ -15,7 +15,7 @@
 <div style="display:inline-block;">
 <?php require_once("parts/table.php"); ?>
 </div>
-} catch(PDOException $e) {
+<?php } catch(PDOException $e) {
             echo "erorrmessage : {$e->getMessage()}";
-        }
+        } ?>
 <?php require_once("parts/search.php"); ?>
