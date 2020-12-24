@@ -33,7 +33,7 @@
         foreach($result as $user){
         $id = $user['id'];
         $name = $user['name'];
-        }
+        
     ?>
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
     <p style="padding-left:40px;font-size:20px;">来所時間</p></br>
@@ -43,5 +43,7 @@
         <input type="submit" name="submit" value="入力">
         <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
     </form>
-    <?php  } else {echo null;} ?> 
+    <?php  
+        }
+    } else {echo null;} ?> 
 
