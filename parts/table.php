@@ -12,7 +12,7 @@
     </tr>
     
         <?php
-            $sql = "SELECT id, name, visit, exits, bloodpressure, meal, bath, notices FROM user WHERE 1";
+            $sql = "SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1";
             $stmt = getDB()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
@@ -21,7 +21,7 @@
             $name=$user['name']; 
             $visit=$user['visit']; 
             $exits=$user['exits']; 
-            $bloodpressure=$user['bloodpresure'];
+            $maxblood=$user['maxblood'];
             $bath=$user['bath']; 
             $meal=$user['meal']; 
             $notices=$user['notices'];
@@ -66,7 +66,7 @@
             <a href="../../input/index.php/<?php echo $id ?>/?bloodp=1" style="opacity:0;">TIME</a>                       
             <?php }else { ?>
         
-            <a href="../../input/index.php/<?php echo $id ?>/?bloodp1=1" ><?php echo $bloodpressure ?></a>     
+            <a href="../../input/index.php/<?php echo $id ?>/?bloodp1=1" ><?php echo $maxblood ?></a>     
         <?php } ?>
         </td>
         
