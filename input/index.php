@@ -132,17 +132,38 @@
     <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
     <p style="padding-left:40px;font-size:20px;">血圧</p></br>
     <form action="" method="post">
-        <input type="text" name="blood" style="width:44px;height:55px;margin-left:40px;">
-        <?php if(isset($_POST['blood'])) {
-                $sql = 'UPDATE user SET vital = :blood WHERE id = :id';
+        最高血圧<input type="text" name="maxblood" style="width:44px;height:55px;margin-left:40px;">（mmhg）</br>
+        最小血圧<input type="text" name="miniblood" style="width:44px;height:55px;margin-left:40px;">（mmhg）</br>
+        脈拍<input type="text" name="pulse" style="width:44px;height:55px;margin-left:40px;">　(拍/分)
+        <?php if(isset($_POST['maxblood'])) {
+                $sql = 'UPDATE user SET maxblood = :blood WHERE id = :id';
                 $stmt = getDB()->prepare($sql);
-                $stmt->bindParam(':blood', $_POST['blood'], PDO::PARAM_STR);
+                $stmt->bindParam(':blood', $_POST['maxblood'], PDO::PARAM_STR);
                 $stmt->bindParam(':id', $id, PDO::PARAM_STR);
                 $stmt->execute();
                 header('Location: https://animech2.herokuapp.com/');
                 exit;
         }
         ?>
+        <?php if(isset($_POST['miniblood'])) {
+                $sql = 'UPDATE user SET miniblood = :blood WHERE id = :id';
+                $stmt = getDB()->prepare($sql);
+                $stmt->bindParam(':blood', $_POST['miniblood'], PDO::PARAM_STR);
+                $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+                $stmt->execute();
+                header('Location: https://animech2.herokuapp.com/');
+                exit;
+        }
+        ?>
+        <?php if(isset($_POST['pulse'])) {
+                $sql = 'UPDATE user SET pulse = :blood WHERE id = :id';
+                $stmt = getDB()->prepare($sql);
+                $stmt->bindParam(':pulse', $_POST['pulse'], PDO::PARAM_STR);
+                $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+                $stmt->execute();
+                header('Location: https://animech2.herokuapp.com/');
+                exit;
+        }
         <input type="submit" name="submit" value="入力">
         <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
     </form>
