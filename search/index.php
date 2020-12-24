@@ -20,7 +20,7 @@
         <?php
             if(!empty($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])) {
                 
-            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') or (visit=:visit) 
+            $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') or (visit=:visit) 
                     or (exits=:exit)";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', searchName($_POST['search_visit']), PDO::PARAM_STR);
@@ -96,7 +96,7 @@
     <?php
             if(!empty($_POST['visit100'])) {
                 
-            $sql = "SELECT id, name, visit, exits, vital, meal, bath, notices FROM user WHERE visit=:visit";
+            $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE visit=:visit";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', $_POST['visit100'], PDO::PARAM_STR);
             $stmt->execute();
