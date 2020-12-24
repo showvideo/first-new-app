@@ -3,22 +3,7 @@
 </head>    
 <?php require_once("common/function.php"); ?>
 
-<?php
-    try {
-        $db = getDB();
-        $stt = $db->preapre('SELECT name FROM user WHERE 1');
-        $stt->execute();
-        $stt->setFetchMode(PDO::FETCH_ASSOC);
-        foreach($stt as $row) {
-?>
-    $sql = "SELECT name FROM user WHERE 1";
-    $stmt = getDB()->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-    foreach($result as $user){
-    $name = $user['name'];
-    }
-?>
+
 <div style="display:inline-block;">
             <?php
                 try {
