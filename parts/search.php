@@ -6,8 +6,13 @@
     <h4>名前</h4>
         <input type="text" name="search_name" style="width:100px;height:34px;margin-left:20px;">様。
     
-    <h4>来所</h4>
-        <input type="text" name="search_visit" style="width:30px;height:40px;margin-left:20px;">時
+    <h4>来所時間</h4>        
+        <select name="search_visit" style="margin-left:20px;">
+        <option value="09:30">09時30分</option>
+        <option value="10:00">10時00分</option>
+        <option value="10:30">10時30分</option>
+        <option value="11:00">11時00分</option>
+        </select>
         
     <h4>退所</h4>
         <input type="text" name="search_exit" style="width:30px;height:40px;margin-left:20px;">時<input type="text" name="visit" style="width:30px;height:40px;">分。
