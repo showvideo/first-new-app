@@ -8,6 +8,7 @@
     
     <h4>来所時間</h4>        
         <select name="search_visit" style="margin-left:20px;">
+        <option value="選択なし">選択なし</option>
         <option value="09:30">09時30分</option>
         <option value="10:00">10時00分</option>
         <option value="10:30">10時30分</option>
@@ -16,6 +17,7 @@
         
     <h4>退所</h4>
         <select name="search_exit" style="margin-left:20px;">
+        <option value="選択なし">選択なし</option>
         <option value="13:00">13時00分</option>
         <option value="13:30">13時30分</option>
         <option value="14:00">14時00分</option>
