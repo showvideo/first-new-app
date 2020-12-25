@@ -15,7 +15,12 @@
         </select>
         
     <h4>退所</h4>
-        <input type="text" name="search_exit" style="width:30px;height:40px;margin-left:20px;">時<input type="text" name="visit" style="width:30px;height:40px;">分。
+        <select name="search_exit" style="margin-left:20px;">
+        <option value="13:00">13時00分</option>
+        <option value="13:30">13時30分</option>
+        <option value="14:00">14時00分</option>
+        <option value="14:30">14時30分</option>
+        </select>
         
       <h4>バイタル</h4>
         <a style="margin-left:10px;">最高血圧</a><input type="text" name="vital1" style="width:40px;height:50px;margin-left:20px;">～<input type="text" name="vital1" style="width:40px;height:50px;">(mmhg)</br>
