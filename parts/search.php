@@ -32,8 +32,8 @@
         <a style="margin-left:10px;">脈拍</a><input type="text" name="vital3" style="width:40px;height:50px;margin-left:50px;">～<input type="text" name="vital3" style="width:40px;height:50px;">(拍/分)
         
       <h4>入浴ありで絞り込む</h4>
-        <input type="radio" name="bath1" value="はい" style="margin-left:20px;"> はい
-        <input type="radio" value="いいえ" checked> いいえ
+        <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
+        <input type="radio" value="no" checked> いいえ
         
       <h4>食事ありで絞り込む</h4>
         <input type="radio" name="meal1" value="はい" style="margin-left:20px;"> はい
