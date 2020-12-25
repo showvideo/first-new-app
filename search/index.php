@@ -16,7 +16,7 @@
         <th style="width:60px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">食事</th>
         <th style="width:170px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">特記事項</th>
     </tr>
-        <?php if(!empty($_POST[name1])) {
+        <?php if(!empty($_POST[bath1])) {
             $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user Wehre bath IS NOT NULL";
             $stmt = getDB()->preapre($sql);
             $stmt->execute();
