@@ -22,7 +22,7 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach($result as $user) {
-                $bath = $user['bath'];
+                $bath = $user['bath']; ?>
                  <tr>
         <!--お名前-->
         <td style="width:100px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
@@ -95,7 +95,6 @@
    
     
           
-        ?>
         <?php
             if(!empty($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])) {
                 
