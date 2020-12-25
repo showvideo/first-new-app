@@ -33,7 +33,7 @@
         
       <h4>入浴ありで絞り込む</h4>
         <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
-        <input type="radio" value="no" checked> いいえ
+        <input type="radio" value="no"> いいえ
         
       <h4>食事ありで絞り込む</h4>
         <input type="radio" name="meal1" value="はい" style="margin-left:20px;"> はい
