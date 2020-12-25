@@ -18,10 +18,10 @@
     </tr>
        
         <?php
-            if(!empty($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])) {
+            if(!empty($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])or($_POST['name1'])) {
                 
             $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') or (visit=:visit) 
-                    or (exits=:exit)";
+                    or (exits=:exit) or (bath IS NOT NULL)";
             $stmt = getDB()->prepare($sql);
             $stmt->bindParam(':visit', searchName($_POST['search_visit']), PDO::PARAM_STR);
             $stmt->bindParam(':exit', searchName($_POST['search_exit']), PDO::PARAM_STR);
@@ -32,6 +32,7 @@
             $name = $user['name']; 
             $visit = $user['visit']; 
             $exit = $user['exit'];
+            $bath = $bath['bath'];
             echo $name;
             echo $visit;
         ?>
