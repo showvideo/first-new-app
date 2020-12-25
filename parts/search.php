@@ -7,7 +7,7 @@
         <input type="text" name="search_name" style="width:100px;height:34px;margin-left:20px;">様。
     
     <h4>来所</h4>
-        <input type="text" name="search_visit" style="width:30px;height:40px;margin-left:20px;">時<input type="text" name="search_visit" style="width:30px;height:40px;">分。
+        <input type="text" name="search_visit" style="width:30px;height:40px;margin-left:20px;">時
         
     <h4>退所</h4>
         <input type="text" name="search_exit" style="width:30px;height:40px;margin-left:20px;">時<input type="text" name="visit" style="width:30px;height:40px;">分。
