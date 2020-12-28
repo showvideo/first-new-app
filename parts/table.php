@@ -18,7 +18,6 @@
         $db = getDB();
         $stt = $db->prepare('SELECT * FROM user WHERE 1');
         $stt->execute();
-        $result = $stt->fetchAll();
             while($row = $stt->fetchAll()) {
                 
                 $id=$row['id'];
