@@ -18,12 +18,12 @@
     </tr>
      
         <?php
-            if(!empty($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])) {
+            if(!empty(($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])) {
                 
             $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') or (visit=:visit) 
                     or (exits=:exit)";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit', searchName($_POST['search_visit']), PDO::PARAM_STR);
+            $stmt->bindParam(':visit', ($_POST['search_visit']), PDO::NULL_EMPTY_STRING);
             $stmt->bindParam(':exit', searchName($_POST['search_exit']), PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
@@ -37,6 +37,11 @@
             echo $visit;
         ?>
            
+        <?php /*
+            if(!empty(($_POST['maxblo']) or ($_POST['maxblo1']) {
+                 
+                $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE "*/
+        ?>
     <tr>
         <!--お名前-->
         <td style="width:100px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
