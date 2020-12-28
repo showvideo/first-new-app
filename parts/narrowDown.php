@@ -6,7 +6,7 @@
         <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;">名前</p>
         <input type="text" name="search_name" style="width:100px;margin-top:10px;margin-left:15px;">様
     
-    <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:300px;">来所時間</p>        
+    <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:300px;border-top:ridge;margin-top:30px;">来所時間</p>        
         <select name="search_visit" style="margin-left:20px;">
         <option value="選択なし">選択なし</option>
         <option value="09:30">09時30分</option>
