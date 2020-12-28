@@ -1,3 +1,4 @@
+<?php require_once('../common/function.php'); ?>
 
 <table border="1" cellspacing="0" style="border-collaspe:collapse;">
     
