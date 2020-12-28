@@ -16,7 +16,7 @@
     try {
         
         $db = getDB();
-        $stt = $db->prepare('SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1');
+        $stt = $db->prepare('SELECT * FROM user WHERE 1');
         $stt->execute();
         $result = $stt->fetchAll();
             while($row = $stt->fetchAll()) {
@@ -34,7 +34,7 @@
            
     <tr>
         <!--お名前-->
-        <td style="width:100px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(isset($name)){ ?>
             <form action="information/index.php/<?php echo $id ?>/" method="post">
             <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
@@ -43,7 +43,7 @@
         </td>
            
         <!--来所-->
-        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($visit)){ ?>                       
           
             <a href="../../input/index.php/<?php echo $id; ?>/?visitime=1" style="opacity:0;">TIME</a>                       
@@ -54,7 +54,7 @@
         </td>
         
         <!--退所-->
-        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($exits)){ ?>                       
           
             <a href="../../input/index.php/<?php echo $id; ?>/?exitime=1" style="opacity:0;">TIME</a>                       
@@ -65,7 +65,7 @@
         </td>
         
         <!--最高・最低血圧/脈拍-->
-        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($maxblood)){ ?>                       
           
             <a href="../../input/index.php/<?php echo $id; ?>/?bloodp=1" style="opacity:0;">TIME</a>                       
@@ -76,19 +76,19 @@
         </td>
         
         <!--入浴-->
-        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
             <?php echo $bath ?>     
         </td>
         
         
         <!--食事-->
-        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
             <?php echo $meal ?>     
         </td>
         
         
         <!--特記事項-->
-        <td style="width:60px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($notices)){ ?>                       
           
             <a href="../../input/index.php/<?php echo $id; ?>/?noticesing=1" style="opacity:0;">TIME</a>                       
@@ -97,6 +97,7 @@
             <a href="../../input/index.php/<?php echo $id; ?>/?noticesing1=1" ><?php echo $notices ?></a>     
         <?php } ?>
         </td>
+        
     </tr>
 <?php   
             }
