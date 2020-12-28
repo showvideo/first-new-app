@@ -101,7 +101,7 @@
 <?php   
             }
         
-    } catch(PDOException) {
+    } catch(PDOException $e) {
         
         echo "ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}";
      
