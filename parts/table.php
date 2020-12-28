@@ -31,7 +31,7 @@
                 
  ?>
            
-<tr>
+<tr style="margin:0;">
     <!--お名前-->
     <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(isset($name)){ ?>
