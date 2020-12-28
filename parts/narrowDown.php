@@ -4,7 +4,7 @@
     <form action="../search/index.php" method="post">
         
         <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;">名前</p>
-        <input type="text" name="search_name" style="width:100px;margin-top:10px;">様
+        <input type="text" name="search_name" style="width:100px;margin-top:10px;margin-left:15px;">様
     
     <h4>来所時間</h4>        
         <select name="search_visit" style="margin-left:20px;">
