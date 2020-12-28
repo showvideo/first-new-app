@@ -31,9 +31,9 @@
                 
  ?>
            
-<tr style="margin:0;">
+<tr>
     <!--お名前-->
-    <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+    <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;margin:0;">
         <?php if(isset($name)){ ?>
             <form action="information/index.php/<?php echo $id ?>/" method="post">
             <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
