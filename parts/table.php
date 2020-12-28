@@ -18,7 +18,7 @@
         $db = getDB();
         $stt = $db->prepare('SELECT name FROM user WHERE 1');
         $stt->execute();
-            while($row = $stt->fetchAll()) {
+            while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
                 
                 $id=$row['id'];
                 $name=$row['name']; 
