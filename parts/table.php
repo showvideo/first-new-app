@@ -19,7 +19,7 @@
         $stt = $db->prepare('SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1');
         $stt->execute();
         $result = $stt->fetchAll();
-            while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+            while($row = $stt->fetchAll()) {
                 
                 $id=$row['id'];
                 $name=$row['name']; 
