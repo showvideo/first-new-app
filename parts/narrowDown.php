@@ -3,7 +3,7 @@
 
     <form action="../search/index.php" method="post">
         
-    <h4>名前</h4>
+    <a style="text-align:center;border-bottom:ridge;">名前</a>
         <input type="text" name="search_name" style="width:100px;height:34px;margin-left:20px;">様。
     
     <h4>来所時間</h4>        
