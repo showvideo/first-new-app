@@ -11,21 +11,34 @@
         <th style="width:170px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">特記事項</th>
     </tr>
     
-           <?php
-            $sql = "SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1";
-            $stmt = getDB()->prepare($sql);
-            $stmt->execute();
-            $result = $stmt->fetchAll();
-            foreach($result as $user){
-            $id=$user['id'];
-            $name=$user['name']; 
-            $visit=$user['visit']; 
-            $exits=$user['exits']; 
-            $maxblood=$user['maxblood'];
-            $bath=$user['bath']; 
-            $meal=$user['meal']; 
-            $notices=$user['notices'];
-        ?>
+<?php
+    
+    try {
+        
+        $db = getDB();
+        $stt = $db->prepare('SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1');
+        $stt->execute()
+        $result = $stt->fetchAll();
+            foreach($result as $row) {
+                
+                $id=$row['id'];
+                $name=$row['name']; 
+                $visit=$row['visit']; 
+                $exits=$row['exits']; 
+                $maxblood=$row['maxblood'];
+                $bath=$row['bath']; 
+                $meal=$row['meal']; 
+                $notices=$row['notices'];
+                
+                }
+        
+    } catch(PDOException) {
+        
+        echo "ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}";
+     
+    }
+
+?>
            
     <tr>
         <!--お名前-->
