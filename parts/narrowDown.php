@@ -25,11 +25,11 @@
         </select>
         
       <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:300px;border-top:ridge;margin-top:30px;">バイタル</p>
-        <a style="margin-left:10px;">最高血圧</a><input type="text" name="maxblo" style="width:40px;height:50px;margin-left:20px;">～<input type="text" name="maxblo1" style="width:40px;height:50px;">(mmhg)</br>
+        <a style="margin-left:10px;">最高血圧</a></br><input type="text" name="maxblo" style="width:40px;height:50px;margin-left:20px;">～<input type="text" name="maxblo1" style="width:40px;height:50px;">(mmhg)</br>
       
-        <a style="margin-left:10px;">最低血圧</a><input type="text" name="maxblo2" style="width:40px;height:50px;margin-left:20px;">～<input type="text" name="maxblo3" style="width:40px;height:50px;">(mmhg)</br>
+<a style="margin-left:10px;">最低血圧</a></br><input type="text" name="maxblo2" style="width:40px;height:50px;margin-left:20px;">～<input type="text" name="maxblo3" style="width:40px;height:50px;">(mmhg)</br>
         
-        <a style="margin-left:10px;">脈拍</a><input type="text" name="maxblo4" style="width:40px;height:50px;margin-left:50px;">～<input type="text" name="maxblo5" style="width:40px;height:50px;">(拍/分)
+<a style="margin-left:10px;">脈拍</a></br><input type="text" name="maxblo4" style="width:40px;height:50px;margin-left:50px;">～<input type="text" name="maxblo5" style="width:40px;height:50px;">(拍/分)
         
       <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:300px;border-top:ridge;margin-top:30px;">入浴ありで絞り込む</p>
         <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
