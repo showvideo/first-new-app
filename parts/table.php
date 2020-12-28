@@ -33,71 +33,13 @@
  ?>
            
     <tr>
-        <!--お名前-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-        <?php if(isset($name)){ ?>
-            <form action="information/index.php/<?php echo $id ?>/" method="post">
-            <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
-            </form>    
-        <?php } ?>
-        </td>
-           
-        <!--来所-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-        <?php if(empty($visit)){ ?>                       
-          
-            <a href="../../input/index.php/<?php echo $id; ?>/?visitime=1" style="opacity:0;">TIME</a>                       
-            <?php }else { ?>
-        
-            <a href="../../input/index.php/<?php echo $id; ?>/?visitime1=1" ><?php echo $visit; ?></a>     
-        <?php } ?>
-        </td>
-        
-        <!--退所-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-        <?php if(empty($exits)){ ?>                       
-          
-            <a href="../../input/index.php/<?php echo $id; ?>/?exitime=1" style="opacity:0;">TIME</a>                       
-            <?php }else { ?>
-        
-            <a href="../../input/index.php/<?php echo $id; ?>/?exitime1=1" ><?php echo $exits; ?></a>     
-        <?php } ?>
-        </td>
-        
-        <!--最高・最低血圧/脈拍-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-        <?php if(empty($maxblood)){ ?>                       
-          
-            <a href="../../input/index.php/<?php echo $id; ?>/?bloodp=1" style="opacity:0;">TIME</a>                       
-            <?php }else { ?>
-        
-            <a href="../../input/index.php/<?php echo $id; ?>/?bloodp1=1" ><?php echo $maxblood ?></a>     
-        <?php } ?>
-        </td>
-        
-        <!--入浴-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-            <?php echo $bath ?>     
-        </td>
-        
-        
-        <!--食事-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-            <?php echo $meal ?>     
-        </td>
-        
-        
-        <!--特記事項-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-        <?php if(empty($notices)){ ?>                       
-          
-            <a href="../../input/index.php/<?php echo $id; ?>/?noticesing=1" style="opacity:0;">TIME</a>                       
-            <?php }else { ?>
-        
-            <a href="../../input/index.php/<?php echo $id; ?>/?noticesing1=1" ><?php echo $notices ?></a>     
-        <?php } ?>
-        </td>
-        
+        <td><?php echo $name ?></td>
+        <td><?php echo $visit ?></td>
+        <td><?php echo $exits ?></td>
+        <td><?php echo $name ?></td>
+        <td><?php echo $name ?></td>
+        <td><?php echo $name ?></td>
+        <td><?php echo $name ?></td>
     </tr>
 <?php   
             }
