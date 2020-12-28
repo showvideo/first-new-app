@@ -17,7 +17,7 @@
         
         $db = getDB();
         $stt = $db->prepare('SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1');
-        $stt->execute()
+        $stt->execute();
         $result = $stt->fetchAll();
             foreach($result as $row) {
                 
