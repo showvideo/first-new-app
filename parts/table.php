@@ -103,7 +103,7 @@
         
     } catch(PDOException $e) {
         
-        echo "ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}";
+        echo "エラーメッセージ: {$e->getMessage()}";
      
     }
 
