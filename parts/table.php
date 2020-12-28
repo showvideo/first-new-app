@@ -19,7 +19,7 @@
         $stt = $db->prepare('SELECT id, name, visit, exits, maxblood, miniblood, meal, bath, notices FROM user WHERE 1');
         $stt->execute();
         $result = $stt->fetchAll();
-            foreach($result as $row) {
+            while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
                 
                 $id=$row['id'];
                 $name=$row['name']; 
@@ -30,15 +30,7 @@
                 $meal=$row['meal']; 
                 $notices=$row['notices'];
                 
-                }
-        
-    } catch(PDOException) {
-        
-        echo "ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}";
-     
-    }
-
-?>
+ ?>
            
     <tr>
         <!--お名前-->
@@ -106,6 +98,14 @@
         <?php } ?>
         </td>
     </tr>
-    <?php } ?>
+<?php   
+            }
+        
+    } catch(PDOException) {
+        
+        echo "ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}";
+     
+    }
 
+?>
 </table>
