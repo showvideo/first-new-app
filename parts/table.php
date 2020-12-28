@@ -16,7 +16,7 @@
     try {
         
         $db = getDB();
-        $stt = $db->prepare('SELECT name FROM user WHERE 1');
+        $stt = $db->prepare('SELECT * FROM user WHERE 1');
         $stt->execute();
             while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
                 
@@ -32,74 +32,67 @@
  ?>
            
 <tr>
-        <!--お名前-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+    <!--お名前-->
+    <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(isset($name)){ ?>
             <form action="information/index.php/<?php echo $id ?>/" method="post">
             <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
             </form>    
         <?php } ?>
-        </td>
+     </td>
            
-        <!--来所-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+     <!--来所-->
+     <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($visit)){ ?>                       
-          
-            <a href="../../input/index.php/<?php echo $id; ?>/?visitime=1" style="opacity:0;">TIME</a>                       
-            <?php }else { ?>
-        
-            <a href="../../input/index.php/<?php echo $id; ?>/?visitime1=1" ><?php echo $visit; ?></a>     
+          <a href="../../input/index.php/<?php echo $id; ?>/?visitime=1" style="opacity:0;">TIME</a>                       
+          <?php }else { ?>
+          <a href="../../input/index.php/<?php echo $id; ?>/?visitime1=1" ><?php echo $visit; ?></a>     
         <?php } ?>
-        </td>
+     </td>
         
-        <!--退所-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+     <!--退所-->
+     <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($exits)){ ?>                       
-          
-            <a href="../../input/index.php/<?php echo $id; ?>/?exitime=1" style="opacity:0;">TIME</a>                       
-            <?php }else { ?>
+          <a href="../../input/index.php/<?php echo $id; ?>/?exitime=1" style="opacity:0;">TIME</a>                       
+          <?php }else { ?>
+          <a href="../../input/index.php/<?php echo $id; ?>/?exitime1=1" ><?php echo $exits; ?></a>     
+          <?php } ?>
+     </td>
         
-            <a href="../../input/index.php/<?php echo $id; ?>/?exitime1=1" ><?php echo $exits; ?></a>     
-        <?php } ?>
-        </td>
-        
-        <!--最高・最低血圧/脈拍-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+     <!--最高・最低血圧/脈拍-->
+     <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($maxblood)){ ?>                       
-          
-            <a href="../../input/index.php/<?php echo $id; ?>/?bloodp=1" style="opacity:0;">TIME</a>                       
-            <?php }else { ?>
-        
-            <a href="../../input/index.php/<?php echo $id; ?>/?bloodp1=1" ><?php echo $maxblood ?></a>     
+          <a href="../../input/index.php/<?php echo $id; ?>/?bloodp=1" style="opacity:0;">TIME</a>                       
+          <?php }else { ?>
+          <a href="../../input/index.php/<?php echo $id; ?>/?bloodp1=1" ><?php echo $maxblood ?></a>     
         <?php } ?>
-        </td>
+      </td>
         
-        <!--入浴-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-            <?php echo $bath ?>     
-        </td>
-        
-        
-        <!--食事-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-            <?php echo $meal ?>     
-        </td>
+      <!--入浴-->
+      <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php echo $bath ?>     
+       </td>
         
         
-        <!--特記事項-->
-        <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+      <!--食事-->
+      <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+        <?php echo $meal ?>     
+      </td>
+        
+      <!--特記事項-->
+      <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
         <?php if(empty($notices)){ ?>                       
-          
-            <a href="../../input/index.php/<?php echo $id; ?>/?noticesing=1" style="opacity:0;">TIME</a>                       
-            <?php }else { ?>
-        
-            <a href="../../input/index.php/<?php echo $id; ?>/?noticesing1=1" ><?php echo $notices ?></a>     
+          <a href="../../input/index.php/<?php echo $id; ?>/?noticesing=1" style="opacity:0;">TIME</a>                       
+        <?php }else { ?>
+           <a href="../../input/index.php/<?php echo $id; ?>/?noticesing1=1" ><?php echo $notices ?></a>     
         <?php } ?>
-        </td>
+      </td>
         
     </tr>
-<?php   
-            }
+
+<?php 
+                
+      }
         
     } catch(PDOException $e) {
         
@@ -108,4 +101,5 @@
     }
 
 ?>
+    
 </table>
