@@ -1,5 +1,5 @@
 
-<div style="display:inline-block;border:ridge;width:400px;vertical-align:top;margin-left:6px;padding-left:20px;">
+<div style="display:inline-block;border:ridge;width:300px;vertical-align:top;margin-left:6px;padding-left:20px;">
 
     <form action="../search/index.php" method="post">
         
