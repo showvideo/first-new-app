@@ -6,8 +6,8 @@
         <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;">名前</p>
         <input type="text" name="search_name" style="width:100px;margin-top:15px;margin-left:10px;">様
     
-    <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:300px;border-top:ridge;margin-top:30px;">来所時間</p>        
-        <select name="search_visit" style="margin-left:20px;">
+    <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:ridge;margin-top:30px;">来所時間</p>        
+        <select name="search_visit" style="margin-left:10px;">
         <option value="選択なし">選択なし</option>
         <option value="09:30">09時30分</option>
         <option value="10:00">10時00分</option>
@@ -16,7 +16,7 @@
         </select>
         
     <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:300px;border-top:ridge;margin-top:30px;">退所</p>
-        <select name="search_exit" style="margin-left:20px;">
+        <select name="search_exit" style="margin-left:10px;">
         <option value="選択なし">選択なし</option>
         <option value="13:00">13時00分</option>
         <option value="13:30">13時30分</option>
