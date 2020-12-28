@@ -23,7 +23,7 @@
             $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') or (visit=:visit) 
                     or (exits=:exit)";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit', ($_POST['search_visit']), PDO::NULL_EMPTY_STRING);
+            $stmt->bindParam(':visit', $_POST['search_visit'], PDO::NULL_EMPTY_STRING);
             $stmt->bindParam(':exit', searchName($_POST['search_exit']), PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
