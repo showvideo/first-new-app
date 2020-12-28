@@ -23,7 +23,7 @@
             $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') or (visit=:visit) 
                     or (exits=:exit)";
             $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit', $_POST['search_visit'], PDO::NULL_EMPTY_STRING);
+            $stmt->bindParam(':visit', searchName($_POST['search_visit']), PDO::PARAM_STR);
             $stmt->bindParam(':exit', searchName($_POST['search_exit']), PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll();
@@ -37,10 +37,24 @@
             echo $visit;
         ?>
            
-        <?php /*
+        <?php 
             if(!empty(($_POST['maxblo']) or ($_POST['maxblo1']) {
                  
-                $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE "*/
+            $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE maxblo BETWEEN :maxblo and :maxblo1 "
+            
+            $stt = getDB()->prepare($sql);
+            $stt->bindParam(':maxblo, $_POST['maxblo'],PDO::PARAM_STR');
+            $stt->bindParam(':maxblo1, $_POST['maxblo1'],PDO::PARAM_STR');
+            $stt->execute();
+            $result = $stt->fetchAll();
+            foreach($result as $user) {
+                            $id = $user['id'];     
+            $name = $user['name']; 
+            $visit = $user['visit']; 
+            $exit = $user['exit'];
+            $bath = $bath['bath'];
+                
+            
         ?>
     <tr>
         <!--お名前-->
@@ -108,7 +122,7 @@
         <?php } ?>
         </td>
     </tr>
-            
+        <?php } ?>    
         <?php } ?>
    <?php } ?>  
    
