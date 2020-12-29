@@ -1,25 +1,29 @@
     
         
-<div style="display:inline-block;width:400px;vertical-align:top;margin-left:6px;">
+<div style="display:inline-block;width:250px;vertical-align:top;margin-left:6px;">
 
     <form action="../search/index.php" method="post">
         <a style="border:ridge;">来所時間</a></br>
-    <div style="width:400px;height:200px;border:ridge;margin:0;">-選択してください-</br>
+    
+    <div style="width:250px;height:200px;border:ridge;margin:0;">-選択してください-</br>
         <input type="submit" name="search" value="09:30" style="margin-left:20px;">
         <input type="submit" name="search" value="10:00">
         <input type="submit" name="search" value="10:30">
         <input type="submit" name="search" value="11:00">
         <input type="submit" name="search" value="11:30">
         <input type="submit" name="search" value="12:00">
-        </div>
-    <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:ridge;margin-top:30px;">退所時間</p>        
+    </div>
+    
+        <a style="border:ridge;">退所時間</a></br>
+
+        <div style="width:250px;height:200px;border:ridge;margin:0;">-選択してください-</br>
         <input type="submit" name="search" value="12:30" style="margin-left:20px;">
         <input type="submit" name="search" value="13:00">
         <input type="submit" name="search" value="13:30">
         <input type="submit" name="search" value="14:00">
         <input type="submit" name="search" value="14:30">
         <input type="submit" name="search" value="15:00">     
-
+    </div>
         
 </div>
         
