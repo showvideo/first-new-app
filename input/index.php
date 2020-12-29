@@ -40,10 +40,13 @@
     <div style="width:200px;border:ridge;margin:0;"></br>
         <p style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></p></br>
 
-        <input type="text" style="width:44px;height:55px;margin-left:60px;">:
-        <input type="text" style="width:44px;height:55px;">
-        <input type="submit" name="submit" value="入力">
-        <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
+        <input type="submit" value="09:30">
+        <input type="submit" value="09:30">
+        <input type="submit" value="09:30">
+        <input type="submit" value="09:30">
+        <input type="submit" value="09:30">
+        <input type="submit" value="09:30">
+        <input type="submit" value="09:30">
     </form>
     </div>
 </div>
