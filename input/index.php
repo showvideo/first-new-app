@@ -38,7 +38,7 @@
     <a style="border:ridge;">来所時間</a></br>
     
     <div style="width:200px;border:ridge;margin:0;"></br>
-        <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
+        <p style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></p></br>
 
         <input type="text" style="width:44px;height:55px;margin-left:60px;">:
         <input type="text" style="width:44px;height:55px;">
