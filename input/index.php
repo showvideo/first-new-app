@@ -32,14 +32,22 @@
         $name = $user['name'];
         
     ?>
-    <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-    <p style="margin-left:40px;font-size:20px;">来所時間</p></br>
+    <div style="display:inline-block;width:250px;vertical-align:top;margin-left:6px;">
+
     <form action="" method="post">
+    <a style="border:ridge;">来所時間</a></br>
+    
+    <div style="width:200px;border:ridge;margin:0;"></br>
+        <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
+
         <input type="text" style="width:44px;height:55px;margin-left:60px;">:
         <input type="text" style="width:44px;height:55px;">
         <input type="submit" name="submit" value="入力">
         <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
     </form>
+    </div>
+</div>
+
     <?php  
         }
     } else {echo null;} ?> 
