@@ -32,7 +32,7 @@
         $name = $user['name'];
         
     ?>
-    <div style="display:inline-block;width:250px;vertical-align:top;margin-left:6px;">
+    <div style="display:inline-block;width:325px;vertical-align:top;margin-left:6px;">
 
     <form action="" method="post">
     <a style="border:ridge;">来所時間</a></br>
@@ -40,7 +40,7 @@
     <div style="width:200px;border:ridge;margin:0;"></br>
         <p style="padding-left:20px;font-size:20px;margin:0;"><?php echo $name."様"; ?></p></br>
 
-        来所時間を選択してください。
+        <a style="padding-left:20px;">来所時間を選択してください。</br>
         <input type="submit" value="09:30">
         <input type="submit" value="09:30">
         <input type="submit" value="09:30">
