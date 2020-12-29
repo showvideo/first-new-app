@@ -3,7 +3,7 @@
 
     <form action="../search/index.php" method="post">
         
-        <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;">来所</p>
+        <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;">来所時間</p>
         <input type="submit" name="search" value="09:30">
         <input type="submit" name="search" value="10:00">
         <input type="submit" name="search" value="10:30">
@@ -11,14 +11,15 @@
         <input type="submit" name="search" value="11:30">
         <input type="submit" name="search" value="12:00">
     
-    <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:ridge;margin-top:30px;">来所時間</p>        
-        <select name="search_visit" style="margin-left:10px;">
-        <option value="選択なし">選択なし</option>
-        <option value="09:30">09時30分</option>
-        <option value="10:00">10時00分</option>
-        <option value="10:30">10時30分</option>
-        <option value="11:00">11時00分</option>
-        </select>
+    <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:ridge;margin-top:30px;">退所時間</p>        
+        <input type="submit" name="search" value="12:30">
+        <input type="submit" name="search" value="13:00">
+        <input type="submit" name="search" value="13:30">
+        <input type="submit" name="search" value="14:00">
+        <input type="submit" name="search" value="14:30">
+        <input type="submit" name="search" value="15:00">        
+        
+</div>
         
     <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;border-top:300px;border-top:ridge;margin-top:30px;">退所</p>
         <select name="search_exit" style="margin-left:10px;">
