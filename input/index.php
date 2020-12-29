@@ -20,7 +20,7 @@
 
 <?php /*来所*/ ?>
 
-<?php if(!empty($visitime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
+<?php if(!empty($visitime)) { ?> <div style="display:inline-block;">
     <?php
         $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
