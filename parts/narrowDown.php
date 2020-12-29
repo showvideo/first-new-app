@@ -1,9 +1,10 @@
-
-<div style="display:inline-block;border:ridge;width:400px;vertical-align:top;margin-left:6px;">
+    
+        
+<div style="display:inline-block;width:400px;vertical-align:top;margin-left:6px;">
 
     <form action="../search/index.php" method="post">
-        
-        <p style="text-align:center;border-bottom:ridge;width:80px;border-right:ridge;margin-top:0;">来所時間</p>
+        <p style="border:ridge;">来所時間</p></br>
+        <div style="display:inline-block;border:ridge;width:400px;vertical-align:top;margin-left:6px;">
         -選択してください-
         <input type="submit" name="search" value="09:30" style="margin-left:20px;">
         <input type="submit" name="search" value="10:00">
@@ -18,7 +19,8 @@
         <input type="submit" name="search" value="13:30">
         <input type="submit" name="search" value="14:00">
         <input type="submit" name="search" value="14:30">
-        <input type="submit" name="search" value="15:00">        
+        <input type="submit" name="search" value="15:00">     
+    </div>
         
 </div>
         
