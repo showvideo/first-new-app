@@ -40,6 +40,7 @@
     <div style="width:200px;border:ridge;margin:0;"></br>
         <p style="padding-left:20px;font-size:20px;margin:0;"><?php echo $name."様"; ?></p></br>
 
+        来所時間を選択してください。
         <input type="submit" value="09:30">
         <input type="submit" value="09:30">
         <input type="submit" value="09:30">
