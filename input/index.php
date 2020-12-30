@@ -258,7 +258,7 @@
 <?php
     if(isset($visit_time)){
     try {
-        $visit_time = $_POST['visit_time']
+        $visit_time = $_POST['visit_time'];
         $db = getDB();
         $stt = $db->prepare('UPDATE user SET visit = :visit');
         $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
