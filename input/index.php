@@ -255,4 +255,20 @@
     <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;"></form>
     </div><?php  } else {echo null;} ?> 
 
+<?php
+    if(isset($visit_time)){
+    try {
+        $visit_time = $_POST['visit_time']
+        $db = getDB();
+        $stt = $db->prepare('UPDATE user SET visit = :visit');
+        $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
+        $stt->execute();
+        
+        } catch (PDOException $e) {
+        
+        echo "エラーメッセージ: {$e->getMessage())"};
+     
+        }
+    }
+ ?>
 
