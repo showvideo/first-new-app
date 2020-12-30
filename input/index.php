@@ -88,8 +88,8 @@
                 <option value="11:30">11:30</option>
                 <option value="12:00">12:00</option>
             </select></p>
-        <input type="submit" value="一覧へ戻る" style="margin-left:120px;margin-top:190px;">
-        </form>
+        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:160px;">
+
     </div>
         
     </form>
