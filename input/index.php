@@ -40,7 +40,7 @@
     
     <div style="width:300px;border:ridge;"></br>
 
-        <a style="padding-left:30px;font-size:16px;">来所時間を選択してください。</br>
+        <a style="padding-left:30px;font-size:13px;margin:0;">来所時間を選択してください。</br>
         <input type="submit" name="visit_time" value="09:30" style="margin-top:10px;margin-left:30px;margin-bottom:10px;width:60px;height:40px;">
         <input type="submit" name="visit_time" value="10:00" style="margin-top:10px;margin-left:10px;margin-bottom:10px;width:60px;height:40px;">
         <input type="submit" name="visit_time" value="10:30" style="margin-top:10px;margin-left:10px;margin-bottom:10px;width:60px;height:40px;"></br>
