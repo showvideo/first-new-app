@@ -88,7 +88,7 @@
 
 <?php /*退所*/ ?>
 
-<?php if(!empty($exitime)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
+<?php if(!empty($exitime)) { ?> 
     <?php
         $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
