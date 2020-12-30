@@ -58,9 +58,9 @@
         <p style="padding-left:20px;font-size:30px;margin:0;"><?php echo $name."様"; ?></p></br>
 
         <a style="padding-left:20px;">来所時間を選択してください。</br>
-        <input type="submit" name="visit_time" value="09:30" style="margin-left:30px;margin-bottom:10px;width:60px;height:40px;">
-        <input type="submit" name="visit_time" value="10:00" style="margin-left:10px;margin-bottom:10px;width:60px;height:40px;">
-        <input type="submit" name="visit_time" value="10:30" style="margin-left:10px;margin-bottom:10px;width:60px;height:40px;"></br>
+        <input type="submit" name="visit_time" value="09:30" style="margin-top:10px;margin-left:30px;margin-bottom:10px;width:60px;height:40px;">
+        <input type="submit" name="visit_time" value="10:00" style="margin-top:10px;margin-left:10px;margin-bottom:10px;width:60px;height:40px;">
+        <input type="submit" name="visit_time" value="10:30" style="margin-top:10px;margin-left:10px;margin-bottom:10px;width:60px;height:40px;"></br>
         <input type="submit" name="visit_time" value="11:00" style="margin-left:30px;margin-bottom:10px;width:60px;height:40px;"">
         <input type="submit" name="visit_time" value="11:30" style="margin-left:10px;margin-bottom:10px;width:60px;height:40px;">
         <input type="submit" name="visit_time" value="12:00" style="margin-left:10px;margin-bottom:10px;width:60px;height:40px;"></br>
