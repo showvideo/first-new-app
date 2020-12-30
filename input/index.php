@@ -14,25 +14,9 @@
   $bloodp1 = $_GET['bloodp1'];
   $noticesing = $_GET['noticesing'];
   $noticesing1 = $_GET['noticesing1'];
+  $visit_time = $_POST['visit_time'];
 
 
-/*<?php
-    if(isset($visit_time)){
-        $visit_time = $_POST['visit_time'];
-    try {
-        
-        $db = getDB();
-        $stt = $db->prepare('UPDATE user SET visit = :visit');
-        $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
-        $stt->execute();
-        
-        } catch (PDOException $e) {
-        
-        echo "エラーメッセージ: {$e->getMessage())"};
-     
-        }
-    }
- ?>*/
 ?>
 
 <?php /*来所*/ ?>
@@ -87,16 +71,20 @@
         $visit = $user['visit'];
         }
     ?>
+    <div style="display:inline-block;width:315px;vertical-align:top;margin-left:6px;">
+
     <form action="" method="post">
-    <input type="submit" name="back" value="一覧へ戻る">
-    <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-    <a style="margin-left:40px;font-size:20px;padding-bottom:10px;">来所時間</a></br>
-    <input type="text" value="<?php echo substr($visit, 0, 2); ?>" style="width:44px;height:55px;margin-left:47px;color:black;font-weight:bold;">:
-    <input type="text" value="<?php echo substr($visit, 3, 5); ?>" style="width:44px;height:55px;"></br>
-    <input type="submit" name="edit" value="更新"　style="margin-left:200px;"></br>
-    <a href="" name="delete" value="削除" style="padding-top:100px;margin-left:115px;">データを削除する</a>
+    <a style="border:ridge;font-size:19px;padding:6px;margin:0;">来所時間</a></br>
+    
+    <div style="width:300px;border:ridge;margin-top:6px;"></br>
+        <a style="margin-left:20px;font-size:30px;margin-bottom:10px;text-decoration:underline;"><?php echo $name."様"; ?></a></br>
+
+        
     </form>
-    </div><?php  } else {echo null;} ?> 
+
+    </div>
+</div>
+><?php  } else {echo null;} ?> 
 
 
 <?php /*退所*/ ?>
@@ -273,3 +261,20 @@
     </div><?php  } else {echo null;} ?> 
 
 
+<?php
+    if(isset($visit_time)){
+        
+    try {
+        
+        $db = getDB();
+        $stt = $db->prepare('UPDATE user SET visit = :visit');
+        $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
+        $stt->execute();
+        
+        } catch (PDOException $e) {
+        
+        echo "エラーメッセージ: {$e->getMessage())"};
+     
+        }
+    }
+ ?>
