@@ -251,8 +251,8 @@
 
 <?php /*特記事項*/ ?>
 
-<?php if(!empty($noticesing)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
-    <?php
+<?php if(!empty($noticesing)) { ?> 
+        <?php
         $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
@@ -281,7 +281,7 @@
         }
     } else {echo null;} ?> 
 
-<?php if(isset($noticesing1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
+<?php if(isset($noticesing1)) { ?> 
    <?php
        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
