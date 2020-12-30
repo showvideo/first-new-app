@@ -188,21 +188,27 @@
         $name = $user['name'];
         }
     ?>
-    <h3 style="padding-left:20px;font-size:30px;"><?php echo $name."様"; ?></h3></br>
-    <p style="padding-left:40px;font-size:20px;">血圧</p></br>
-    <form action="" method="post">
-        最高血圧<input type="text" name="maxblood" style="width:44px;height:55px;margin-left:40px;">（mmhg）</br>
-        最小血圧<input type="text" name="miniblood" style="width:44px;height:55px;margin-left:40px;">（mmhg）</br>
-        脈拍<input type="text" name="pulse" style="width:44px;height:55px;margin-left:40px;">　(拍/分)
-        <?php if(isset($_POST['maxblood'])) {
-                $sql = 'UPDATE user SET maxblood = :blood WHERE id = :id';
-                $stmt = getDB()->prepare($sql);
-                $stmt->bindParam(':blood', $_POST['maxblood'], PDO::PARAM_STR);
-                $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-                $stmt->execute();
-                header('Location: https://animech2.herokuapp.com/');
-                exit;
-        }
+    <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
+
+        <form action="" method="post">
+            <p>来所時間</p>
+            <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
+            
+        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">来所時間を選択してください。</a></br>
+
+            <select name="visit_time" style="width:100px;height:30px;margin-left:40px;">
+                <option value="">選択しない</option>
+                <option value="09:30">09:30</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="12:00">12:00</option>
+            </select></p>
+        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
+        </form>
+    </div>
+
         ?>
         <?php if(isset($_POST['miniblood'])) {
                 $sql = 'UPDATE user SET miniblood = :blood WHERE id = :id';
