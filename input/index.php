@@ -16,6 +16,23 @@
   $noticesing1 = $_GET['noticesing1'];
 
 
+/*<?php
+    if(isset($visit_time)){
+        $visit_time = $_POST['visit_time'];
+    try {
+        
+        $db = getDB();
+        $stt = $db->prepare('UPDATE user SET visit = :visit');
+        $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
+        $stt->execute();
+        
+        } catch (PDOException $e) {
+        
+        echo "エラーメッセージ: {$e->getMessage())"};
+     
+        }
+    }
+ ?>*/
 ?>
 
 <?php /*来所*/ ?>
@@ -255,21 +272,4 @@
     <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;"></form>
     </div><?php  } else {echo null;} ?> 
 
-<?php
-    if(isset($visit_time)){
-        $visit_time = $_POST['visit_time'];
-    try {
-        
-        $db = getDB();
-        $stt = $db->prepare('UPDATE user SET visit = :visit');
-        $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
-        $stt->execute();
-        
-        } catch (PDOException $e) {
-        
-        echo "エラーメッセージ: {$e->getMessage())"};
-     
-        }
-    }
- ?>
 
