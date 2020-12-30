@@ -76,7 +76,7 @@
             <p>来所時間</p>
             <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
             <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">只今設定されている時間</a></br>
-            <?php echo $visit; ?></br>
+            <a style="padding-left:40px;font-size:17px;"><?php echo $visit; ?></a></br>
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">来所時間を選択してください。</a></br>
 
             <select name="visit_time" style="width:100px;height:30px;margin-left:40px;">
