@@ -40,7 +40,7 @@
             
         <a style="padding-left:30px;font-size:13px;margin:0;">来所時間を選択してください。</br>
 
-            <select name="visit_time" style="width:100px;height:30px;-left:40px;">
+            <select name="visit_time" style="width:100px;height:30px;margin-left:40px;">
                 <option value="">選択しない</option>
                 <option value="09:30">09:30</option>
                 <option value="10:00">10:00</option>
