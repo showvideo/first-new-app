@@ -49,7 +49,7 @@
         $name = $user['name'];
         
     ?>
-    <div style="display:inline-block;width:325px;vertical-align:top;margin-left:6px;">
+    <div style="display:inline-block;width:315px;vertical-align:top;margin-left:6px;">
 
     <form action="" method="post">
     <a style="border:ridge;font-size:19px;padding:6px;margin:0;">来所時間</a></br>
