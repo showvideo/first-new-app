@@ -52,7 +52,7 @@
     <div style="display:inline-block;width:325px;vertical-align:top;margin-left:6px;">
 
     <form action="" method="post">
-    <a style="border:ridge;font-size:23px;padding:6px;margin:0;">来所時間</a></br>
+    <a style="border:ridge;font-size:19px;padding:6px;margin:0;">来所時間</a></br>
     
     <div style="width:300px;border:ridge;margin-top:6px;"></br>
         <p style="padding-left:20px;font-size:30px;margin:0;"><?php echo $name."様"; ?></p></br>
