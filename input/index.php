@@ -135,7 +135,7 @@
     </div>
     <?php  } else {echo null;} ?> 
 
-<?php if(isset($exitime1)) { ?> <div style="display:inline-block;border:ridge;width:367px;height:579px;position:relative;">
+<?php if(isset($exitime1)) { ?> 
    <?php
        $sql = "SELECT * FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
