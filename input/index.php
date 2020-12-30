@@ -20,17 +20,19 @@
 
 <?php /*来所*/ ?>
 
-<?php if(!empty($visitime)) { ?> <div style="display:inline-block;">
+<?php if(!empty($visitime)) { ?> 
     <?php
-        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
+    try { 
+        $db = getDB();
+        $stt = $db->preapare('SELECT * FROM user WHERE id = :id');
+        $stt->bindValue(':id', $id);
+        $stt->execute();
         $result = $stmt->fetchAll();
         foreach($result as $user){
         $id = $user['id'];
         $name = $user['name'];
         
+
     ?>
     <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
 
@@ -54,7 +56,9 @@
     </div>
 
     <?php  
-        }
+    } catch (PDOException $e) {
+        echo "エラーメッセージ: {$e->getMessage()}";
+        }        
     } else {echo null;} ?> 
 
 <?php if(isset($visitime1)) { ?> 
