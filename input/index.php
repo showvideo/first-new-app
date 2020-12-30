@@ -14,25 +14,7 @@
   $bloodp1 = $_GET['bloodp1'];
   $noticesing = $_GET['noticesing'];
   $noticesing1 = $_GET['noticesing1'];
-  $visit_time = $_POST['visit_time'];
 
-<?php /*
-    if(isset($visit_time)){
-        
-    try {
-        
-        $db = getDB();
-        $stt = $db->prepare('UPDATE user SET visit = :visit');
-        $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
-        $stt->execute();
-        
-        } catch (PDOException $e) {
-        
-        echo "エラーメッセージ: {$e->getMessage())"};
-     
-        }
-    }
- */?>
 
 ?>
 
