@@ -41,17 +41,25 @@
         <p style="padding-left:20px;font-size:20px;margin:0;"><?php echo $name."様"; ?></p></br>
 
         <a style="padding-left:20px;">来所時間を選択してください。</br>
-        <input type="submit" name="visit1" value="09:30" style="margin-left:20px;">
-        <input type="submit" name="visit2" value="10:00">
-        <input type="submit" name="visit3" value="10:30"></br>
-        <input type="submit" name="visit4" value="11:00" style="margin-left:20px;">
-        <input type="submit" name="visit5" value="11:30">
-        <input type="submit" name="visit6" value="12:00"></br>
-        <input type="submit" name="visit7" value="12:30" style="margin-left:20px;margin-bottom:40px;">
+        <input type="submit" name="visit_time" value="09:30" style="margin-left:20px;">
+        <input type="submit" name="visit_time" value="10:00">
+        <input type="submit" name="visit_time" value="10:30"></br>
+        <input type="submit" name="visit_time" value="11:00" style="margin-left:20px;">
+        <input type="submit" name="visit_time" value="11:30">
+        <input type="submit" name="visit_time" value="12:00"></br>
+        <input type="submit" name="visit_time" value="12:30" style="margin-left:20px;margin-bottom:40px;">
     </form>
-    <?php 
-            try {
-            
+    <?php
+    
+    try {
+        $visit_time = $_POST['visit_time']
+        $db = getDB();
+        $stt = $db->prepare('UPDATE user SET visit = :visit');
+        $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
+        $stt->execute();
+    } catch (PDOException $e) {
+        "エラーメッセージ:getMessage()->$e"
+ ?>
     </div>
 </div>
 
