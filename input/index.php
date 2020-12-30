@@ -38,7 +38,7 @@
             <p>来所時間</p>
             <a style="padding-left:200px;"><?php echo $name."様"; ?></a></br>
             
-        <a style="padding-left:30px;font-size:13px;margin:0;margin-top:50px;">来所時間を選択してください。</br>
+        <a style="padding-left:30px;font-size:13px;margin-top:50px;">来所時間を選択してください。</br>
 
             <select name="visit_time" style="width:100px;height:30px;margin-left:40px;">
                 <option value="">選択しない</option>
