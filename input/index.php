@@ -32,14 +32,12 @@
         $name = $user['name'];
         
     ?>
-    <div style="display:inline-block;width:300px;vertical-align:top;margin-left:6px;">
+    <div style="border:ridge;width:300px;vertical-align:top;margin-left:6px;">
 
         <form action="" method="post">
-    来所時間
-    <?php echo $name."様"; ?>
-    
-    <div></br>
-
+            <p>来所時間</p>
+            <a style="padding-left:100px;"><?php echo $name."様"; ?></a>
+            
         <a style="padding-left:30px;font-size:13px;margin:0;">来所時間を選択してください。</br>
 
             <select name="visit_time" style="width:100px;height:30px;-left:40px;">
@@ -51,10 +49,8 @@
                 <option value="11:30">11:30</option>
                 <option value="12:00">12:00</option>
             </select></p>
-            </form>
-
+        </form>
     </div>
-</div>
 
     <?php  
         }
