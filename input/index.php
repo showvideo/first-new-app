@@ -57,8 +57,12 @@
         $stt = $db->prepare('UPDATE user SET visit = :visit');
         $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
         $stt->execute();
+        
     } catch (PDOException $e) {
-        "エラーメッセージ:getMessage()->$e"
+        
+        echo "エラーメッセージ: {$e->getMessage())"};
+     
+    }
  ?>
     </div>
 </div>
