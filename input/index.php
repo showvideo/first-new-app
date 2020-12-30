@@ -57,7 +57,7 @@
         }
     } else {echo null;} ?> 
 
-<?php if(isset($visitime1)) { ?> <div style="display:inline-block;border:ridge;width:367px;height:479px;position:relative;">
+<?php if(isset($visitime1)) { ?> 
    <?php
        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
