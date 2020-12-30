@@ -55,7 +55,7 @@
     <a style="border:ridge;font-size:19px;padding:6px;margin:0;">来所時間</a></br>
     
     <div style="width:300px;border:ridge;margin-top:6px;"></br>
-        <p style="padding-left:20px;font-size:30px;margin:0;background:linear-gradient(transparent 50%, yellow 50%);"><?php echo $name."様"; ?></p></br>
+        <a style="padding-left:20px;font-size:30px;margin:0;background:linear-gradient(transparent 50%, yellow 50%);"><?php echo $name."様"; ?></a></br>
 
         <a style="padding-left:30px;font-size:16px;">来所時間を選択してください。</br>
         <input type="submit" name="visit_time" value="09:30" style="margin-top:10px;margin-left:30px;margin-bottom:10px;width:60px;height:40px;">
