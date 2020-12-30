@@ -49,21 +49,7 @@
         <input type="submit" name="visit_time" value="12:00"></br>
         <input type="submit" name="visit_time" value="12:30" style="margin-left:20px;margin-bottom:40px;">
     </form>
-    <?php
-    
-    try {
-        $visit_time = $_POST['visit_time']
-        $db = getDB();
-        $stt = $db->prepare('UPDATE user SET visit = :visit');
-        $stt->bindParam(:visit, $visit_time, PDO::PARAM_STR);
-        $stt->execute();
-        
-    } catch (PDOException $e) {
-        
-        echo "エラーメッセージ: {$e->getMessage())"};
-     
-    }
- ?>
+
     </div>
 </div>
 
