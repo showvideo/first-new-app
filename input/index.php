@@ -35,7 +35,7 @@
     <div style="display:inline-block;width:300px;vertical-align:top;margin-left:6px;">
 
         <form action="" method="post">
-        <p style="border:ridge;font-size:19px;padding:6px;margin:0;">来所時間<a style="border:ridge;padding:6px;padding-left:30px;"><?php echo $name."様"; ?></a></p>
+        <p style="border:ridge;font-size:19px;padding:6px;margin:0;">来所時間<a style="border-left:ridge;padding:6px;padding-left:100px;"><?php echo $name."様"; ?></a></p>
     
     </div>
     <div style="width:300px;border:ridge;margin-top:6px;"></br>
