@@ -36,7 +36,7 @@
 
         <form action="" method="post">
             <p>来所時間</p>
-            <a style="padding-left:200px;"><?php echo $name."様"; ?></a></br>
+            <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
             
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">来所時間を選択してください。</a></br>
 
