@@ -35,10 +35,10 @@
     <div style="display:inline-block;width:300px;vertical-align:top;margin-left:6px;">
 
         <form action="" method="post">
-        <p style="border:ridge;font-size:19px;padding:6px;margin:0;">来所時間<a style="border-left:ridge;padding:6px;padding-left:60px;"><?php echo $name."様"; ?></a></p>
+    来所時間
+    <?php echo $name."様"; ?>
     
-    
-    <div style="width:300px;border:ridge;"></br>
+    <div></br>
 
         <a style="padding-left:30px;font-size:13px;margin:0;">来所時間を選択してください。</br>
 
