@@ -22,7 +22,7 @@
 
 <?php if(!empty($visitime)) { ?> 
     <?php
-    try { 
+    
         $db = getDB();
         $stt = $db->preapare('SELECT * FROM user WHERE id = :id');
         $stt->bindValue(':id', $id);
@@ -56,9 +56,7 @@
     </div>
 
     <?php  
-    } catch (PDOException $e) {
-        echo "エラーメッセージ: {$e->getMessage()}";
-        }        
+
     } else {echo null;} ?> 
 
 <?php if(isset($visitime1)) { ?> 
