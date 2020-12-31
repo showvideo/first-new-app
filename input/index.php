@@ -31,7 +31,7 @@
         foreach($result as $user){
         $id = $user['id'];
         $name = $user['name'];
-        
+        }
     ?>
     <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
 
@@ -49,12 +49,12 @@
                 <option value="11:00">11:00</option>
                 <option value="11:30">11:30</option>
                 <option value="12:00">12:00</option>
-            </select></p>
+            </select>
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
     </div>
 
-    <?php  }
+    <?php  
         
     } else {echo null;} ?> 
 
