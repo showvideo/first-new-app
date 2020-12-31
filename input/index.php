@@ -56,7 +56,7 @@
     </div>
 
     <?php  
-
+        }
     } else {echo null;} ?> 
 
 <?php if(isset($visitime1)) { ?> 
@@ -70,7 +70,7 @@
         $id = $user['id'];
         $name = $user['name'];
         $visit = $user['visit'];
-        }
+        
     ?>
         <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
 
@@ -98,7 +98,8 @@
 
     </div>
 </div>
-><?php  } else {echo null;} ?> 
+<?php  }
+    } else {echo null;} ?> 
 
 
 <?php /*退所*/ ?>
