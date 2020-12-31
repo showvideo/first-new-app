@@ -32,7 +32,7 @@
         $id = $user['id'];
         $name = $user['name'];
         
-
+        }
     ?>
     <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
 
@@ -56,7 +56,7 @@
     </div>
 
     <?php  
-        }
+        
     } else {echo null;} ?> 
 
 <?php if(isset($visitime1)) { ?> 
