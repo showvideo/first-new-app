@@ -267,7 +267,7 @@
             
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">特記事項を入力してください。</a></br>
 
-            <textarea name="" style="width:100px;height:30px;margin-left:40px;"></textarea>
+            <textarea name="" style="width:200px;height:100px;margin-left:40px;resize:none;"></textarea>
                 
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
@@ -300,7 +300,7 @@
             <a style="padding-left:40px;font-size:17px;"><?php echo $visit; ?></a></br>
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">特記事項を追加する</a></br>
 
-            <textarea name="visit_time" style="width:100px;height:30px;margin-left:40px;"></textarea>
+            <textarea name="visit_time" style="width:200px;height:100px;margin-left:40px;resize:none;"></textarea>
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:160px;">
 
     </div>
