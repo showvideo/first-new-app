@@ -25,14 +25,13 @@
     
         $db = getDB();
         $stt = $db->preapare('SELECT * FROM user WHERE id = :id');
-        $stt->bindValue(':id', $id);
+        $stt->bindValue(':id', $id, PDO::PARAM_STR);
         $stt->execute();
         $result = $stmt->fetchAll();
         foreach($result as $user){
         $id = $user['id'];
         $name = $user['name'];
         
-        }
     ?>
     <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
 
@@ -55,7 +54,7 @@
         </form>
     </div>
 
-    <?php  
+    <?php  }
         
     } else {echo null;} ?> 
 
