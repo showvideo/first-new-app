@@ -172,7 +172,7 @@
 
 <?php /*血圧*/ ?>
 
-<?php if(!empty($bloodp)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;">
+<?php if(!empty($bloodp)) { ?>
     <?php
         $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -187,20 +187,15 @@
     <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
 
         <form action="" method="post">
-            <p>来所時間</p>
+            <p>最高・最低血圧</p>
             <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
             
-        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">来所時間を選択してください。</a></br>
-
-            <select name="visit_time" style="width:100px;height:30px;margin-left:40px;">
-                <option value="">選択しない</option>
-                <option value="09:30">09:30</option>
-                <option value="10:00">10:00</option>
-                <option value="10:30">10:30</option>
-                <option value="11:00">11:00</option>
-                <option value="11:30">11:30</option>
-                <option value="12:00">12:00</option>
-            </select></p>
+        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">最高・最低血圧を入力してください。</a></br>
+            <input type="text" name="maxb">/<input type="text" name="maxm"> 
+        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">脈拍を入力してください。</a></br>
+            <input type="text" name="pulse">
+            <input type="submit" value="入力">
+    
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
     </div>
