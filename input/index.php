@@ -191,9 +191,9 @@
             <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
             
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">最高・最低血圧を入力してください。</a></br>
-            <input type="text" name="maxb">/<input type="text" name="maxm"> 
+            <input type="text" name="maxb" style="width:50px;">/<input type="text" name="maxm" style="width:50px;"> 
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">脈拍を入力してください。</a></br>
-            <input type="text" name="pulse">
+            <input type="text" name="pulse" style="width:50px;">
             <input type="submit" value="入力">
     
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
