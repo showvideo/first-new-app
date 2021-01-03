@@ -17,45 +17,19 @@
         <th style="width:170px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">特記事項</th>
     </tr>
      
+
         <?php
-            if(!empty(($_POST['search_name'])or($_POST['search_visit'])or($_POST['search_exit'])) {
-                
-            $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE (name LIKE '%".searchName($_POST['search_name'])."%') or (visit=:visit) 
-                    or (exits=:exit)";
-            $stmt = getDB()->prepare($sql);
-            $stmt->bindParam(':visit', searchName($_POST['search_visit']), PDO::PARAM_STR);
-            $stmt->bindParam(':exit', searchName($_POST['search_exit']), PDO::PARAM_STR);
-            $stmt->execute();
-            $result = $stmt->fetchAll();
-            foreach($result as $user){
-            $id = $user['id'];     
-            $name = $user['name']; 
-            $visit = $user['visit']; 
-            $exit = $user['exit'];
-            $bath = $bath['bath'];
-            echo $name;
-            echo $visit;
-        ?>
+            if(isset($_POST['vsearch_visit'])) { 
+
+                    $db = getDB();
+                    $stt = $db->preapre('SELECT * FROM user WHERE visit = :visit');
+                    $stt->bindParam(':visit', $_POST['search_visit'], PDO::PARAM_STR);
+                    $stt->execute();
+                    $result = $stt->fetchAll();
+                    foreach($result as $user) {
+                    
            
-        <?php 
-            if(!empty(($_POST['maxblo']) or ($_POST['maxblo1']) {
-                 
-            $sql = "SELECT id, name, visit, exits, maxblood, meal, bath, notices FROM user WHERE maxblo BETWEEN :maxblo and :maxblo1 "
-            
-            $stt = getDB()->prepare($sql);
-            $stt->bindParam(':maxblo, $_POST['maxblo'],PDO::PARAM_STR');
-            $stt->bindParam(':maxblo1, $_POST['maxblo1'],PDO::PARAM_STR');
-            $stt->execute();
-            $result = $stt->fetchAll();
-            foreach($result as $user) {
-                            $id = $user['id'];     
-            $name = $user['name']; 
-            $visit = $user['visit']; 
-            $exit = $user['exit'];
-            $bath = $bath['bath'];
-                
-            
-        ?>
+?>
     <tr>
         <!--お名前-->
         <td style="width:100px;height:34px;border:1px solid #ccc;background:#fff;padding:4px;">
