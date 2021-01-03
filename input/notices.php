@@ -24,18 +24,7 @@
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
     </div>
-<?php if(isset($_POST['notices_submit'])) {
-        try {
-                $db = getDB();
-                $stt = $db->preapre("INSERT INTO user(notices) VALUES(:notices)");
-                $stt->bindParam(':notices', $_POST['notices_text'], PDO::PARAM_STR);
-                $stt->execute();
-                header('Location: https://animech2.herokuapp.com/');
-        } catch(PDOException $e) {
-                echo 'ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}';
-        }
-}
-?>
+
 
     <?php  
         }
@@ -75,3 +64,15 @@
 <?php  } else {echo null;} ?> 
 
 
+<?php if(isset($_POST['notices_submit'])) {
+        try {
+                $db = getDB();
+                $stt = $db->preapre("INSERT INTO user(notices) VALUES(:notices)");
+                $stt->bindParam(':notices', $_POST['notices_text'], PDO::PARAM_STR);
+                $stt->execute();
+                header('Location: https://animech2.herokuapp.com/');
+        } catch(PDOException $e) {
+                echo 'ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}';
+        }
+}
+?>
