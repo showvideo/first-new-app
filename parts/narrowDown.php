@@ -5,13 +5,9 @@
     <form action="../search/index.php" method="post">
     <a style="border:ridge;">来所時間</a></br>
     
-    <div style="width:200px;border:ridge;margin:0;">-選択してください-</br>
-        <input type="submit" name="search" value="09:30" style="margin-left:20px;">
-        <input type="submit" name="search" value="10:00">
-        <input type="submit" name="search" value="10:30">
-        <input type="submit" name="search" value="11:00">
-        <input type="submit" name="search" value="11:30">
-        <input type="submit" name="search" value="12:00">
+    <div style="width:200px;border:ridge;margin:0;">時間を入力してください</br>
+        <input type="text" name="search_visit">
+        <input type="submit" name="vsearch_submit">
     </div>
     
     <a style="border:ridge;margin-top:10px;">退所時間</a></br>
