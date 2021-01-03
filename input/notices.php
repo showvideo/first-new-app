@@ -24,7 +24,7 @@
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
     </div>
-<?php if(isset($notices_submit)) {
+<?php if(isset($_POST['notices_submit])) {
         try {
                 $db = getDB();
                 $stt = $db->preapre("INSERT INTO user(notices) VALUES(':notices')");
