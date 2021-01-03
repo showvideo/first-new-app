@@ -19,7 +19,9 @@
 ?>
 
 <?php require_once('../input/visit.php'); ?>
-
+<?php require_once('../input/exit.php'); ?>
+<?php require_once('../input/blood.php'); ?>
+<?php require_once('../input/notices.php'); ?>
 
 <?php /*血圧*/ ?>
 
