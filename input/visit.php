@@ -27,7 +27,7 @@
                 <option value="11:00">11:00</option>
                 <option value="11:30">11:30</option>
                 <option value="12:00">12:00</option>
-            </select><input type="submit" value="入力" name="visit_submit" style="margin-left:80px;"></p>
+            </select></p><input type="submit" value="入力" name="visit_submit" style="margin-left:80px;">
         
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
