@@ -193,8 +193,8 @@
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">最高・最低血圧を入力してください。</a></br>
             <input type="text" name="maxb" style="width:50px;margin-left:40px;">/<input type="text" name="maxm" style="width:50px;"> </br>
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">脈拍を入力してください。</a></br>
-            <input type="text" name="pulse" style="width:50px;padding-left:40px;">
-            <input type="submit" value="入力"></br>
+            <input type="text" name="pulse" style="width:50px;margin-left:40px;">
+            <input type="submit" value="入力" style="margin-left:100px;"></br>
     
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
