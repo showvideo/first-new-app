@@ -68,7 +68,7 @@
                 $stt = $db->preapre('INSERT INTO user(notices) VALUES(:notices)');
                 $stt->bindParam(':notices', $notices, PDO::PARAM_STR);
                 $stt->execute();
-                header('Location: https://animech2.herokuapp.com/')
+                header('Location: https://animech2.herokuapp.com/');
         } catch(PDOException $e) {
                 echo 'ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}';
         }
