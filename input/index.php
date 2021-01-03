@@ -18,7 +18,7 @@
 
 ?>
 
-<?php require_once('../visit.php'); ?>
+<?php require_once('../input/visit.php'); ?>
 
 <?php /*退所*/ ?>
 
