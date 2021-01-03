@@ -81,7 +81,7 @@
     try {
         $db = getDB();
         $stt = $db->preapre('INSERT INTO user(visit) VALUES(:visit)');
-        $stt->bindValue(':visit', $visit);
+        $stt->bindParam(':visit', $visit, PDO::PARAM_STR);
         $stt->execute();
         header('Location: https://animech2.herokuapp.com/');
     } catch(PDOException $e) {
