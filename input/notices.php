@@ -19,7 +19,7 @@
             
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">特記事項を入力してください。</a></br>
 
-            <textarea name="" style="width:200px;height:100px;margin-left:40px;resize:none;"></textarea>
+            <textarea name="notices_text" style="width:200px;height:100px;margin-left:40px;resize:none;"></textarea>
             <input type="submit" value="入力" name="notices_submit"> 
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
@@ -66,7 +66,7 @@
         try {
                 $db = getDB();
                 $stt = $db->preapre('INSERT INTO user(notices) VALUES(:notices)');
-                $stt->bindParam(':notices', $notices, PDO::PARAM_STR);
+                $stt->bindParam(':notices', $_POST['notices_text'], PDO::PARAM_STR);
                 $stt->execute();
                 header('Location: https://animech2.herokuapp.com/');
         } catch(PDOException $e) {
