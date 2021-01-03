@@ -74,17 +74,3 @@
 <?php  }
     } else {echo null;} ?> 
 
-<?php if(isset($_POST['visit_submit'])) {
-    
-    try {
-        $db = getDB();
-        $stt = $db->preapre('INSERT INTO user(visit) VALUES(:visit)');
-        $stt->bindValue(':visit', $visit);
-        $stt->execute();
-        header('Location: https://animech2.herokuapp.com/');
-    } catch(PDOException $e) {
-        echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
-    }
-    
-?>    
-    
