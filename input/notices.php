@@ -27,7 +27,7 @@
 <?php if(isset($notices_submit)) {
         try {
                 $db = getDB();
-                $stt = $db->preapre('INSERT INTO user(notices) VALUES(':notices')');
+                $stt = $db->preapre("INSERT INTO user(notices) VALUES(':notices')");
                 $stt->bindParam(':notices', $_POST['notices_text'], PDO::PARAM_STR);
                 $stt->execute();
                 header('Location: https://animech2.herokuapp.com/');
