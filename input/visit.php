@@ -32,7 +32,9 @@
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
     </div>
-    <?php  } else {echo null;} ?> <?php if(isset($visitime1)) { ?> 
+    <?php  } else {echo null;} ?> 
+
+<?php if(isset($visitime1)) { ?> 
    <?php
        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
         $stmt = getDB()->prepare($sql);
@@ -73,4 +75,21 @@
 </div>
 <?php  }
     } else {echo null;} ?> 
+
+<?php if(isset($_POST['visit_submit'])) {
+    
+    try {
+        $db = getDB();
+        $stt = $db->preapre('INSERT INTO user(visit) VALUES(:visit)');
+        $stt->bindValue(':visit', $visit);
+        $stt->execute();
+        header('Location: https://animech2.herokuapp.com/');
+    } catch(PDOException $e) {
+        echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+    }
+}    
+    
+?>    
+    
+
 
