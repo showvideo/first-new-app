@@ -3,9 +3,9 @@
 <div style="display:inline-block;width:250px;vertical-align:top;margin-left:6px;">
 
     <form action="../search/index.php" method="post">
-    <div style="border:ridge;padding:4px;margin:0;width:70px;hegiht:200px;">来所時間</div>
+    <div style="border:ridge;padding:4px;margin:0;width:70px;">来所時間</div>
     
-    <div style="width:200px;border:ridge;margin:0;padding-left:20px;">時間を入力してください</br>
+    <div style="width:200px;hegiht:200px;border:ridge;margin:0;padding-left:20px;">時間を入力してください</br>
         <input type="text" name="search_visit" style="width:100px;padding-left:40px;">
         <input type="submit" name="vsearch_submit" value="絞り込み">
     </div>
