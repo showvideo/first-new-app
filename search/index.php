@@ -27,7 +27,10 @@
                     $stt->execute();
                     $result = $stt->fetchAll();
                     foreach($result as $user) {
-                    
+                        $name = $user['name'];
+                        $visit = $user['visit'];
+                        $exits = $user['exits'];
+                       
            
 ?>
     
