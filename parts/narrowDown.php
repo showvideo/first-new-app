@@ -27,20 +27,8 @@
         <input type="text" name="search" style="margin-left:15px;">
        
     </div>
-    
-    <div style="border:ridge;margin-top:10px;">入浴</div>
-    <div style="width:200px;border:ridge;margin:0;"></br>
-        <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
-        <input type="radio" value="no"> いいえ
-    </div>
 
-    <div style="border:ridge;margin-top:10px;">食事</div>
-    <div style="width:200px;border:ridge;margin:0;"></br>
-        <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
-        <input type="radio" value="no"> いいえ
-    </div>
-
-    <div style="border:ridge;margin-top:10px;">特記事項</div>
+    <div style="border:ridge;margin-top:20px;width:65px;padding:4px;">特記事項</div>
     <div style="width:200px;border:ridge;margin:0;"></br>
         <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
         <input type="radio" value="no"> いいえ
