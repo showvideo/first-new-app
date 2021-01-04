@@ -6,7 +6,7 @@
     <div style="border:ridge;padding:4px;margin:0;width:70px;">来所時間</div>
     
     <div style="width:200px;height:135px;border:ridge;margin:0;">
-        <p> style="padding-left:10px;">時間を入力してください</p>
+        <p style="padding-left:10px;">時間を入力してください</p>
         <input type="text" name="search_visit" style="width:100px;padding-left:40px;">
         <input type="submit" name="vsearch_submit" value="絞り込み">
     </div>
