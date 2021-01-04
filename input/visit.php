@@ -13,12 +13,12 @@
     ?>
         <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
 
-        <form action="" method="post">
+        
             <p>来所時間</p>
             <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
             
         <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">来時間を選択してください。</a></br>
-            
+        <form action="" method="post">    
             <select name="visit_time" style="width:100px;height:30px;margin-left:40px;">
                 <option value="">選択しない</option>
                 <option value="09:30">09:30</option>
@@ -29,10 +29,27 @@
                 <option value="12:00">12:00</option>
             </select>
         <input type="submit" value="入力" name="visit_submit" style="margin-left:20px;">
-        
-        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         </form>
+        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
+        
+        <?php if(isset($_POST['visit_submit'])) {
+    
+    try {
+        $db = getDB();
+        $stt = $db->preapre('INSERT INTO user(visit) VALUES(:visit)');
+        $stt->bindParam(':visit', $_POST['visit_time'], PDO::PARAM_STR);
+        $stt->execute();
+        header('Location: https://animech2.herokuapp.com/');
+    } catch(PDOException $e) {
+        echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+    }
+}    
+    
+?>    
+    
     </div>
+
+
     <?php  } else {echo null;} ?> 
 
 <?php if(isset($visitime1)) { ?> 
@@ -78,20 +95,5 @@
 <?php  }
     } else {echo null;} ?> 
 
-<?php if(isset($_POST['visit_submit'])) {
-    
-    try {
-        $db = getDB();
-        $stt = $db->preapre('INSERT INTO user(visit) VALUES(:visit)');
-        $stt->bindParam(':visit', $visit, PDO::PARAM_STR);
-        $stt->execute();
-        header('Location: https://animech2.herokuapp.com/');
-    } catch(PDOException $e) {
-        echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
-    }
-}    
-    
-?>    
-    
 
 
