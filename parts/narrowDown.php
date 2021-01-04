@@ -10,18 +10,15 @@
         <input type="submit" name="vsearch_submit">
     </div>
     
-    <div style="border:ridge;margin-top:10px;padding:4px;width:80px;">退所時間</div>
+    <div style="border:ridge;margin-top:20px;padding:4px;width:80px;">退所時間</div>
 
     <div style="width:200px;border:ridge;margin:0;">-選択してください-</br>
-        <input type="submit" name="search" value="12:30" style="margin-left:20px;">
-        <input type="submit" name="search" value="13:00">
-        <input type="submit" name="search" value="13:30">
-        <input type="submit" name="search" value="14:00">
-        <input type="submit" name="search" value="14:30">
-        <input type="submit" name="search" value="15:00">     
+
+        <input type="text" name="search_visit" style="width:90px;">
+        <input type="submit" name="esearch_submit"> 
     </div>
     
-    <a style="border:ridge;margin-top:10px;">バイタル</a></br>
+    <div style="border:ridge;margin-top:10px;">バイタル</div>
     <div style="width:200px;border:ridge;margin:0;"></br>
         最高血圧</br><input type="text" name="search" style="margin-left:20px;">
         最小血圧</br><input type="text" name="search" style="margin-left:20px;">
@@ -29,19 +26,19 @@
        
     </div>
     
-    <a style="border:ridge;margin-top:10px;">入浴</a></br>
+    <div style="border:ridge;margin-top:10px;">入浴</div>
     <div style="width:200px;border:ridge;margin:0;"></br>
         <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
         <input type="radio" value="no"> いいえ
     </div>
 
-    <a style="border:ridge;margin-top:10px;">食事</a></br>
+    <div style="border:ridge;margin-top:10px;">食事</div>
     <div style="width:200px;border:ridge;margin:0;"></br>
         <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
         <input type="radio" value="no"> いいえ
     </div>
 
-    <a style="border:ridge;margin-top:10px;">特記事項</a></br>
+    <div style="border:ridge;margin-top:10px;">特記事項</div>
     <div style="width:200px;border:ridge;margin:0;"></br>
         <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
         <input type="radio" value="no"> いいえ
