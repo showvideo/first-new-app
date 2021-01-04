@@ -3,18 +3,15 @@
 <div style="display:inline-block;width:250px;vertical-align:top;margin-left:6px;">
 
     <form action="../search/index.php" method="post">
-    <div style="border:ridge;padding:4px;margin:0;width:80px;">来所時間</div>
+    <div style="border:ridge;padding:4px;margin:0;">来所時間</div>
     
     <div style="width:200px;border:ridge;margin:0;">時間を入力してください</br>
         <input type="text" name="search_visit" style="width:90px;">
-        <input type="submit" name="vsearch_submit">
+        <input type="submit" name="vsearch_submit" value="絞り込み">
     </div>
     
-    <div style="border:ridge;margin-top:20px;padding:4px;width:80px;">退所時間</div>
-
-    <div style="width:200px;border:ridge;margin:0;">-選択してください-</br>
-
-        <input type="text" name="search_visit" style="width:90px;">
+    <div style="border:ridge;margin-top:20px;padding:4px;">退所時間</div>
+        <input type="text" name="search_visit" style="width:90px;margin-left:20px;">
         <input type="submit" name="esearch_submit"> 
     </div>
     
