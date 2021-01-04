@@ -3,7 +3,7 @@
 <div style="display:inline-block;width:250px;vertical-align:top;margin-left:6px;">
 
     <form action="../search/index.php" method="post">
-    <div style="border:ridge;padding:4px;margin:0;width:100px;">来所時間</div></br>
+    <div style="border:ridge;padding:4px;margin:0;width:100px;">来所時間</div>
     
     <div style="width:200px;border:ridge;margin:0;">時間を入力してください</br>
         <input type="text" name="search_visit">
