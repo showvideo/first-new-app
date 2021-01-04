@@ -24,14 +24,16 @@
         <a style="padding-left:10px;">最小血圧</a></br>
         <input type="text" name="search" style="margin-left:15px;">
         <a style="padding-left:10px;">脈拍</a></br>
-        <input type="text" name="search" style="margin-left:15px;">
+        <input type="text" name="search" style="margin-left:15px;"></br>
+        <input type="submit" value="絞り込み" style="margin-left:75px;">
        
     </div>
 
     <div style="border:ridge;margin-top:20px;width:65px;padding:4px;">特記事項</div>
     <div style="width:200px;border:ridge;margin:0;"></br>
         <input type="radio" name="bath1" value="yes" style="margin-left:20px;"> はい
-        <input type="radio" value="no"> いいえ
+        <input type="radio" value="no"> いいえ</br>
+        <input type="submit" value="絞り込み" style="margin-left:75px;"
     </div>
 
         
