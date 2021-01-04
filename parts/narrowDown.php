@@ -4,11 +4,10 @@
 
     <form action="../search/index.php" method="post">
     <div style="border:ridge;padding:4px;margin:0;width:65px;">来所時間</div>
-    
     <div style="width:200px;height:115px;border:ridge;margin:0;">
         <p style="padding-left:10px;">時間を入力してください</p>
         <input type="text" name="search_visit" style="width:100px;height:20px;margin-left:15px;">
-        <input type="submit" name="vsearch_submit" value="絞り込み">
+        <input type="submit" name="esearch_submit" value="絞り込み">
     </div>
     
     <div style="border:ridge;margin-top:20px;padding:4px;width:65px;">退所時間</div>
@@ -18,11 +17,14 @@
         <input type="submit" name="vsearch_submit" value="絞り込み">
     </div>
     
-    <div style="border:ridge;margin-top:10px;">バイタル</div>
-    <div style="width:200px;border:ridge;margin:0;"></br>
-        最高血圧</br><input type="text" name="search" style="margin-left:20px;">
-        最小血圧</br><input type="text" name="search" style="margin-left:20px;">
-        脈拍</br><input type="text" name="search" style="margin-left:20px;">
+    <div style="border:ridge;margin-top:20px;width:65px;">バイタル</div>
+    <div style="width:200px;border:ridge;margin:0;">
+        <a style="padding-left:10px;">最高血圧</a></br>
+        <input type="text" name="search" style="margin-left:15px;">
+        <a style="padding-left:10px;">最小血圧</a></br>
+        <input type="text" name="search" style="margin-left:15px;">
+        <a style="padding-left:10px;">脈拍</a></br>
+        <input type="text" name="search" style="margin-left:15px;">
        
     </div>
     
