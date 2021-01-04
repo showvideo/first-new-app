@@ -19,7 +19,7 @@
     
     <div style="border:ridge;margin-top:20px;width:65px;padding:4px;">バイタル</div>
     <div style="width:200px;border:ridge;margin:0;">
-        <a style="padding-left:10px;">最高血圧</a></br>
+        <a style="padding-left:10px;padding-top:20px;">最高血圧</a></br>
         <input type="text" name="search" style="margin-left:15px;">
         <a style="padding-left:10px;">最小血圧</a></br>
         <input type="text" name="search" style="margin-left:15px;">
