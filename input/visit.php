@@ -32,7 +32,7 @@
         </form>
         <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
         
-        <?php if(isset($_POST['visit_submit'])) {
+        <?php if(!empty($_POST['visit_submit'])) {
     
     try {
         $db = getDB();
