@@ -6,11 +6,11 @@
     <div style="border:ridge;padding:4px;margin:0;width:80px;">来所時間</div>
     
     <div style="width:200px;border:ridge;margin:0;">時間を入力してください</br>
-        <input type="text" name="search_visit">
+        <input type="text" name="search_visit" style="width:90px;">
         <input type="submit" name="vsearch_submit">
     </div>
     
-    <div style="border:ridge;margin-top:10px;padding:4px;width:80px;">退所時間</a></br>
+    <div style="border:ridge;margin-top:10px;padding:4px;width:80px;">退所時間</div>
 
     <div style="width:200px;border:ridge;margin:0;">-選択してください-</br>
         <input type="submit" name="search" value="12:30" style="margin-left:20px;">
