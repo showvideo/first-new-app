@@ -22,7 +22,7 @@
             if(isset($_POST['vsearch_submit'])) { 
 
                     $db = getDB();
-                    $sql = 'SELECT * FROM user WHERE visit = :visit';
+                    $sql = 'SELECT name, visit, exits, maxblood, bath, meal, notices FROM user WHERE visit = :visit';
                     $stt = $db->preapre($sql);
                     $stt->bindParam(':visit', $_POST['search_visit'], PDO::PARAM_STR);
                     $stt->execute();
