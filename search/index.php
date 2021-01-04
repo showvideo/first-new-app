@@ -30,8 +30,10 @@
                         $name = $user['name'];
                         $visit = $user['visit'];
                         $exits = $user['exits'];
-                       
-           
+                        $maxblood = $user['maxblood'];
+                        $bath = $user['bath'];
+                        $meal = $user['meal'];
+                        $notices= $user['notices'];
 ?>
     
         <!--お名前-->
