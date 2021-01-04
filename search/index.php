@@ -19,7 +19,7 @@
     <tr> 
 
         <?php
-            if(isset($_POST['vsearch_visit'])) { 
+            if(isset($_POST['vsearch_submit'])) { 
 
                     $db = getDB();
                     $stt = $db->preapre('SELECT * FROM user WHERE visit = :visit');
