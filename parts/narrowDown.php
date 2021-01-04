@@ -7,14 +7,14 @@
     
     <div style="width:200px;height:115px;border:ridge;margin:0;">
         <p style="padding-left:10px;">時間を入力してください</p>
-        <input type="text" name="search_visit" style="width:80px;padding-left:40px;">
+        <input type="text" name="search_visit" style="width:80px;margin-left:40px;">
         <input type="submit" name="vsearch_submit" value="絞り込み">
     </div>
     
     <div style="border:ridge;margin-top:20px;padding:4px;width:65px;">退所時間</div>
     <div style="width:200px;height:115px;border:ridge;margin:0;">
         <p style="padding-left:10px;">時間を入力してください</p>
-        <input type="text" name="search_exit" style="width:80px;padding-left:40px;">
+        <input type="text" name="search_exit" style="width:80px;margin-left:40px;">
         <input type="submit" name="vsearch_submit" value="絞り込み">
     </div>
     
