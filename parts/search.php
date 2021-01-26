@@ -1,5 +1,3 @@
-<div>
-
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">入所</label>
@@ -9,6 +7,6 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
         
-</div>
+
 
 
