@@ -18,7 +18,7 @@ try {
     $sql = "UPDATE user SET visit = :visit where id = :id";
     $stt = getDB()->prepare($sql);
     $stt->bindParam(':visit', $_POST['form-control']);
-    $stt->bindParam(':id', $id]);
+    $stt->bindParam(':id', $id);
     $stt->execute();
     header('Location: https://animech2.herokuapp.com/');
 } catch (PDOException $e) {
