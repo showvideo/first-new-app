@@ -104,10 +104,13 @@
     <table class="table table-bordered">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">お名前</th>
+      <th scope="col">入所</th>
+      <th scope="col">退所</th>
+      <th scope="col">血圧</th>
+      <th scope="col">食事</th>
+      <th scope="col">入浴</th>
+      <th scope="col">特記事項</th>
     </tr>
   </thead>
   <tbody>
