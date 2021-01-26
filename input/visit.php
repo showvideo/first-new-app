@@ -14,7 +14,7 @@
 <?php
 
 try {
-    $sql = "UPDATE users SET visit = :visit where id = :id";
+    $sql = "UPDATE user SET visit = :visit where id = :id";
     $stt = getDB()->prepare($sql);
     $stt->execute(array(':visit' => $_POST['form-control'], ':id' => $id));
     $stt->execute();
