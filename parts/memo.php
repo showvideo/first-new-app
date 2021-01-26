@@ -7,12 +7,13 @@
 } ?></a>
 
 <a style="padding-bottom:200px;"><?php if(isset($_POST['note'])){
-        echo "・".$_POST['note']; 
+        echo "・".$_POST['note'].?><small><?php echo $_POST['name']; 
 } ?></a>
 
 <div style="padding-top:200px;padding-bottom:50px;">
 <form action="" method="post">
-<input name="note" type='text'>
+ﾒﾓ:<input name="note" type='text'>
+name:<input name="name" type='text'>
 <input type='submit' value='入力'>
 </form>
 </div>
