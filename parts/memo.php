@@ -8,9 +8,11 @@
 <a style="padding-bottom:200px;"><?php if(isset($_POST['note'])){
         echo "・".$_POST['note']; 
 } ?></a>
+<div style="padding-bottom:200px;">
 <form action="" method="post">
 <input name="note" type='text'>
 <input type='submit' value='入力'>
-</form>  
+</form>
+</div>
 </div>
 
