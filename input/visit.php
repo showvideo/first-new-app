@@ -5,7 +5,7 @@
 <form action = '' method='post'>
   <div class="form-group">
     <label for="exampleInputEmail1">入所時間</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="text" name="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">時間を入力してください</small>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -17,7 +17,9 @@ if(isset($_POST['form-control'])){
 try {
     $sql = "UPDATE user SET visit = :visit where id = :id";
     $stt = getDB()->prepare($sql);
-    $stt->execute(array(':visit' => $_POST['form-control'], ':id' => $id));
+    $stt->bindParam(':visit', $_POST['form-control']);
+    $stt->bindParam(':id', $id]);
+    $stt->execute();
     header('Location: https://animech2.herokuapp.com/');
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
