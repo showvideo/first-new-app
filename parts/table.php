@@ -67,10 +67,11 @@
         
     </tr>
 <tbody>
-</table>
+
 
 <?php 
                 
       }
         
 ?>
+</table>
