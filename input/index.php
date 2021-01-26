@@ -3,7 +3,7 @@
 </head>    
 <?php require_once('../common/function.php'); ?>
 <?php $id = getInfomation(); ?>
-
+hello
 <?php require_once('../input/visit.php'); ?>
 <?php require_once('../input/exit.php'); ?>
 <?php require_once('../input/blood.php'); ?>
