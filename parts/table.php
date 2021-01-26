@@ -1,5 +1,5 @@
 
-<table border="1" cellspacing="0" style="border-collaspe:collapse;margin-left:160px;">
+<table border="1" cellspacing="0" style="border-collaspe:collapse;margin-left:160px;display:inline-block;">
     
     <tr style="background-color:#384D98;">
         <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
