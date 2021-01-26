@@ -33,12 +33,8 @@
            
 <tr>
     <!--お名前-->
-    <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-        <?php if(isset($name)){ ?>
-            <form action="information/index.php/<?php echo $id ?>/" method="post" style="margin:0;">
-            <a href="information/index.php/<?php echo $id ?>/" style="text-decoration:none;color:black;"><?php echo $name; ?></a>
-            </form>    
-        <?php } ?>
+    <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"  
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name ?></a>
      </td>
            
      <!--来所-->
@@ -135,13 +131,13 @@
  ?>
 
     <tr>
-        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $name ?></a></td>
-        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $visit ?></a></td>
-        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $exits ?></a></td>
-        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $blood ?></a></td>
-        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $bath ?></a></td>
-        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $meal ?></a></td>
-        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $notices ?></a></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $name ?></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $visit ?></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $exits ?></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $blood ?></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $bath ?></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $meal ?></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $notices ?></td>
     </tr>
   </tbody>
 </table>
