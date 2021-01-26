@@ -101,6 +101,19 @@
     }
 
 ?>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">お名前</th>
+      <th scope="col">入所</th>
+      <th scope="col">退所</th>
+      <th scope="col">血圧</th>
+      <th scope="col">食事</th>
+      <th scope="col">入浴</th>
+      <th scope="col">特記事項</th>
+    </tr>
+  </thead>
+  <tbody>
 <?php
     
     try {
@@ -120,19 +133,7 @@
                 $notices=$row['notices'];
                 
  ?>
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">お名前</th>
-      <th scope="col">入所</th>
-      <th scope="col">退所</th>
-      <th scope="col">血圧</th>
-      <th scope="col">食事</th>
-      <th scope="col">入浴</th>
-      <th scope="col">特記事項</th>
-    </tr>
-  </thead>
-  <tbody>
+
     <tr>
         <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $name ?></a></td>
         <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $visit ?></a></td>
