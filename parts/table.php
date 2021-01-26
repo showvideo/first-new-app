@@ -116,10 +116,13 @@
   </thead>
   <tbody>
     <tr>
-       <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $name ?></a></td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $name ?></a></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $visit ?></a></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $exits ?></a></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $blood ?></a></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $bath ?></a></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $meal ?></a></td>
+        <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $notices ?></a></td>
     </tr>
     <tr>
       <th scope="row">2</th>
