@@ -30,7 +30,7 @@
 <tbody>
 <tr>
     <!--お名前-->
-    <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"  
+    <td onclick="window.location='https://animech2.herokuapp.com/input/visit.php/<?php echo $id ?>/'"  
      style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name ?></a>
      </td>
            
