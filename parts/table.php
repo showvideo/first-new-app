@@ -101,7 +101,25 @@
     }
 
 ?>
+<?php
     
+    try {
+        
+        $db = getDB();
+        $stt = $db->prepare('SELECT * FROM user WHERE 1');
+        $stt->execute();
+            while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+                
+                $id=$row['id'];
+                $name=$row['name']; 
+                $visit=$row['visit']; 
+                $exits=$row['exits']; 
+                $maxblood=$row['maxblood'];
+                $bath=$row['bath']; 
+                $meal=$row['meal']; 
+                $notices=$row['notices'];
+                
+ ?>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -124,18 +142,18 @@
         <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $meal ?></a></td>
         <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $notices ?></a></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
   </tbody>
 </table>
     
 </table>
+<?php 
+                
+      }
+        
+    } catch(PDOException $e) {
+        
+        echo "エラーメッセージ: {$e->getMessage()}";
+     
+    }
+
+?>
