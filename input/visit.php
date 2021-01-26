@@ -12,7 +12,6 @@
 </form>
 
 <?php
-if(isset($_POST['btn-primary'])) {
 
 try {
     $sql = "UPDATE users SET visit = :visit where id = :id";
@@ -22,6 +21,5 @@ try {
     header('Location: https://animech2.herokuapp.com/');
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
-}
 }
 ?>
