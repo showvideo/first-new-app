@@ -12,7 +12,7 @@
 
 <div class="form-group" style="padding-top:200px;padding-bottom:50px;">
 <form action="" method="post">
-ﾒﾓ:<input type="text" class="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+<input type="text" class="name" id="exampleInputEmail1" aria-describedby="emailHelp"></br>
 <small id="emailHelp" class="form-text text-muted">memo</small>
 <button type="submit" class="btn btn-primary">Submit</button>        
 </form>
