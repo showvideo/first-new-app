@@ -10,10 +10,11 @@
         echo "・".$_POST['note']; 
 } ?></a>
 
-<div style="padding-top:200px;padding-bottom:50px;">
+<div class="form-group" style="padding-top:200px;padding-bottom:50px;">
 <form action="" method="post">
-ﾒﾓ:<input name="note" type='text'>
-<input type='submit' value='入力'>
+ﾒﾓ:<input type="text" class="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+<small id="emailHelp" class="form-text text-muted"><memo></small>
+<button type="submit" class="btn btn-primary">Submit</button>        
 </form>
 </div>
 </div>
