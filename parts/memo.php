@@ -1,7 +1,7 @@
 
 <div style="width:200px;display:inline-block;vertical-align:center;border:solid 1px;margin-top:50px;">
 スタッフメモ
-<?php if(isset($_POST['note'])){
+<?php if(!isset($_POST['note'])){
         echo "入力がありません";
 } ?>
 <?php echo $_POST['note']; ?>
