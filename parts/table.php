@@ -12,9 +12,6 @@
     </tr>
     </thead>
 <?php
-    
-    try {
-        
         $db = getDB();
         $stt = $db->prepare('SELECT * FROM user WHERE 1');
         $stt->execute();
@@ -76,10 +73,4 @@
                 
       }
         
-    } catch(PDOException $e) {
-        
-        echo "エラーメッセージ: {$e->getMessage()}";
-     
-    }
-
 ?>
