@@ -145,8 +145,7 @@
     </tr>
   </tbody>
 </table>
-    
-</table>
+
 <?php 
                 
       }
