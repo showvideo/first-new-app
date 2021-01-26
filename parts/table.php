@@ -101,7 +101,8 @@
     }
 
 ?>
-    <table class="table table-bordered">
+    
+<table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">お名前</th>
@@ -115,7 +116,7 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
+       <td onclick="window.location='https://animech2.herokuapp.com/person/edit/$id/'"><?php echo $name ?></a></td>
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
