@@ -2,7 +2,7 @@
 <?php require_once('../common/function.php'); ?>
 <?php require_once('../parts/header.php'); ?>
 <?php $id = getInfomation(); ?>
-<form>
+<form action = '' method='post'>
   <div class="form-group">
     <label for="exampleInputEmail1">入所時間</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
