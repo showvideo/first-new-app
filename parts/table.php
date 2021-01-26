@@ -116,7 +116,7 @@
   </thead>
   <tbody>
     <tr>
-       <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/$id/'"><?php echo $name ?></a></td>
+       <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"><?php echo $name ?></a></td>
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
