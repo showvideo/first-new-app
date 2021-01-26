@@ -12,7 +12,6 @@
 </form>
 
 <?php
-if(isset($_POST['form-control']) {
 
 try {
     $sql = "UPDATE user SET visit = :visit where id = :id";
@@ -24,5 +23,4 @@ try {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
 }
 
-}
 ?>
