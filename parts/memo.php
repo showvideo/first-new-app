@@ -5,8 +5,9 @@
 <?php if(!isset($_POST['note'])){
         echo "入力がありません";
 } ?>
-        
-<?php echo "・".$_POST['note']; ?>
+<?php if(isset($_POSt['note'])){
+        echo "・".$_POST['note']; 
+} ?>
 <form action="" method="post">
 <input name="note" type='text'>
 <input type='submit' value='入力'>
