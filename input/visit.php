@@ -12,6 +12,7 @@
 </form>
 
 <?php
+if(isset($_POST['form-control']) {
 
 try {
     $sql = "UPDATE user SET visit = :visit where id = :id";
@@ -21,5 +22,7 @@ try {
     header('Location: https://animech2.herokuapp.com/');
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+}
+
 }
 ?>
