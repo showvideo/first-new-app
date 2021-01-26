@@ -1,6 +1,4 @@
-<head>
-    <script type="text/javascript"></script>
-</head>    
+<?php require_once('../parts/head.php'); ?>
 <?php require_once('../common/function.php'); ?>
 <?php require_once('../parts/header.php'); ?>
 <?php $id = getInfomation(); ?>
