@@ -16,13 +16,16 @@
 </form>
 
 <?php
+if(isset($_POST['btn-primary'])) {
+
 try {
     $sql = "UPDATE users SET visit = :visit where id = :id";
-    $stt = getDB()->prepare($sql)
+    $stt = getDB()->prepare($sql);
     $stt->execute(array(':visit' => $_POST['form-control'], ':id' => $id));
     $stt->execute();
     header('Location: https://animech2.herokuapp.com/');
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+}
 }
 ?>
