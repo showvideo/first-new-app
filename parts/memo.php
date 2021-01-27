@@ -6,11 +6,11 @@
         echo "入力がありません";
 } ?></a>
 
-<a style="padding-bottom:200px;"><?php if(isset($_POST['note'])){
+<a style="padding-bottom:400px;"><?php if(isset($_POST['note'])){
         echo "・".$_POST['note']; 
 } ?></a>
 
-<div class="form-group" style="padding-top:200px;padding-bottom:50px;">
+<div class="form-group" style="padding-top:200px;padding-bottom:15px;">
 <form action="" method="post">
 <small id="emailHelp" class="form-text text-muted">memo</small></br>
 <input type="text" class="name" id="exampleInputEmail1" aria-describedby="emailHelp">
