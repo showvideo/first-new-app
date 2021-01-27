@@ -1,4 +1,4 @@
-<div style="width:200px;vertical-align:top;margin-top:50px;position:absolute;top:1000px;left:1000px;">
+<div style="width:200px;vertical-align:top;margin-top:50px;position:absolute;top:800px;left:800px;">
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">入所</label>
