@@ -2,11 +2,11 @@
 <div style="width:250px;display:inline-block;vertical-align:center;border:solid 1px;margin-top:50px;position:relative;">
 <<スタッフ・メモ>></br>
 
-<a style="padding-bottom:200px;"><?php if(!isset($_POST['note'])){
+<a style="padding-bottom:200px;text-decoration:underline"><?php if(!isset($_POST['note'])){
         echo "入力がありません";
 } ?></a>
 
-<a style="padding-bottom:400px;"><?php if(isset($_POST['note'])){
+<a style="padding-bottom:400px;text-decoration:underline"><?php if(isset($_POST['note'])){
         echo "・".$_POST['note']; 
 } ?></a>
 
