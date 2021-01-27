@@ -14,7 +14,7 @@
 <form action="" method="post">
 <input type="text" class="name" id="exampleInputEmail1" aria-describedby="emailHelp"></br>
 <small id="emailHelp" class="form-text text-muted">memo</small>
-<button type="submit" class="btn btn-primary">Submit</button>        
+<button type="submit" class="btn btn-primary">送信</button>        
 </form>
 </div>
 </div>
