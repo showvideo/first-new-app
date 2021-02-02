@@ -23,7 +23,7 @@ try {
 <form action="" method="post">
     <h4>入所時間</h4>
     <?php if(isset($visit)){
-      echo $visit;
+      echo "現在入力されている時刻は$visit;
 } ?>
   <div class="form-group" style="margin-top:40px;">
     
