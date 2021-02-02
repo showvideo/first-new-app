@@ -46,7 +46,7 @@ if(isset($_POST['blood'])){
 try {
     $sql = "UPDATE user SET visit = :visit where id = :id";
     $stt = getDB()->prepare($sql);
-    $stt->bindParam(':visit', $_POST['name']);
+    $stt->bindParam(':visit', $_POST['blood']);
     $stt->bindParam(':id', $id);
     $stt->execute();
     header('Location: https://animech2.herokuapp.com/');
