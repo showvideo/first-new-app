@@ -1,16 +1,4 @@
-
-<table border="1" cellspacing="0" style="border-collaspe:collapse;display:inline-block;margin-left:150px;margin-top:50px;vertical-align:top;">
-    <thead>
-    <tr style="background-color:#384D98;">
-        <th style="width:100px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
-        <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">来所</th>
-        <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">退所</th>
-        <th style="width:160px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">最高・最低血圧/脈拍</th>
-        <th style="width:60px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">入浴</th>
-        <th style="width:60px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">食事</th>
-        <th style="width:170px;height:35px;border:1px solid #ccc; background:#fff;padding:4px;">特記事項</th>
-    </tr>
-    </thead>
+<?php require_once("th.php"); ?>  
 <?php
         $db = getDB();
         $stt = $db->prepare('SELECT * FROM user WHERE 1');
@@ -22,46 +10,52 @@
                 $visit=$row['visit']; 
                 $exits=$row['exits']; 
                 $maxblood=$row['maxblood'];
+                $miniblood=$row['miniblood'];
+                $pulse=$row['pulse'];
                 $bath=$row['bath']; 
                 $meal=$row['meal']; 
                 $notices=$row['notices'];
-                
+            
  ?>
 <tbody>
 <tr>
     <!--お名前-->
-    <td onclick="window.location='https://animech2.herokuapp.com/input/name.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name ?></a>
+    <td onclick="window.location='input/name.php/<?php echo $id ?>/'"  
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
      </td>
            
      <!--来所-->
-    <td onclick="window.location='https://animech2.herokuapp.com/input/visit.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $visit ?></a>
+    <td onclick="window.location='input/visit.php/<?php echo $id ?>/'"  
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $visit; ?></a>
      </td>
         
      <!--退所-->
-    <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $exits ?></a>
+    <td onclick="window.location='input/exit.php/<?php echo $id ?>/'"  
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $exits; ?></a>
      </td>
         
      <!--最高・最低血圧/脈拍-->
-     <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $blood ?></a>
+     <td onclick="window.location='input/blood.php/<?php echo $id ?>/'"  
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
+     <?php if(isset($maxblood) || ($miniblood) ||( $pulse)){
+         echo $maxblood."/".$miniblood."/".$pulse;
+     }
+      ?></a>
      </td>
         
       <!--入浴-->
-     <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $bath ?></a>
+     <td  
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $bath; ?></a>
      </td>
         
         
       <!--食事-->
-    <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $meal ?></a>
+    <td   
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $meal; ?></a>
      </td>
         
       <!--特記事項-->
-    <td onclick="window.location='https://animech2.herokuapp.com/input/index.php/<?php echo $id ?>/'"  
+    <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  
      style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $notices ?></a>
      </td>
         
