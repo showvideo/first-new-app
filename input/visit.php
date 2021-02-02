@@ -22,9 +22,7 @@ try {
 
 <form>
     <h4>入所時間</h4>
-  <?php if(isset($visit)){
-      echo '現在指定されている時刻は、'.$visit;
-  ?>
+ 
   <div class="form-group" style="margin-top:40px;">
     
   <select name="blood">
@@ -51,7 +49,7 @@ try {
     $stt->bindParam(':visit', $_POST['name']);
     $stt->bindParam(':id', $id);
     $stt->execute();
-    header('Location: http://localhost/note/');
+    header('Location: https://animech2.herokuapp.com/');
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
 }
