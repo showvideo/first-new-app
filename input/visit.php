@@ -22,7 +22,9 @@ try {
 
 <form>
     <h4>入所時間</h4>
-    
+  <?php if(isset($visit)){
+      echo '現在指定されている時刻は、'.$visit;
+  ?>
   <div class="form-group" style="margin-top:40px;">
     
   <select name="blood">
@@ -37,11 +39,11 @@ try {
   <div class="form-group form-check">
 
   </div>
-  <button type="submit" class="btn btn-primary" style="margin-left:340px;">送信</button>
+  <button type="submit" class="btn btn-primary" style="margin-left:340px;">編集</button>
 </form>
 </div>
 <?php
-if(isset($_POST['name'])){
+if(isset($_POST['blood'])){
  
 try {
     $sql = "UPDATE user SET visit = :visit where id = :id";
