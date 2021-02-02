@@ -20,7 +20,7 @@ try {
 ?> 
 <div style="width:500px;margin-left:250px;margin-top:30px;border:solid 1px gray;padding:40px;display:inline-block;">
 
-<form>
+<form action="" method="post">
     <h4>入所時間</h4>
  
   <div class="form-group" style="margin-top:40px;">
