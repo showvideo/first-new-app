@@ -22,7 +22,9 @@ try {
 
 <form action="" method="post">
     <h4>入所時間</h4>
- 
+    <?php if(isset($visit)){
+      echo $visit;
+} ?>
   <div class="form-group" style="margin-top:40px;">
     
   <select name="blood">
