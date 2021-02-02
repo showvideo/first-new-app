@@ -3,7 +3,7 @@
 <?php require_once("../common/function.php"); ?>
 <?php $id = getInfomation(); ?>
 
-<?PHP 
+<?php
 try {
 
   $db = getDB();
