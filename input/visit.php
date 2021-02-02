@@ -18,7 +18,7 @@ try {
   echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
 }
 ?> 
-<div style="width:500px;height:400px;margin-left:250px;margin-top:30px;border:solid 1px gray;padding:40px;display:inline-block;">
+<div style="width:500px;height:350px;margin-left:50px;margin-top:30px;border:solid 1px gray;padding:40px;display:inline-block;">
 
 <form action="" method="post">
     <h4>入所時間</h4>
@@ -59,7 +59,5 @@ try {
 }
 
 ?>
-<div style="display:inline-block;border:solid 1px;">
-<?php require_once("../parts/numpeople.php"); ?>
-</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
