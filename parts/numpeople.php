@@ -1,5 +1,4 @@
 
-<div style="width:250px;display:inline-block;border:solid 1px;margin-top:40px;margin-left:10px;position:relative;">
 
 <strong style="padding:20px 10px;margin:0;">利用者数</strong></br>
 
@@ -43,4 +42,3 @@ $sex1 = $row["cnt"];
 <p style="margin-top:10px;margin-left:20px;"><?php echo $bath ?>人</p>
 <strong style="padding:10px 10px;margin:0;">食事</strong></br>
 <p style="margin-top:10px;margin-left:20px;"><?php echo $bath ?>人</p>
-</div>
