@@ -1,78 +1,57 @@
+<?php require_once("../parts/head.php"); ?>
+<?php require_once("../parts/header.php"); ?>  
+<?php require_once("../common/function.php"); ?>
+<?php $id = getInfomation(); ?>
 
-<?php if(!empty($noticesing)) { ?> 
-        <?php
-        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        
-    ?>
-    <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
+<?php
+try {
 
-        <form action="" method="post">
-            <p>特記事項</p>
-            <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
-            
-        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">特記事項を入力してください。</a></br>
-
-            <textarea name="notices_text" style="width:200px;height:100px;margin-left:40px;resize:none;"></textarea>
-            <input type="submit" value="入力" name="notices_submit"> 
-        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
-        </form>
-    </div>
-
-
-    <?php  
-        }
-    } else {echo null;} ?> 
-
-<?php if(isset($noticesing1)) { ?> 
-   <?php
-       $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        $visit = $user['visit'];
-        $notices = $user['notices'];
-        }
-    ?>
-    <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
-
-        <form action="" method="post">
-            <p>特記事項</p>
-            <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
-            <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">只今入力されている特記事項</a></br>
-            <a style="padding-left:40px;font-size:17px;"><?php echo $visit; ?></a></br>
-        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">特記事項を追加する</a></br>
-
-            <textarea name="visit_time" style="width:200px;height:100px;margin-left:40px;resize:none;"></textarea>
-        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:160px;">
-
-    </div>
-        
-    </form>
-
-    </div>
-<?php  } else {echo null;} ?> 
-
-
-<?php if(isset($_POST['notices_submit'])) {
-        try {
-                $db = getDB();
-                $stt = $db->preapre("INSERT INTO user(notices) VALUES(:notices)");
-                $stt->bindParam(':notices', $_POST['notices_text'], PDO::PARAM_STR);
-                $stt->execute();
-                header('Location: https://animech2.herokuapp.com/');
-        } catch(PDOException $e) {
-                echo 'ｴﾗｰﾒｯｾｰｼﾞ: {$e->getMessage()}';
-        }
+  $db = getDB();
+  $stt = $db->prepare("select notices from user where id=:id");
+  $stt->bindParam(':id', $id);
+  $stt->execute();
+  while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+    $notices = $row['notices'];
+  }
+} catch (PDOException $e) {
+  echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
 }
+?> 
+<div style="width:500px;height:350px;margin-left:30px;margin-top:30px;border:solid 1px gray;padding:40px;display:inline-block;">
+
+<form action="" method="post">
+    <h4>退所時間</h4>
+    <?php if(isset($notices)){
+      echo "現在入力されている特記事項、\n".$notices;
+} ?>
+  <div class="form-group" style="margin-top:40px;">
+    
+  <textarea name="notices"></textarea>
+    <small id="emailHelp" class="form-text text-muted">特記事項を入力してください</small>
+
+  <div class="form-group form-check">
+
+  </div>
+  <button type="submit" class="btn btn-primary" style="margin-left:340px;">編集</button>
+</form>
+</div>
+<?php
+if(isset($_POST['notices'])){
+ 
+try {
+    $sql = "UPDATE user SET notices = :notices where id = :id";
+    $stt = getDB()->prepare($sql);
+    $stt->bindParam(':notices', $_POST['notices']);
+    $stt->bindParam(':id', $id);
+    $stt->execute();
+    header('Location: https://animech2.herokuapp.com/');
+} catch (PDOException $e) {
+    echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+}
+  
+}
+
 ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
