@@ -26,8 +26,7 @@ $stt->execute();
 ?>  
 <tr>
     <!--お名前-->
-    <td onclick="window.location='input/name.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
+    <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
      </td>
            
      <!--来所-->
