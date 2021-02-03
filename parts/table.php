@@ -55,7 +55,7 @@
         
       <!--特記事項-->
     <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $notices ?></a>
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo mb_strimwidth($notices, 0, 7, '…', 'UTF-8'); ?></a>
      </td>
         
     </tr>
