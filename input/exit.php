@@ -1,73 +1,64 @@
+<?php require_once("../parts/head.php"); ?>
+<?php require_once("../parts/header.php"); ?>  
+<?php require_once("../common/function.php"); ?>
+<?php $id = getInfomation(); ?>
 
-<?php if(!empty($exitime)) { ?> 
-    <?php
-        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        }
-    ?>
-        <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
+<?php
+try {
 
-        <form action="" method="post">
-            <p>退所時間</p>
-            <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
-            
-        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">退所時間を選択してください。</a></br>
+  $db = getDB();
+  $stt = $db->prepare("select exits from user where id=:id");
+  $stt->bindParam(':id', $id);
+  $stt->execute();
+  while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+    $exit = $row['exits'];
+  }
+} catch (PDOException $e) {
+  echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+}
+?> 
+<div style="width:500px;height:350px;margin-left:30px;margin-top:30px;border:solid 1px gray;padding:40px;display:inline-block;">
 
-            <select name="visit_time" style="width:100px;height:30px;margin-left:40px;">
-                <option value="">選択しない</option>
-                <option value="12:30">12:30</option>
-                <option value="13:00">10:00</option>
-                <option value="13:30">10:30</option>
-                <option value="14:00">14:00</option>
-                <option value="14:30">14:30</option>
-                <option value="15:00">15:00</option>
-            </select></p>
-        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
-        </form>
-    </div>
-    <?php  } else {echo null;} ?> 
+<form action="" method="post">
+    <h4>退所時間</h4>
+    <?php if(isset($visit)){
+      echo "現在入力されている時刻は".$exit;
+} ?>
+  <div class="form-group" style="margin-top:40px;">
+    
+  <select name="exit">
+  <option value="13:30">13:30</option>
+  <option value="14:00">14:00</option>
+  <option value="14:30">14:30</option>
+  <option value="15:00">15:00</option>
+  <option value="15:30">15:30</option>
+  <option value="16:00">16:00</option>
+  <option value="16:30">16:30</option>
+  </select></p>
+    <small id="emailHelp" class="form-text text-muted">時間を指定してください</small>
 
-<?php if(isset($exitime1)) { ?> 
-   <?php
-       $sql = "SELECT * FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        $exit = $user['exits'];
-        }
-    ?>        
-        <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
+  <div class="form-group form-check">
 
-        <form action="" method="post">
-            <p>来所時間</p>
-            <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
-            <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">只今設定されている時間</a></br>
-            <a style="padding-left:40px;font-size:17px;"><?php echo $exit; ?></a></br>
-        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">退所時間を選択してください。</a></br>
+  </div>
+  <button type="submit" class="btn btn-primary" style="margin-left:340px;">編集</button>
+</form>
+</div>
+<?php
+if(isset($_POST['exit'])){
+ 
+try {
+    $sql = "UPDATE user SET exits = :exit where id = :id";
+    $stt = getDB()->prepare($sql);
+    $stt->bindParam(':exit', $_POST['exit']);
+    $stt->bindParam(':id', $id);
+    $stt->execute();
+    header('Location: https://animech2.herokuapp.com/');
+} catch (PDOException $e) {
+    echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+}
+  
+}
 
-            <select name="visit_time" style="width:100px;height:30px;margin-left:40px;">
-                <option value="">選択しない</option>
-                <option value="09:30">09:30</option>
-                <option value="10:00">10:00</option>
-                <option value="10:30">10:30</option>
-                <option value="11:00">11:00</option>
-                <option value="11:30">11:30</option>
-                <option value="12:00">12:00</option>
-            </select></p>
-        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:160px;">
+?>
 
-    </div>
-        
-    </form>
-
-    </div><?php  } else {echo null;} ?> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
