@@ -137,5 +137,7 @@ $stt->execute();
 
 <?php } ?>
 </table>
+<div style="width:250px;display:inline-block;border:solid 1px;margin-top:40px;margin-left:10px;position:relative;">
 <?php require('../parts/numpeople.php'); ?>
+</div>
 <?php endif; ?>
