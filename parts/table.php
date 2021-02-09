@@ -17,7 +17,6 @@
                 $notices=$row['notices'];
             
  ?>
-<tbody>
 <tr>
     <!--お名前-->
     <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
@@ -59,8 +58,6 @@
      </td>
         
     </tr>
-<tbody>
-
 
 <?php 
                 
