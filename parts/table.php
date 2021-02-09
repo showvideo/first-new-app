@@ -1,8 +1,12 @@
 <?php require_once("th.php"); ?>  
-
+<?php
+        $db = getDB();
+        $stt = $db->prepare('SELECT * FROM user WHERE 1');
+        $stt->execute();
+            while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+ ?>
 <tr>
-    <!--お名前-->
-    <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
+    <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $row['name']; ?></a>
      </td>
 
      <!--来所-->
