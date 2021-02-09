@@ -1,22 +1,5 @@
 <?php require_once("th.php"); ?>  
-<?php
-        $db = getDB();
-        $stt = $db->prepare('SELECT * FROM user WHERE 1');
-        $stt->execute();
-            while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
-                
-                $id=$row['id'];
-                $name=$row['name']; 
-                $visit=$row['visit']; 
-                $exits=$row['exits']; 
-                $maxblood=$row['maxblood'];
-                $miniblood=$row['miniblood'];
-                $pulse=$row['pulse'];
-                $bath=$row['bath']; 
-                $meal=$row['meal']; 
-                $notices=$row['notices'];
-            
- ?>
+
 <tr>
     <!--お名前-->
     <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
