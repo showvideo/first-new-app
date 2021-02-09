@@ -3,11 +3,6 @@
 <?php require_once("common/function.php"); ?>
 <div></div>
 
-</form>
-<?php
-
-?>
-</div>
 <?php
     $sql = "SELECT name FROM user WHERE 1";
     $stmt = getDB()->prepare($sql);
@@ -25,6 +20,5 @@
 </div>
 <?php require_once("parts/bloods.php"); ?>
 
-<?php echo 'bjajbda'; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
