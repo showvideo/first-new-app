@@ -3,7 +3,7 @@
         $db = getDB();
         $stt = $db->prepare('SELECT * FROM user WHERE 1');
         $stt->execute();
-            while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+            foreach($stt as $row) {
                 
                 $id=$row['id'];
                 $name=$row['name']; 
