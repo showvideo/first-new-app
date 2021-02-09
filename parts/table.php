@@ -22,7 +22,9 @@
     <!--お名前-->
     <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
      </td>
-           
+              <!--お名前-->
+    <td style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
+     </td> 
      <!--来所-->
     <td onclick="window.location='input/visit.php/<?php echo $id ?>/'"  
      style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $visit; ?></a>
