@@ -3,15 +3,6 @@
 <?php require_once("common/function.php"); ?>
 <div></div>
 
-<?php
-    $sql = "SELECT name FROM user WHERE 1";
-    $stmt = getDB()->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-    foreach($result as $user){
-    $name = $user['name'];
-    }
-?>
 
 <?php require_once("parts/table.php"); ?>
 
