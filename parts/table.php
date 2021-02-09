@@ -2,8 +2,9 @@
 <?php
         $db = getDB();
         $stt = $db->prepare('SELECT * FROM user WHERE 1');
+        $result = $stt->fetch(PDO::FETCH_ASSOC);
         $stt->execute();
-            while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+            foreach($result as $row) {
                 
                 $id=$row['id'];
                 $name=$row['name']; 
