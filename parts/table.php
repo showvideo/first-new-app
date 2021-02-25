@@ -20,10 +20,9 @@
      </td>
         
      <!--最高・最低血圧/脈拍-->
-     <td onclick="window.location='input/bloods.php/<?php echo $id ?>/'"  
-     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;">
-     <?php echo $maxblood; ?></a>
-     </td>
+    <td onclick="window.location='input/exit.php/<?php echo $id ?>/'"  
+     style="height:35px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $exits; ?></a>
+     </td>       
         
       <!--入浴-->
      <td  
