@@ -44,7 +44,7 @@ try {
     $stt->bindParam(':notices', $_POST['notices']);
     $stt->bindParam(':id', $id);
     $stt->execute();
-    header('Location: https://animech2.herokuapp.com/');
+    header('Location: https://first-new-app1.herokuapp.com/');
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
 }
