@@ -1,70 +1,63 @@
-<?php /*血圧*/ ?>
+<?php require_once("../parts/head.php"); ?>
+<?php require_once("../parts/header.php"); ?>  
+<?php require_once("../common/function.php"); ?>
+<?php $id = getInfomation(); ?>
 
-<?php if(!empty($bloodp)) { ?>
-    <?php
-        $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        }
-    ?>
-    <div style="border:ridge;width:300px;height:400px;vertical-align:top;margin-left:6px;">
+<?php
+try {
 
-        <form action="" method="post">
-            <p>最高・最低血圧</p>
-            <a style="padding-left:200px;padding-bottom:50px;"><?php echo $name."様"; ?></a></br>
-            
-        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">最高・最低血圧を入力してください。</a></br>
-            <input type="text" name="maxb" style="width:50px;margin-left:40px;">/<input type="text" name="maxm" style="width:50px;"> </br>
-        <a style="padding-left:30px;font-size:13px;margin-top:50px;padding-top:50px;">脈拍を入力してください。</a></br>
-            <input type="text" name="pulse" style="width:50px;margin-left:40px;">
-            <input type="submit" value="入力" style="margin-left:100px;"></br>
+  $db = getDB();
+  $stt = $db->prepare("select * from user where id=:id");
+  $stt->bindParam(':id', $id);
+  $stt->execute();
+  while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
+    $maxblood = $row['maxblood'];
+    $miniblood = $row['miniblood'];
+    $pulse = $row['pulse'];
+  }
+} catch (PDOException $e) {
+  echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+}
+?> 
+<div style="width:500px;height:350px;margin-left:30px;margin-top:30px;border:solid 1px gray;padding:40px;display:inline-block;">
+
+<form action="" method="post">
+    <h4>血圧/脈拍</h4>
+    <?php if(isset($maxblood)){
+      echo "現在入力されている血圧/脈拍は".$maxblood;
+} ?>
+  <div class="form-group" style="margin-top:40px;">
     
-        <input type="submit" value="一覧へ戻る" style="margin-left:110px;margin-top:190px;">
-        </form>
-    </div>
+    <input type="text">
+      
+    <input type="text">
+      
+    <input type="text">
+      
+    <small id="emailHelp" class="form-text text-muted">時間を指定してください</small>
 
-        ?>
-        <?php if(isset($_POST['miniblood'])) {
-                $sql = 'UPDATE user SET miniblood = :blood WHERE id = :id';
-                $stmt = getDB()->prepare($sql);
-                $stmt->bindParam(':blood', $_POST['miniblood'], PDO::PARAM_STR);
-                $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-                $stmt->execute();
-                header('Location: https://animech2.herokuapp.com/');
-                exit;
-        }
-        ?>
-        <?php if(isset($_POST['pulse'])) {
-                $sql = 'UPDATE user SET pulse = :blood WHERE id = :id';
-                $stmt = getDB()->prepare($sql);
-                $stmt->bindParam(':pulse', $_POST['pulse'], PDO::PARAM_STR);
-                $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-                $stmt->execute();
-                header('Location: https://animech2.herokuapp.com/');
-                exit;
-        }
-        ?>
-        <input type="submit" name="submit" value="入力">
-        <input type="submit" name="back" value="一覧へ戻る" style="position:absolute;bottom:9px;">
-    </form>
-    <?php  } else {echo null;} ?> 
+  <div class="form-group form-check">
 
-<?php if(isset($bloodp1)) { ?> <div style="display:inline-block;border:ridge;width:567px;height:779px;position:relative;">
-   <?php
-       $sql = "SELECT id, name, visit, maxblood, meal, bath, notices FROM user WHERE id=:id";
-        $stmt = getDB()->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
-        foreach($result as $user){
-        $id = $user['id'];
-        $name = $user['name'];
-        $visit = $user['visit'];
-        }
-    ?><?php  } else {echo null;} ?> 
+  </div>
+  <button type="submit" class="btn btn-primary" style="margin-left:340px;">編集</button>
+</form>
+</div>
+<?php
+if(isset($_POST['exit'])){
+ 
+try {
+    $sql = "UPDATE user SET exits = :exit where id = :id";
+    $stt = getDB()->prepare($sql);
+    $stt->bindParam(':exit', $_POST['exit']);
+    $stt->bindParam(':id', $id);
+    $stt->execute();
+    header('Location: https://animech2.herokuapp.com/');
+} catch (PDOException $e) {
+    echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
+}
+  
+}
 
+?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
