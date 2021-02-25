@@ -7,13 +7,11 @@
 try {
 
   $db = getDB();
-  $stt = $db->prepare("select * from user where id=:id");
+  $stt = $db->prepare("select exits from user where id=:id");
   $stt->bindParam(':id', $id);
   $stt->execute();
   while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
-    $maxblood = $row['maxblood'];
-    $miniblood = $row['miniblood'];
-    $pulse = $row['pulse'];
+
   }
 } catch (PDOException $e) {
   echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
@@ -23,9 +21,7 @@ try {
 
 <form action="" method="post">
     <h4>血圧/脈拍</h4>
-    <?php if(isset($maxblood)){
-      echo "現在入力されている血圧/脈拍は".$maxblood;
-} ?>
+
   <div class="form-group" style="margin-top:40px;">
     
     <input type="text">
